@@ -10,17 +10,12 @@ using System.Windows.Forms;
 
 namespace WinFormsRestaurant
 {
-    public partial class Login : Form
+    public partial class Manage : Form
     {
-        public Login()
+        public Manage()
         {
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-       
-            panel1.BackColor = Color.FromArgb(100, panel1.BackColor);
-        }
     }
 }
