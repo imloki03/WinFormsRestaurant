@@ -131,7 +131,7 @@ namespace WinFormsRestaurant
             bmp.RotateFlip(RotateFlipType.RotateNoneFlipX);
 
             return result;
-
+        }
         public void fillPanel(Panel panel, Form childform, int clear)
         {
             childform.Dock = DockStyle.Fill;
@@ -144,5 +144,7 @@ namespace WinFormsRestaurant
             childform.BringToFront();
             childform.Show();
         }
+
+
     }
 }

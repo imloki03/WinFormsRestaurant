@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AForge.Video;
+using AForge.Video.DirectShow;
+using Emgu.CV;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,14 +12,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace WinFormsRestaurant
 {
     public partial class AddNewAccount : Form
     {
+
         public AddNewAccount()
         {
             InitializeComponent();
         }
+
+        VideoCaptureDevice device = new VideoCaptureDevice();
+        private VideoCapture video_capture;
+        private Bitmap image;
+        Methods methods = new Methods();
+
         static HttpClient client = new HttpClient();
         static List<Province> provinces = new List<Province>();
         static List<District> districts = new List<District>();
@@ -43,9 +54,20 @@ namespace WinFormsRestaurant
         {
             pg_scan.Minimum = 0;
             pg_scan.Maximum = 100;
+            VideoCaptureDeviceForm deviceForm = new VideoCaptureDeviceForm();
+            if (deviceForm.ShowDialog() == DialogResult.OK)
+                device = deviceForm.VideoDevice;
+            device = deviceForm.VideoDevice;
+            device.NewFrame += new NewFrameEventHandler(video_NewFrame);
+            device.Start();
             getProvince();
         }
-
+        private void video_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            Bitmap img = (Bitmap)eventArgs.Frame.Clone();
+            img = methods.antimirror(img);
+            pb_camera.Image = img;
+        }
         private async void cb_province_Click(object sender, EventArgs e)
         {
             List<string> provinceNames = new List<string>();
@@ -86,11 +108,17 @@ namespace WinFormsRestaurant
                 pg_scan.Value += 100 / 8;
             }
             else
+            {
                 pg_scan.Value = 100;
+            }
+        }
 
         private void bt_cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+            device.Stop();
         }
+
     }
 }
+    

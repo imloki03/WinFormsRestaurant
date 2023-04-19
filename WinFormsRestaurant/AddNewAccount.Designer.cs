@@ -58,16 +58,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
-            this.label1.Location = new System.Drawing.Point(45, 32);
+            this.label1.Location = new System.Drawing.Point(34, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(227, 29);
-
-            this.label1.Location = new System.Drawing.Point(34, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 24);
-
             this.label1.TabIndex = 0;
             this.label1.Text = "Add New Employee";
             // 
@@ -140,7 +134,7 @@
             // tb_name
             // 
             this.tb_name.Location = new System.Drawing.Point(152, 133);
-            this.tb_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_name.Margin = new System.Windows.Forms.Padding(4);
             this.tb_name.Multiline = true;
             this.tb_name.Name = "tb_name";
             this.tb_name.Size = new System.Drawing.Size(280, 29);
@@ -149,7 +143,7 @@
             // tb_phone
             // 
             this.tb_phone.Location = new System.Drawing.Point(152, 277);
-            this.tb_phone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_phone.Margin = new System.Windows.Forms.Padding(4);
             this.tb_phone.Multiline = true;
             this.tb_phone.Name = "tb_phone";
             this.tb_phone.Size = new System.Drawing.Size(280, 29);
@@ -158,7 +152,7 @@
             // tb_street
             // 
             this.tb_street.Location = new System.Drawing.Point(152, 474);
-            this.tb_street.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_street.Margin = new System.Windows.Forms.Padding(4);
             this.tb_street.Multiline = true;
             this.tb_street.Name = "tb_street";
             this.tb_street.Size = new System.Drawing.Size(280, 29);
@@ -168,7 +162,7 @@
             // 
             this.rb_male.AutoSize = true;
             this.rb_male.Location = new System.Drawing.Point(152, 183);
-            this.rb_male.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rb_male.Margin = new System.Windows.Forms.Padding(4);
             this.rb_male.Name = "rb_male";
             this.rb_male.Size = new System.Drawing.Size(58, 20);
             this.rb_male.TabIndex = 10;
@@ -180,7 +174,7 @@
             // 
             this.rb_female.AutoSize = true;
             this.rb_female.Location = new System.Drawing.Point(295, 183);
-            this.rb_female.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rb_female.Margin = new System.Windows.Forms.Padding(4);
             this.rb_female.Name = "rb_female";
             this.rb_female.Size = new System.Drawing.Size(74, 20);
             this.rb_female.TabIndex = 11;
@@ -193,7 +187,7 @@
             this.dt_birthday.CustomFormat = "dd/MM/yyyy";
             this.dt_birthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dt_birthday.Location = new System.Drawing.Point(152, 229);
-            this.dt_birthday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dt_birthday.Margin = new System.Windows.Forms.Padding(4);
             this.dt_birthday.MaximumSize = new System.Drawing.Size(399, 24);
             this.dt_birthday.MinimumSize = new System.Drawing.Size(65, 24);
             this.dt_birthday.Name = "dt_birthday";
@@ -226,7 +220,7 @@
             // 
             this.cb_province.FormattingEnabled = true;
             this.cb_province.Location = new System.Drawing.Point(152, 330);
-            this.cb_province.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_province.Margin = new System.Windows.Forms.Padding(4);
             this.cb_province.Name = "cb_province";
             this.cb_province.Size = new System.Drawing.Size(280, 24);
             this.cb_province.TabIndex = 15;
@@ -237,7 +231,7 @@
             // 
             this.cb_district.FormattingEnabled = true;
             this.cb_district.Location = new System.Drawing.Point(152, 379);
-            this.cb_district.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_district.Margin = new System.Windows.Forms.Padding(4);
             this.cb_district.Name = "cb_district";
             this.cb_district.Size = new System.Drawing.Size(280, 24);
             this.cb_district.TabIndex = 16;
@@ -247,7 +241,7 @@
             // 
             this.cb_ward.FormattingEnabled = true;
             this.cb_ward.Location = new System.Drawing.Point(152, 428);
-            this.cb_ward.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_ward.Margin = new System.Windows.Forms.Padding(4);
             this.cb_ward.Name = "cb_ward";
             this.cb_ward.Size = new System.Drawing.Size(280, 24);
             this.cb_ward.TabIndex = 17;
@@ -255,7 +249,7 @@
             // bt_add
             // 
             this.bt_add.Location = new System.Drawing.Point(165, 538);
-            this.bt_add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_add.Margin = new System.Windows.Forms.Padding(4);
             this.bt_add.Name = "bt_add";
             this.bt_add.Size = new System.Drawing.Size(107, 43);
             this.bt_add.TabIndex = 18;
@@ -264,8 +258,9 @@
             // 
             // bt_cancel
             // 
+            this.bt_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bt_cancel.Location = new System.Drawing.Point(308, 538);
-            this.bt_cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_cancel.Margin = new System.Windows.Forms.Padding(4);
             this.bt_cancel.Name = "bt_cancel";
             this.bt_cancel.Size = new System.Drawing.Size(107, 43);
             this.bt_cancel.TabIndex = 19;
@@ -277,7 +272,7 @@
             // 
             this.pb_camera.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pb_camera.Location = new System.Drawing.Point(568, 133);
-            this.pb_camera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pb_camera.Margin = new System.Windows.Forms.Padding(4);
             this.pb_camera.Name = "pb_camera";
             this.pb_camera.Size = new System.Drawing.Size(746, 387);
             this.pb_camera.TabIndex = 20;
@@ -286,7 +281,7 @@
             // bt_scan
             // 
             this.bt_scan.Location = new System.Drawing.Point(855, 580);
-            this.bt_scan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_scan.Margin = new System.Windows.Forms.Padding(4);
             this.bt_scan.Name = "bt_scan";
             this.bt_scan.Size = new System.Drawing.Size(145, 50);
             this.bt_scan.TabIndex = 21;
@@ -297,7 +292,7 @@
             // pg_scan
             // 
             this.pg_scan.Location = new System.Drawing.Point(615, 538);
-            this.pg_scan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pg_scan.Margin = new System.Windows.Forms.Padding(4);
             this.pg_scan.Name = "pg_scan";
             this.pg_scan.Size = new System.Drawing.Size(639, 28);
             this.pg_scan.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
@@ -331,7 +326,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1447, 851);
             this.MinimumSize = new System.Drawing.Size(1447, 851);
             this.Name = "AddNewAccount";
