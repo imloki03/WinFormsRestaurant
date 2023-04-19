@@ -88,6 +88,8 @@ namespace WinFormsRestaurant
             else
                 pg_scan.Value = 100;
 
+        }
+
         private void bt_cancel_Click(object sender, EventArgs e)
         {
             this.Close();
