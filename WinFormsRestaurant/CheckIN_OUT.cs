@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace WinFormsRestaurant
 {
     public partial class CheckIN_OUT : Form
     {
+        Methods methods = new Methods();
         private TcpClient client;
         private NetworkStream stream;
         private BinaryReader reader;
@@ -69,7 +71,7 @@ namespace WinFormsRestaurant
                     using (var ms = new MemoryStream(data))
                     {
                         var bmp = new Bitmap(ms);
-
+                        bmp = methods.antimirror(bmp);
                         // Update the PictureBox control in the UI thread
                         pb_camera.Invoke(new Action(() =>
                         {

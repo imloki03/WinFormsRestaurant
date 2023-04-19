@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -113,6 +114,23 @@ namespace WinFormsRestaurant
             }
             return wards;
         }
+
+
+        public Bitmap antimirror(Bitmap bmp)
+        {
+            Bitmap result = new Bitmap(bmp.Width, bmp.Height);
+
+            // Flip the original bitmap horizontally and copy it to the new bitmap
+            bmp.RotateFlip(RotateFlipType.RotateNoneFlipX);
+            using (Graphics g = Graphics.FromImage(result))
+            {
+                g.DrawImage(bmp, 0, 0);
+            }
+
+            // Flip the original bitmap back to its original orientation
+            bmp.RotateFlip(RotateFlipType.RotateNoneFlipX);
+
+            return result;
 
         public void fillPanel(Panel panel, Form childform, int clear)
         {
