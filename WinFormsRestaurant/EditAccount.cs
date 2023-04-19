@@ -76,5 +76,10 @@ namespace WinFormsRestaurant
             cb_ward.Items.Clear();
             cb_ward.Items.AddRange(wardNames.ToArray());
         }
+
+        private void bt_cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

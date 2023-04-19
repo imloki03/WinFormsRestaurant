@@ -28,36 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pn_main = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pn_statistics = new System.Windows.Forms.Panel();
+            this.pn_summarizeSalary = new System.Windows.Forms.Panel();
+            this.pn_dashboard = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.pn_manageShift = new System.Windows.Forms.Panel();
+            this.pn_manageAccount = new System.Windows.Forms.Panel();
+            this.bt_Dashboard = new System.Windows.Forms.Button();
+            this.bt_ManageAccount = new System.Windows.Forms.Button();
+            this.bt_ManageShift = new System.Windows.Forms.Button();
+            this.bt_SummarizeSalary = new System.Windows.Forms.Button();
+            this.bt_statistics = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
+            this.pn_statistics.SuspendLayout();
+            this.pn_summarizeSalary.SuspendLayout();
+            this.pn_dashboard.SuspendLayout();
+            this.pn_manageShift.SuspendLayout();
+            this.pn_manageAccount.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pn_main
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.panel1.Location = new System.Drawing.Point(195, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1090, 700);
-            this.panel1.TabIndex = 0;
+            this.pn_main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.pn_main.Location = new System.Drawing.Point(195, 0);
+            this.pn_main.Name = "pn_main";
+            this.pn_main.Size = new System.Drawing.Size(1090, 700);
+            this.pn_main.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel2.Controls.Add(this.panel9);
-            this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.panel8);
-            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.pn_statistics);
+            this.panel2.Controls.Add(this.pn_summarizeSalary);
+            this.panel2.Controls.Add(this.pn_dashboard);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.pn_manageShift);
+            this.panel2.Controls.Add(this.pn_manageAccount);
             this.panel2.Location = new System.Drawing.Point(-5, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 700);
@@ -71,29 +81,32 @@
             this.panel9.Size = new System.Drawing.Size(200, 100);
             this.panel9.TabIndex = 0;
             // 
-            // panel7
+            // pn_statistics
             // 
-            this.panel7.BackColor = System.Drawing.Color.Red;
-            this.panel7.Location = new System.Drawing.Point(0, 502);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(200, 100);
-            this.panel7.TabIndex = 2;
+            this.pn_statistics.BackColor = System.Drawing.Color.Red;
+            this.pn_statistics.Controls.Add(this.bt_statistics);
+            this.pn_statistics.Location = new System.Drawing.Point(0, 502);
+            this.pn_statistics.Name = "pn_statistics";
+            this.pn_statistics.Size = new System.Drawing.Size(200, 100);
+            this.pn_statistics.TabIndex = 2;
             // 
-            // panel8
+            // pn_summarizeSalary
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel8.Location = new System.Drawing.Point(2, 402);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(200, 100);
-            this.panel8.TabIndex = 3;
+            this.pn_summarizeSalary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pn_summarizeSalary.Controls.Add(this.bt_SummarizeSalary);
+            this.pn_summarizeSalary.Location = new System.Drawing.Point(2, 402);
+            this.pn_summarizeSalary.Name = "pn_summarizeSalary";
+            this.pn_summarizeSalary.Size = new System.Drawing.Size(200, 100);
+            this.pn_summarizeSalary.TabIndex = 3;
             // 
-            // panel4
+            // pn_dashboard
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.Location = new System.Drawing.Point(5, 101);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 100);
-            this.panel4.TabIndex = 1;
+            this.pn_dashboard.BackColor = System.Drawing.SystemColors.Control;
+            this.pn_dashboard.Controls.Add(this.bt_Dashboard);
+            this.pn_dashboard.Location = new System.Drawing.Point(5, 101);
+            this.pn_dashboard.Name = "pn_dashboard";
+            this.pn_dashboard.Size = new System.Drawing.Size(200, 100);
+            this.pn_dashboard.TabIndex = 1;
             // 
             // panel3
             // 
@@ -103,45 +116,107 @@
             this.panel3.Size = new System.Drawing.Size(200, 100);
             this.panel3.TabIndex = 0;
             // 
-            // panel6
+            // pn_manageShift
             // 
-            this.panel6.BackColor = System.Drawing.Color.Fuchsia;
-            this.panel6.Location = new System.Drawing.Point(5, 302);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(200, 100);
-            this.panel6.TabIndex = 1;
+            this.pn_manageShift.BackColor = System.Drawing.Color.Fuchsia;
+            this.pn_manageShift.Controls.Add(this.bt_ManageShift);
+            this.pn_manageShift.Location = new System.Drawing.Point(5, 302);
+            this.pn_manageShift.Name = "pn_manageShift";
+            this.pn_manageShift.Size = new System.Drawing.Size(200, 100);
+            this.pn_manageShift.TabIndex = 1;
             // 
-            // panel5
+            // pn_manageAccount
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.panel5.Location = new System.Drawing.Point(2, 202);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(200, 100);
-            this.panel5.TabIndex = 0;
+            this.pn_manageAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.pn_manageAccount.Controls.Add(this.bt_ManageAccount);
+            this.pn_manageAccount.Location = new System.Drawing.Point(2, 202);
+            this.pn_manageAccount.Name = "pn_manageAccount";
+            this.pn_manageAccount.Size = new System.Drawing.Size(200, 100);
+            this.pn_manageAccount.TabIndex = 0;
+            // 
+            // bt_Dashboard
+            // 
+            this.bt_Dashboard.Location = new System.Drawing.Point(0, -1);
+            this.bt_Dashboard.Name = "bt_Dashboard";
+            this.bt_Dashboard.Size = new System.Drawing.Size(197, 95);
+            this.bt_Dashboard.TabIndex = 0;
+            this.bt_Dashboard.Text = "Dashboard";
+            this.bt_Dashboard.UseVisualStyleBackColor = true;
+            this.bt_Dashboard.Click += new System.EventHandler(this.bt_Dashboard_Click);
+            // 
+            // bt_ManageAccount
+            // 
+            this.bt_ManageAccount.Location = new System.Drawing.Point(3, 0);
+            this.bt_ManageAccount.Name = "bt_ManageAccount";
+            this.bt_ManageAccount.Size = new System.Drawing.Size(197, 95);
+            this.bt_ManageAccount.TabIndex = 1;
+            this.bt_ManageAccount.Text = "Manage Account";
+            this.bt_ManageAccount.UseVisualStyleBackColor = true;
+            this.bt_ManageAccount.Click += new System.EventHandler(this.bt_ManageAccount_Click);
+            // 
+            // bt_ManageShift
+            // 
+            this.bt_ManageShift.Location = new System.Drawing.Point(-2, 2);
+            this.bt_ManageShift.Name = "bt_ManageShift";
+            this.bt_ManageShift.Size = new System.Drawing.Size(197, 95);
+            this.bt_ManageShift.TabIndex = 1;
+            this.bt_ManageShift.Text = "Manage Shift";
+            this.bt_ManageShift.UseVisualStyleBackColor = true;
+            this.bt_ManageShift.Click += new System.EventHandler(this.bt_ManageShift_Click);
+            // 
+            // bt_SummarizeSalary
+            // 
+            this.bt_SummarizeSalary.Location = new System.Drawing.Point(2, 0);
+            this.bt_SummarizeSalary.Name = "bt_SummarizeSalary";
+            this.bt_SummarizeSalary.Size = new System.Drawing.Size(197, 95);
+            this.bt_SummarizeSalary.TabIndex = 1;
+            this.bt_SummarizeSalary.Text = "Summarize Salary";
+            this.bt_SummarizeSalary.UseVisualStyleBackColor = true;
+            this.bt_SummarizeSalary.Click += new System.EventHandler(this.bt_SummarizeSalary_Click);
+            // 
+            // bt_statistics
+            // 
+            this.bt_statistics.Location = new System.Drawing.Point(5, 0);
+            this.bt_statistics.Name = "bt_statistics";
+            this.bt_statistics.Size = new System.Drawing.Size(197, 95);
+            this.bt_statistics.TabIndex = 1;
+            this.bt_statistics.Text = "Statistics";
+            this.bt_statistics.UseVisualStyleBackColor = true;
+            this.bt_statistics.Click += new System.EventHandler(this.bt_statistics_Click);
             // 
             // Manage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1282, 698);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pn_main);
             this.Name = "Manage";
             this.Text = "Manage";
             this.panel2.ResumeLayout(false);
+            this.pn_statistics.ResumeLayout(false);
+            this.pn_summarizeSalary.ResumeLayout(false);
+            this.pn_dashboard.ResumeLayout(false);
+            this.pn_manageShift.ResumeLayout(false);
+            this.pn_manageAccount.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pn_main;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pn_dashboard;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pn_statistics;
+        private System.Windows.Forms.Panel pn_summarizeSalary;
+        private System.Windows.Forms.Panel pn_manageShift;
+        private System.Windows.Forms.Panel pn_manageAccount;
+        private System.Windows.Forms.Button bt_statistics;
+        private System.Windows.Forms.Button bt_SummarizeSalary;
+        private System.Windows.Forms.Button bt_Dashboard;
+        private System.Windows.Forms.Button bt_ManageShift;
+        private System.Windows.Forms.Button bt_ManageAccount;
     }
 }
