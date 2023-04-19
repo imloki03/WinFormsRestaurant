@@ -75,18 +75,21 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="DB_Class.cs" />
     <Compile Include="EditAccount.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditAccount.Designer.cs">
       <DependentUpon>EditAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee_Class.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login_Class.cs" />
     <Compile Include="Manage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +147,7 @@
     <Compile Include="Statics.Designer.cs">
       <DependentUpon>Statics.cs</DependentUpon>
     </Compile>
+    <Compile Include="StaticVars_Class.cs" />
     <Compile Include="WorkTimeStatics.cs">
       <SubType>Form</SubType>
     </Compile>
