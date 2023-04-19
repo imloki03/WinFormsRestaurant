@@ -78,6 +78,7 @@ namespace WinFormsRestaurant
             cb_ward.Items.AddRange(wardNames.ToArray());
         }
 
+
         private void bt_scan_Click(object sender, EventArgs e)
         {
             if (pg_scan.Value + 100 / 8 < 100)
@@ -86,6 +87,10 @@ namespace WinFormsRestaurant
             }
             else
                 pg_scan.Value = 100;
+
+        private void bt_cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
