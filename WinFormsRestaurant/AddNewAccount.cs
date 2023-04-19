@@ -41,6 +41,8 @@ namespace WinFormsRestaurant
         }
         private void AddNewAccount_Load(object sender, EventArgs e)
         {
+            pg_scan.Minimum = 0;
+            pg_scan.Maximum = 100;
             getProvince();
         }
 
@@ -74,6 +76,16 @@ namespace WinFormsRestaurant
             List<string> wardNames = wards.Select(p => p.Name).ToList();
             cb_ward.Items.Clear();
             cb_ward.Items.AddRange(wardNames.ToArray());
+        }
+
+        private void bt_scan_Click(object sender, EventArgs e)
+        {
+            if (pg_scan.Value + 100 / 8 < 100)
+            {
+                pg_scan.Value += 100 / 8;
+            }
+            else
+                pg_scan.Value = 100;
         }
     }
 }
