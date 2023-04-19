@@ -6,6 +6,8 @@ using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 public class Province
 {
     public int code { get; set; }
@@ -112,6 +114,17 @@ namespace WinFormsRestaurant
             return wards;
         }
 
-
+        public void fillPanel(Panel panel, Form childform, int clear)
+        {
+            childform.Dock = DockStyle.Fill;
+            if (clear == 1)
+                panel.Controls.Clear();
+            childform.FormBorderStyle = FormBorderStyle.None;
+            childform.TopLevel = false;
+            panel.Controls.Add(childform);
+            panel.Tag = childform;
+            childform.BringToFront();
+            childform.Show();
+        }
     }
 }

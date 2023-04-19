@@ -16,5 +16,15 @@ namespace WinFormsRestaurant
         {
             InitializeComponent();
         }
+        Methods methods = new Methods();
+        private void bt_add_Click(object sender, EventArgs e)
+        {
+            methods.fillPanel(pn_manageAccount, new AddNewAccount(), 0); //thi dep trai
+        }
+
+        private void bt_edit_Click(object sender, EventArgs e)
+        {
+            methods.fillPanel(pn_manageAccount, new EditAccount(), 0);
+        }
     }
 }
