@@ -6,12 +6,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using VisioForge.MediaFramework.FFMPEGCore.Enums;
+using VisioForge.MediaFramework.Helpers;
 
 namespace WinFormsRestaurant
 {
@@ -103,14 +106,82 @@ namespace WinFormsRestaurant
 
         private void bt_scan_Click(object sender, EventArgs e)
         {
-            if (pg_scan.Value + 100 / 8 < 100)
+            if (!tb_name.Text.IsNullOrEmpty())
             {
-                pg_scan.Value += 100 / 8;
+                if (pg_scan.Value + 100 / 8 < 100)
+                {
+                    pg_scan.Value += 100 / 8;
+                }
+                else
+                {
+                    pg_scan.Value = 100;
+                    bt_scan.Enabled = false;
+                }
+
+                int duplicateCount = 0;
+                string fileName = tb_name.Text;
+                string fileExtension = ".png";
+                string newFileName = fileName;
+
+                try
+                {
+                    // Get the current directory path
+                    string cDirectory = Directory.GetCurrentDirectory();
+
+                    // Combine the current directory path with the folder name
+                    string fPath = Path.Combine(cDirectory, "Faces");
+
+                    // Check if the folder already exists
+                    if (Directory.Exists(fPath))
+                    {
+                        try
+                        {
+                            // Get the current directory path
+                            string currentDirectory = Directory.GetCurrentDirectory();
+
+                            // Combine the current directory path with the folder name
+                            string folderPath = Path.Combine(currentDirectory + "\\Faces", fileName);
+
+                            // Check if the folder already exists
+                            if (Directory.Exists(folderPath))
+                            {
+                                Bitmap varBmp = new Bitmap(pb_camera.Image);
+                                Bitmap newBitmap = new Bitmap(varBmp);
+                                while (File.Exists(folderPath + "\\" + newFileName + fileExtension))
+                                {
+                                    duplicateCount++;
+                                    newFileName = fileName + " (" + duplicateCount.ToString() + ")";
+                                }
+                                varBmp.Save(folderPath + "\\" + newFileName + fileExtension, ImageFormat.Png);
+                                //Now Dispose to free the memory
+                                varBmp.Dispose();
+                                varBmp = null;
+                                return;
+                            }
+
+                            // Create the folder
+                            Directory.CreateDirectory(folderPath);
+
+                            Console.WriteLine("Folder created successfully.");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Error creating folder: " + ex.Message);
+                        }
+                    }
+
+                    // Create the folder
+                    Directory.CreateDirectory(fPath);
+
+                    Console.WriteLine("Folder created successfully.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error creating folder: " + ex.Message);
+                }
             }
             else
-            {
-                pg_scan.Value = 100;
-            }
+                MessageBox.Show("Missing Fields");
         }
 
         private void bt_cancel_Click(object sender, EventArgs e)

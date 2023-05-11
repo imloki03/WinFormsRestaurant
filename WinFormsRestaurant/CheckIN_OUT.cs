@@ -42,8 +42,8 @@ namespace WinFormsRestaurant
                 }
             };
             process.Start();
-    
 
+      
             // Wait for process to exit
 
             client = new TcpClient("localhost", 8000);
@@ -79,8 +79,11 @@ namespace WinFormsRestaurant
                         }));
                     }
                 }
-                catch
+                catch (IOException)
                 {
+                    string output = process.StandardOutput.ReadToEnd().Trim();
+                    MessageBox.Show(output);
+                    this.Close(); 
                     break;
                 }
             }

@@ -275,6 +275,7 @@
             this.pb_camera.Margin = new System.Windows.Forms.Padding(4);
             this.pb_camera.Name = "pb_camera";
             this.pb_camera.Size = new System.Drawing.Size(746, 387);
+            this.pb_camera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_camera.TabIndex = 20;
             this.pb_camera.TabStop = false;
             // 
@@ -302,7 +303,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1429, 804);
+            this.ClientSize = new System.Drawing.Size(1447, 851);
             this.Controls.Add(this.pg_scan);
             this.Controls.Add(this.bt_scan);
             this.Controls.Add(this.pb_camera);
@@ -326,7 +327,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1447, 851);
             this.MinimumSize = new System.Drawing.Size(1447, 851);
