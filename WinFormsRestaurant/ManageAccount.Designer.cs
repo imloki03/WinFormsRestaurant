@@ -32,19 +32,20 @@
             this.bt_delete = new System.Windows.Forms.Button();
             this.bt_edit = new System.Windows.Forms.Button();
             this.bt_add = new System.Windows.Forms.Button();
-            this.lv_account = new System.Windows.Forms.ListView();
             this.bt_search = new System.Windows.Forms.Button();
             this.tb_search = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.list_account = new System.Windows.Forms.DataGridView();
             this.pn_manageAccount.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.list_account)).BeginInit();
             this.SuspendLayout();
             // 
             // pn_manageAccount
             // 
+            this.pn_manageAccount.Controls.Add(this.list_account);
             this.pn_manageAccount.Controls.Add(this.bt_delete);
             this.pn_manageAccount.Controls.Add(this.bt_edit);
             this.pn_manageAccount.Controls.Add(this.bt_add);
-            this.pn_manageAccount.Controls.Add(this.lv_account);
             this.pn_manageAccount.Controls.Add(this.bt_search);
             this.pn_manageAccount.Controls.Add(this.tb_search);
             this.pn_manageAccount.Controls.Add(this.label1);
@@ -82,15 +83,6 @@
             this.bt_add.UseVisualStyleBackColor = true;
             this.bt_add.Click += new System.EventHandler(this.bt_add_Click);
             // 
-            // lv_account
-            // 
-            this.lv_account.HideSelection = false;
-            this.lv_account.Location = new System.Drawing.Point(39, 94);
-            this.lv_account.Name = "lv_account";
-            this.lv_account.Size = new System.Drawing.Size(822, 541);
-            this.lv_account.TabIndex = 10;
-            this.lv_account.UseCompatibleStateImageBehavior = false;
-            // 
             // bt_search
             // 
             this.bt_search.Location = new System.Drawing.Point(770, 47);
@@ -118,6 +110,17 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Search Account:";
             // 
+            // list_account
+            // 
+            this.list_account.AllowUserToAddRows = false;
+            this.list_account.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.list_account.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.list_account.Location = new System.Drawing.Point(38, 94);
+            this.list_account.Name = "list_account";
+            this.list_account.RowHeadersVisible = false;
+            this.list_account.Size = new System.Drawing.Size(823, 532);
+            this.list_account.TabIndex = 14;
+            // 
             // ManageAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -128,8 +131,10 @@
             this.MinimumSize = new System.Drawing.Size(1090, 700);
             this.Name = "ManageAccount";
             this.Text = "ManageAccount";
+            this.Load += new System.EventHandler(this.ManageAccount_Load);
             this.pn_manageAccount.ResumeLayout(false);
             this.pn_manageAccount.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.list_account)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -140,9 +145,9 @@
         private System.Windows.Forms.Button bt_delete;
         private System.Windows.Forms.Button bt_edit;
         private System.Windows.Forms.Button bt_add;
-        private System.Windows.Forms.ListView lv_account;
         private System.Windows.Forms.Button bt_search;
         private System.Windows.Forms.TextBox tb_search;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView list_account;
     }
 }
