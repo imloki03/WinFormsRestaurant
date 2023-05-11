@@ -1,6 +1,9 @@
-﻿using Newtonsoft.Json;
+﻿using Emgu.CV.ML;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Net.Http;
@@ -51,7 +54,7 @@ namespace WinFormsRestaurant
         {
             // Thay thế các ký tự có dấu thành các ký tự không dấu
             string[] fromChars = new string[] { "à", "á", "ạ", "ả", "ã", "â", "ầ", "ấ", "ậ", "ẩ", "ẫ", "ă", "ằ", "ắ", "ặ", "ẳ", "ẵ", "è", "é", "ẹ", "ẻ", "ẽ", "ê", "ề", "ế", "ệ", "ể", "ễ", "ì", "í", "ị", "ỉ", "ĩ", "ò", "ó", "ọ", "ỏ", "õ", "ô", "ồ", "ố", "ộ", "ổ", "ỗ", "ơ", "ờ", "ớ", "ợ", "ở", "ỡ", "ù", "ú", "ụ", "ủ", "ũ", "ư", "ừ", "ứ", "ự", "ử", "ữ", "ỳ", "ý", "ỵ", "ỷ", "ỹ" };
-            string[] toChars = new string[] { "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "i", "i", "i", "i", "i", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "u", "u", "u", "u", "u", "u", "u", "u", "u", "u", "u", "y", "y", "y", "y", "y" };
+            string[] toChars = new string[]   { "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "i", "i", "i", "i", "i", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "u", "u", "u", "u", "u", "u", "u", "u", "u", "u", "u", "y", "y", "y", "y", "y" };
             for (int i = 0; i < fromChars.Length; i++)
             {
                 text = Regex.Replace(text, fromChars[i], toChars[i], RegexOptions.IgnoreCase);
@@ -144,7 +147,94 @@ namespace WinFormsRestaurant
             childform.BringToFront();
             childform.Show();
         }
+        Employee_Class emp = new Employee_Class();
+        public void scheduleShift(int x)    //x: employee/shift
+        {
+            int n = emp.amountOfEmloyees();
+            //them mot exception neu x>n thi return error
+            int T = (n % x != 0 ? n : n / x);  // circle
+            DateTime shift = DateTime.Now;
+            DB_Class db = new DB_Class();
+            SqlCommand cmd = new SqlCommand();
+            DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
 
+            db.openConnection();
+            cmd = new SqlCommand("delete from WorkSchedule", db.getConnection);
+            cmd.ExecuteNonQuery();
+            cmd = new SqlCommand("delete from Shifts", db.getConnection);
+            cmd.ExecuteNonQuery();
+            for (int i = 1; i <= T; i++)
+            {
+                shift = shift.AddDays(1);
+                cmd = new SqlCommand("insert into Shifts values ([dbo].[AUTO_IDShift](), @shift, '6:00AM - 10:00AM')", db.getConnection);
+                cmd.Parameters.Add("@shift", System.Data.SqlDbType.DateTime).Value = shift;
+                cmd.ExecuteNonQuery();
+                cmd = new SqlCommand("insert into Shifts values ([dbo].[AUTO_IDShift](), @shift, '11:00AM - 3:00PM')", db.getConnection);
+                cmd.Parameters.Add("@shift", System.Data.SqlDbType.DateTime).Value = shift;
+                cmd.ExecuteNonQuery();
+                cmd = new SqlCommand("insert into Shifts values ([dbo].[AUTO_IDShift](), @shift, '6:00PM - 10:00PM')", db.getConnection);
+                cmd.Parameters.Add("@shift", System.Data.SqlDbType.DateTime).Value = shift;
+                cmd.ExecuteNonQuery();
+            }
 
+            //phan ca sang
+            for (int i=0;i<T*x;i=i+x)
+            {
+                table = new DataTable();
+                SqlCommand command = new SqlCommand("SELECT * FROM Shifts where Shift='6:00AM - 10:00AM' ORDER BY ShiftID OFFSET @num ROWS FETCH NEXT 1 ROWS ONLY", db.getConnection);
+                command.Parameters.Add("@num", System.Data.SqlDbType.Int).Value = i/x;
+                adapter = new SqlDataAdapter(command);
+                adapter.Fill(table);
+                string sid = table.Rows[0][0].ToString();
+                for (int j=0;j<x;j++)
+                {
+                    string eid = emp.getEmID((i+j) % n);
+                    cmd = new SqlCommand("insert into WorkSchedule(EmployeeID, ShiftID) values (@eid, @sid)", db.getConnection);
+                    cmd.Parameters.Add("@eid", System.Data.SqlDbType.NVarChar).Value = eid;
+                    cmd.Parameters.Add("@sid", System.Data.SqlDbType.NVarChar).Value = sid;
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            //phan ca trua
+            for (int i = 0; i < T * x; i = i + x)
+            {
+                table = new DataTable();
+                SqlCommand command = new SqlCommand("SELECT * FROM Shifts where Shift='11:00AM - 3:00PM' ORDER BY ShiftID OFFSET @num ROWS FETCH NEXT 1 ROWS ONLY", db.getConnection);
+                command.Parameters.Add("@num", System.Data.SqlDbType.Int).Value = ((i / x) + (T - 1)) % T;
+                adapter = new SqlDataAdapter(command);
+                adapter.Fill(table);
+                string sid = table.Rows[0][0].ToString();
+                for (int j = 0; j < x; j++)
+                {
+                    string eid = emp.getEmID((i + j) % n);
+                    cmd = new SqlCommand("insert into WorkSchedule(EmployeeID, ShiftID) values (@eid, @sid)", db.getConnection);
+                    cmd.Parameters.Add("@eid", System.Data.SqlDbType.NVarChar).Value = eid;
+                    cmd.Parameters.Add("@sid", System.Data.SqlDbType.NVarChar).Value = sid;
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            //phan ca toi
+            for (int i = 0; i < T * x; i = i + x)
+            {
+                table = new DataTable();
+                SqlCommand command = new SqlCommand("SELECT * FROM Shifts where Shift='6:00PM - 10:00PM' ORDER BY ShiftID OFFSET @num ROWS FETCH NEXT 1 ROWS ONLY", db.getConnection);
+                command.Parameters.Add("@num", System.Data.SqlDbType.Int).Value = ((i / x) + (T - 2)) % T;
+                adapter = new SqlDataAdapter(command);
+                adapter.Fill(table);
+                string sid = table.Rows[0][0].ToString();
+                for (int j = 0; j < x; j++)
+                {
+                    string eid = emp.getEmID((i + j) % n);
+                    cmd = new SqlCommand("insert into WorkSchedule(EmployeeID, ShiftID) values (@eid, @sid)", db.getConnection);
+                    cmd.Parameters.Add("@eid", System.Data.SqlDbType.NVarChar).Value = eid;
+                    cmd.Parameters.Add("@sid", System.Data.SqlDbType.NVarChar).Value = sid;
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            db.closeConnection();
+        }
     }
 }

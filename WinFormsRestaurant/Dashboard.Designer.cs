@@ -73,10 +73,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("UTM Hanzel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(4, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 28);
+            this.label1.Size = new System.Drawing.Size(102, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dashboard";
             // 
@@ -102,7 +102,7 @@
             this.bt_shift1.Name = "bt_shift1";
             this.bt_shift1.Size = new System.Drawing.Size(125, 30);
             this.bt_shift1.TabIndex = 2;
-            this.bt_shift1.Text = "7:00AM - 11:00AM";
+            this.bt_shift1.Text = "6:00AM - 10:00AM";
             this.bt_shift1.UseVisualStyleBackColor = false;
             this.bt_shift1.Click += new System.EventHandler(this.bt_shift1_Click);
             // 
