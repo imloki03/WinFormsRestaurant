@@ -20,6 +20,7 @@ namespace WinFormsRestaurant
             //MessageBox.Show("" + employee.getEmID(2));
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new ShiftManagement());
         }
     }
 }
