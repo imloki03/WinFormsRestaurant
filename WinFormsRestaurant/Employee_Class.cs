@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json.Serialization;
+using System.IO;
 
 namespace WinFormsRestaurant
 {
@@ -67,7 +69,20 @@ namespace WinFormsRestaurant
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(table);
             return table.Rows[0][0].ToString();
-            //comment
         }
+        public void addEmployee(string name, bool gender, string phone, string address, string birthday, string jobtitle, string account, MemoryStream picture)
+        {
+            SqlCommand command = new SqlCommand("insert into Employee values ([dbo].[AUTO_IDEmployee](), @name, @gender, @phone, @address, @birth, @job, null, @picture)", dB.getConnection);
+
+        }
+        public void updateEmployee()
+        {
+
+        }
+        public void deleteEmployee()
+        {
+
+        }
+
     }
 }
