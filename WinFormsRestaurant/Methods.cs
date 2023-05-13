@@ -236,5 +236,14 @@ namespace WinFormsRestaurant
             }
             db.closeConnection();
         }
+
+        public void standardrizeDtgridview(DataGridView dataGridView)
+        {
+            dataGridView.AllowUserToAddRows = false;
+            dataGridView.AllowUserToDeleteRows = false;
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView.AllowUserToResizeRows = false;
+            dataGridView.ReadOnly = true;
+        }
     }
 }

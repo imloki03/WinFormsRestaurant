@@ -219,6 +219,7 @@
       <DependentUpon>Statics.cs</DependentUpon>
     </Compile>
     <Compile Include="StaticVars_Class.cs" />
+    <Compile Include="WorkSchedule_Class.cs" />
     <Compile Include="WorkTimeStatics.cs">
       <SubType>Form</SubType>
     </Compile>

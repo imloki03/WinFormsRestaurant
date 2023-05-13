@@ -17,10 +17,10 @@ namespace WinFormsRestaurant
         public DataTable getEmployee(SqlCommand cmd)
         {
             cmd.Connection = dB.getConnection;
-            DataTable table_studentid = new DataTable();
+            DataTable table = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            adapter.Fill(table_studentid);
-            return table_studentid;
+            adapter.Fill(table);
+            return table;
         }
         public int amountOfEmloyees()
         {
