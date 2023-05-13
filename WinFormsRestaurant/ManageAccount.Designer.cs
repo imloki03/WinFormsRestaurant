@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pn_manageAccount = new System.Windows.Forms.Panel();
+            this.list_account = new System.Windows.Forms.DataGridView();
             this.bt_delete = new System.Windows.Forms.Button();
             this.bt_edit = new System.Windows.Forms.Button();
             this.bt_add = new System.Windows.Forms.Button();
             this.bt_search = new System.Windows.Forms.Button();
             this.tb_search = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.list_account = new System.Windows.Forms.DataGridView();
             this.pn_manageAccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.list_account)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +55,36 @@
             this.pn_manageAccount.Name = "pn_manageAccount";
             this.pn_manageAccount.Size = new System.Drawing.Size(1073, 664);
             this.pn_manageAccount.TabIndex = 0;
+            // 
+            // list_account
+            // 
+            this.list_account.AllowUserToAddRows = false;
+            this.list_account.AllowUserToDeleteRows = false;
+            this.list_account.AllowUserToResizeColumns = false;
+            this.list_account.AllowUserToResizeRows = false;
+            this.list_account.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.list_account.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.list_account.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.list_account.DefaultCellStyle = dataGridViewCellStyle4;
+            this.list_account.Location = new System.Drawing.Point(38, 94);
+            this.list_account.Name = "list_account";
+            this.list_account.RowHeadersVisible = false;
+            this.list_account.Size = new System.Drawing.Size(823, 532);
+            this.list_account.TabIndex = 14;
             // 
             // bt_delete
             // 
@@ -91,6 +123,7 @@
             this.bt_search.TabIndex = 9;
             this.bt_search.Text = "Search";
             this.bt_search.UseVisualStyleBackColor = true;
+            this.bt_search.Click += new System.EventHandler(this.bt_search_Click);
             // 
             // tb_search
             // 
@@ -109,17 +142,6 @@
             this.label1.Size = new System.Drawing.Size(117, 18);
             this.label1.TabIndex = 7;
             this.label1.Text = "Search Account:";
-            // 
-            // list_account
-            // 
-            this.list_account.AllowUserToAddRows = false;
-            this.list_account.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.list_account.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.list_account.Location = new System.Drawing.Point(38, 94);
-            this.list_account.Name = "list_account";
-            this.list_account.RowHeadersVisible = false;
-            this.list_account.Size = new System.Drawing.Size(823, 532);
-            this.list_account.TabIndex = 14;
             // 
             // ManageAccount
             // 

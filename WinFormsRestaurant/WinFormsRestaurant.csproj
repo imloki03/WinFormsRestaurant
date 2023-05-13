@@ -211,6 +211,7 @@
     <Compile Include="ShiftStatics.Designer.cs">
       <DependentUpon>ShiftStatics.cs</DependentUpon>
     </Compile>
+    <Compile Include="Shift_Class.cs" />
     <Compile Include="Statics.cs">
       <SubType>Form</SubType>
     </Compile>

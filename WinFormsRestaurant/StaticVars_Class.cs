@@ -14,5 +14,6 @@ namespace WinFormsRestaurant
 
         public static DateTime checkout;
 
+        public static int employeePerShift;
     }
 }
