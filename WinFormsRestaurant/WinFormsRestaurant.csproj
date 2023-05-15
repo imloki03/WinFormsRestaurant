@@ -199,6 +199,7 @@
     <Compile Include="SalarySummary.Designer.cs">
       <DependentUpon>SalarySummary.cs</DependentUpon>
     </Compile>
+    <Compile Include="Salary_Class.cs" />
     <Compile Include="ShiftManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,7 +219,14 @@
     <Compile Include="Statics.Designer.cs">
       <DependentUpon>Statics.cs</DependentUpon>
     </Compile>
+    <Compile Include="Statics_Class.cs" />
     <Compile Include="StaticVars_Class.cs" />
+    <Compile Include="WorkStation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkStation.Designer.cs">
+      <DependentUpon>WorkStation.cs</DependentUpon>
+    </Compile>
     <Compile Include="WorkTimeStatics.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,6 +288,9 @@
     <EmbeddedResource Include="Statics.resx">
       <DependentUpon>Statics.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WorkStation.resx">
+      <DependentUpon>WorkStation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WorkTimeStatics.resx">
       <DependentUpon>WorkTimeStatics.cs</DependentUpon>
     </EmbeddedResource>
@@ -301,6 +312,9 @@
   <ItemGroup>
     <Content Include="Pictures\logo_winforms.png" />
     <Content Include="Pictures\logo_winforms_mini.png" />
+    <None Include="Resources\occupied_reverse.png" />
+    <None Include="Resources\occupied.png" />
+    <None Include="Resources\table.png" />
     <None Include="Resources\logo_winforms_mini.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -14,13 +14,13 @@ namespace WinFormsRestaurant
         [STAThread]
         static void Main()
         {
-            Methods methods = new Methods();
-            methods.scheduleShift(5);
-            Employee_Class employee = new Employee_Class();
+            //Methods methods = new Methods();
+            //methods.scheduleShift(5);
+            //Employee_Class employee = new Employee_Class();
             //MessageBox.Show("" + employee.getEmID(2));
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ShiftManagement());
+            Application.Run(new WorkStation());
         }
     }
 }
