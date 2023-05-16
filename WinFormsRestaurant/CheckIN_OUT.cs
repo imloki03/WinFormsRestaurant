@@ -17,6 +17,7 @@ namespace WinFormsRestaurant
     public partial class CheckIN_OUT : Form
     {
         Methods methods = new Methods();
+        WorkSchedule_Class workSchedule = new WorkSchedule_Class();
         private TcpClient client;
         private NetworkStream stream;
         private BinaryReader reader;
@@ -25,35 +26,39 @@ namespace WinFormsRestaurant
         {
             InitializeComponent();
         }
-        //string python = "C:\\Users\\21110\\AppData\\Local\\Programs\\Python\\Python311\\python.exe";
         string script = "E:\\Python\\FaceRecog\\recognition.py";
         private void CheckIN_OUT_Load(object sender, EventArgs e)
         {
-            process = new Process
-            {
-                StartInfo = new ProcessStartInfo
-                {
-                    FileName = "python",
-                    Arguments = script,
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
-                    RedirectStandardError = true,
-                    CreateNoWindow = true,
-                }
-            };
-            process.Start();
+            //process = new Process
+            //{
+            //    StartInfo = new ProcessStartInfo
+            //    {
+            //        FileName = "python",
+            //        Arguments = script,
+            //        UseShellExecute = false,
+            //        RedirectStandardOutput = true,
+            //        RedirectStandardError = true,
+            //        CreateNoWindow = true,
+            //    }
+            //};
+            //process.Start();
 
-      
-            // Wait for process to exit
 
-            client = new TcpClient("localhost", 8000);
-            stream = client.GetStream();
-            reader = new BinaryReader(stream);
+            //// Wait for process to exit
 
-            // Start receiving images in a separate thread
-            var t = new System.Threading.Thread(ReceiveImages);
-            t.IsBackground = true;
-            t.Start();
+            //client = new TcpClient("localhost", 8000);
+            //stream = client.GetStream();
+            //reader = new BinaryReader(stream);
+
+            //// Start receiving images in a separate thread
+            //var t = new System.Threading.Thread(ReceiveImages);
+            //t.IsBackground = true;
+            //t.Start();
+            if (StaticVars_Class.state == StaticVars_Class.loginstate[0])
+                workSchedule.checkIn();
+            if (StaticVars_Class.state == StaticVars_Class.loginstate[1])
+                workSchedule.checkOut();
+
         }
         private void ReceiveImages()
         {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,7 +37,7 @@ namespace WinFormsRestaurant
             for (int i = 0; i < 3; i++)
                 tb.Rows.Add(tb.NewRow());
             string[] shift = { "6:00AM - 10:00AM", "11:00AM - 3:00PM", "6:00PM - 10:00PM" };
-            for (int i=0;i<3;i++)
+            for (int i = 0; i < 3; i++)
             {
                 DateTime current = start;
                 for (int j = 0; j < 7; j++)
@@ -45,7 +46,7 @@ namespace WinFormsRestaurant
                     foreach (DataRow row in table.Rows)
                     {
                         if (((DateTime)row[0]) == current && shift[i] == row[1].ToString())
-                            emp += "- " + row[2].ToString() +"\n";
+                            emp += "- " + row[2].ToString() + "\n";
                     }
                     tb.Rows[i][j] = emp;
                     current = current.AddDays(1);
@@ -68,6 +69,28 @@ namespace WinFormsRestaurant
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(table);
             return (DateTime)table.Rows[0][0];
+        }
+
+        public string whatshiftnow()
+        {
+            string[] worktime = { "6:00AM - 10:00AM", "11:00AM - 3:00PM", "6:00PM - 10:00PM" };
+            foreach (string timeRange in worktime)
+            {
+                string[] timeParts = timeRange.Split('-');
+
+                string startTimeString = timeParts[0].Trim();
+                string endTimeString = timeParts[1].Trim();
+
+                DateTime startTime, endTime;
+
+                DateTime.TryParseExact(startTimeString, "h:mmtt", CultureInfo.InvariantCulture, DateTimeStyles.None, out startTime);
+                DateTime.TryParseExact(endTimeString, "h:mmtt", CultureInfo.InvariantCulture, DateTimeStyles.None, out endTime);
+               
+                if (DateTime.Now >= startTime && DateTime.Now <= endTime)
+                    return timeRange;
+            }
+            return StaticVars_Class.closetime;
+
         }
     }
 }

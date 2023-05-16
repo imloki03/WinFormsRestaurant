@@ -17,10 +17,10 @@ namespace WinFormsRestaurant
         public DataTable getEmployee(SqlCommand cmd)
         {
             cmd.Connection = dB.getConnection;
-            DataTable table_studentid = new DataTable();
+            DataTable table = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            adapter.Fill(table_studentid);
-            return table_studentid;
+            adapter.Fill(table);
+            return table;
         }
         public int amountOfEmloyees()
         {
@@ -84,5 +84,14 @@ namespace WinFormsRestaurant
 
         }
 
+        public string whatEmIDByAcc(string username)
+        {
+            DataTable table = new DataTable();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Employee WHERE Account = @user", dB.getConnection);
+            cmd.Parameters.Add("@user", System.Data.SqlDbType.NVarChar).Value = username;
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(table);
+            return table.Rows[0][0].ToString();
+        }
     }
 }

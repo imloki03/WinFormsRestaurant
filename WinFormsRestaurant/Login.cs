@@ -18,7 +18,8 @@ namespace WinFormsRestaurant
         {
             InitializeComponent();
         }
-
+        Employee_Class em = new Employee_Class();
+        Shift_Class shift = new Shift_Class();
         private void Login_Load(object sender, EventArgs e)
         {
        
@@ -33,7 +34,9 @@ namespace WinFormsRestaurant
             if (login.checklogin(user,password))
             { 
                 OverView overView = new OverView();
-                StaticVars_Class.username = user; 
+                StaticVars_Class.username = user;
+                StaticVars_Class.emID = em.whatEmIDByAcc(user);
+                StaticVars_Class.shifttime = shift.whatshiftnow();
                 overView.Show(this);
             }
             else

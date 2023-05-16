@@ -227,6 +227,7 @@
     <Compile Include="WorkStation.Designer.cs">
       <DependentUpon>WorkStation.cs</DependentUpon>
     </Compile>
+    <Compile Include="WorkSchedule_Class.cs" />
     <Compile Include="WorkTimeStatics.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pb_logo = new System.Windows.Forms.PictureBox();
             this.pb_avatar = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,7 +46,7 @@
             this.pb_state = new System.Windows.Forms.PictureBox();
             this.lb_state = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dv_workschedule = new System.Windows.Forms.DataGridView();
             this.pb_state1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pb_state3 = new System.Windows.Forms.PictureBox();
@@ -57,10 +58,11 @@
             this.bt_checkin = new System.Windows.Forms.Button();
             this.bt_checkout = new System.Windows.Forms.Button();
             this.bt_changepassword = new System.Windows.Forms.Button();
+            this.cb_dayRange = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_avatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_state)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dv_workschedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_state1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_state3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_state4)).BeginInit();
@@ -246,15 +248,19 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Profile";
             // 
-            // dataGridView1
+            // dv_workschedule
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 286);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(949, 209);
-            this.dataGridView1.TabIndex = 19;
+            this.dv_workschedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dv_workschedule.Location = new System.Drawing.Point(19, 294);
+            this.dv_workschedule.Margin = new System.Windows.Forms.Padding(4);
+            this.dv_workschedule.Name = "dv_workschedule";
+            this.dv_workschedule.RowHeadersWidth = 51;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Transparent;
+            this.dv_workschedule.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dv_workschedule.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dv_workschedule.Size = new System.Drawing.Size(949, 209);
+            this.dv_workschedule.TabIndex = 19;
             // 
             // pb_state1
             // 
@@ -364,11 +370,22 @@
             this.bt_changepassword.UseVisualStyleBackColor = true;
             this.bt_changepassword.Click += new System.EventHandler(this.bt_changepassword_Click);
             // 
+            // cb_dayRange
+            // 
+            this.cb_dayRange.FormattingEnabled = true;
+            this.cb_dayRange.Location = new System.Drawing.Point(740, 262);
+            this.cb_dayRange.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_dayRange.Name = "cb_dayRange";
+            this.cb_dayRange.Size = new System.Drawing.Size(228, 24);
+            this.cb_dayRange.TabIndex = 31;
+            this.cb_dayRange.SelectedIndexChanged += new System.EventHandler(this.cb_dayRange_SelectedIndexChanged);
+            // 
             // OverView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 626);
+            this.Controls.Add(this.cb_dayRange);
             this.Controls.Add(this.bt_changepassword);
             this.Controls.Add(this.bt_checkout);
             this.Controls.Add(this.bt_checkin);
@@ -380,7 +397,7 @@
             this.Controls.Add(this.pb_state3);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pb_state1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dv_workschedule);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lb_state);
             this.Controls.Add(this.pb_state);
@@ -405,7 +422,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_avatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_state)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dv_workschedule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_state1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_state3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_state4)).EndInit();
@@ -427,7 +444,7 @@
         private System.Windows.Forms.PictureBox pb_state;
         private System.Windows.Forms.Label lb_state;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dv_workschedule;
         private System.Windows.Forms.PictureBox pb_state1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pb_state3;
@@ -446,5 +463,6 @@
         public System.Windows.Forms.Label lb_jobtitle;
         public System.Windows.Forms.RadioButton rb_male;
         public System.Windows.Forms.RadioButton rb_female;
+        private System.Windows.Forms.ComboBox cb_dayRange;
     }
 }
