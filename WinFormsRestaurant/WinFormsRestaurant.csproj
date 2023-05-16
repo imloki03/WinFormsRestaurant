@@ -312,6 +312,7 @@
   <ItemGroup>
     <Content Include="Pictures\logo_winforms.png" />
     <Content Include="Pictures\logo_winforms_mini.png" />
+    <None Include="Resources\addTable1.png" />
     <None Include="Resources\occupied_reverse.png" />
     <None Include="Resources\occupied.png" />
     <None Include="Resources\table.png" />
