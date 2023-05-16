@@ -18,8 +18,10 @@ namespace WinFormsRestaurant
             InitializeComponent();
         }
         DB_Class db = new DB_Class();
+        bool leftMouse = true;
         private void WorkStation_Load(object sender, EventArgs e)
         {
+            timer_Clock.Start();
             SqlCommand cmd = new SqlCommand("select * from [Table]", db.getConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             DataTable table = new DataTable();
@@ -34,17 +36,24 @@ namespace WinFormsRestaurant
                 }
                 if (table.Rows[i - 1][1].ToString() == "False")
                 {
-                    hideTable(panel);
+                    if (i < 10)
+                        hideTable(panel, "Table0" + i);
+                    else
+                        hideTable(panel, "Table" + i);
                 }
             }
         }
-        public void hideTable(Control control)
+        public void hideTable(Control control, string tableName)
         {
             foreach (Control c in control.Controls)
             {
                 c.Visible = false;
             }
             control.BackgroundImage = Properties.Resources.addTable;
+            SqlCommand cmd = new SqlCommand("update [Table] set visible=0 where tableID='" + tableName + "'", db.getConnection);
+            db.openConnection();
+            cmd.ExecuteNonQuery();
+            db.closeConnection();
         }
         public void showTable(Control control, string tableName)
         {
@@ -82,16 +91,83 @@ namespace WinFormsRestaurant
             }
             else
             {
-                PictureBox pictureBox = (PictureBox)panel.Controls["cus" + num + "_" + 1];
-                if (pictureBox.Visible == false)
+                if (leftMouse)
                 {
-                    MessageBox.Show("order");   /// mo form order
+                    PictureBox pictureBox = (PictureBox)panel.Controls["cus" + num + "_" + 1];
+                    if (pictureBox.Visible == false)
+                    {
+                        MessageBox.Show("order");   /// mo form order
+                    }
+                    else
+                    {
+                        MessageBox.Show("payment");  // mo form payment
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("payment");  // mo form payment
+                    //MessageBox.Show("right click");
+                    PictureBox pictureBox = (PictureBox)panel.Controls["cus" + num + "_" + 1];
+                    if (pictureBox.Visible == false)
+                    {
+                        option.Items[0].Visible = true;
+                        option.Items[1].Visible = false;
+                        option.Items[2].Visible = true;
+                    }
+                    else
+                    {
+                        option.Items[0].Visible = false;
+                        option.Items[1].Visible = true;
+                        option.Items[2].Enabled = false;
+                    }
+                    option.Show(panel, mouse);
                 }
             }
+        }
+        Point mouse = new Point();
+        Panel selectedPanel = new Panel();
+        private void pn_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+                leftMouse = true;
+            else
+                leftMouse = false;
+            mouse = e.Location;
+            selectedPanel = (Panel)sender;
+        }
+
+        private void option_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            option.Close();
+            if (e.ClickedItem == newOrder)
+            {
+                MessageBox.Show("order");   /// mo form order
+            }
+            else
+            {
+                if (e.ClickedItem == exportReceipt)
+                {
+                    MessageBox.Show("payment");  // mo form payment
+                }
+                else
+                {
+                    if (e.ClickedItem == removeTable)
+                    {
+                        int num = int.Parse(selectedPanel.Name.Substring(3));
+                        if (MessageBox.Show("Remove this Table?", "Remove Table", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
+                        {
+                            if (num < 10)
+                                hideTable(selectedPanel, "Table0" + num);
+                            else
+                                hideTable(selectedPanel, "Table" + num);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void timer_Clock_Tick(object sender, EventArgs e)
+        {
+            lb_clock.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }

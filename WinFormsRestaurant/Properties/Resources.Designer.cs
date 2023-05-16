@@ -73,6 +73,16 @@ namespace WinFormsRestaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap entranceIcon {
+            get {
+                object obj = ResourceManager.GetObject("entranceIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_winforms_mini {
             get {
                 object obj = ResourceManager.GetObject("logo_winforms_mini", resourceCulture);
@@ -113,9 +123,29 @@ namespace WinFormsRestaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap receptionIcon {
+            get {
+                object obj = ResourceManager.GetObject("receptionIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap table {
             get {
                 object obj = ResourceManager.GetObject("table", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wcIcon {
+            get {
+                object obj = ResourceManager.GetObject("wcIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

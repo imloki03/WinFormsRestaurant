@@ -28,6 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.option = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.newOrder = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportReceipt = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeTable = new System.Windows.Forms.ToolStripMenuItem();
+            this.bt_checkOUT = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pn_15 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.cus15_4 = new System.Windows.Forms.PictureBox();
@@ -118,6 +127,13 @@
             this.cus1_3 = new System.Windows.Forms.PictureBox();
             this.cus1_2 = new System.Windows.Forms.PictureBox();
             this.cus1_1 = new System.Windows.Forms.PictureBox();
+            this.lb_clock = new System.Windows.Forms.Label();
+            this.timer_Clock = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.option.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pn_15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cus15_4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cus15_3)).BeginInit();
@@ -195,8 +211,81 @@
             ((System.ComponentModel.ISupportInitialize)(this.cus1_1)).BeginInit();
             this.SuspendLayout();
             // 
+            // option
+            // 
+            this.option.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newOrder,
+            this.exportReceipt,
+            this.removeTable});
+            this.option.Name = "option";
+            this.option.Size = new System.Drawing.Size(151, 70);
+            this.option.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.option_ItemClicked);
+            // 
+            // newOrder
+            // 
+            this.newOrder.Name = "newOrder";
+            this.newOrder.Size = new System.Drawing.Size(150, 22);
+            this.newOrder.Text = "New Order";
+            // 
+            // exportReceipt
+            // 
+            this.exportReceipt.Name = "exportReceipt";
+            this.exportReceipt.Size = new System.Drawing.Size(150, 22);
+            this.exportReceipt.Text = "Export Receipt";
+            // 
+            // removeTable
+            // 
+            this.removeTable.Name = "removeTable";
+            this.removeTable.Size = new System.Drawing.Size(150, 22);
+            this.removeTable.Text = "Remove Table";
+            // 
+            // bt_checkOUT
+            // 
+            this.bt_checkOUT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.bt_checkOUT.FlatAppearance.BorderSize = 2;
+            this.bt_checkOUT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_checkOUT.Location = new System.Drawing.Point(1253, 666);
+            this.bt_checkOUT.Name = "bt_checkOUT";
+            this.bt_checkOUT.Size = new System.Drawing.Size(100, 42);
+            this.bt_checkOUT.TabIndex = 19;
+            this.bt_checkOUT.Text = "Check Out";
+            this.bt_checkOUT.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.receptionIcon;
+            this.pictureBox3.Location = new System.Drawing.Point(2, 560);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(80, 74);
+            this.pictureBox3.TabIndex = 22;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.entranceIcon;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(76, 674);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(60, 57);
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.wcIcon;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(46, -14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 51);
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
             // pn_15
             // 
+            this.pn_15.BackColor = System.Drawing.Color.White;
             this.pn_15.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.table;
             this.pn_15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -205,11 +294,12 @@
             this.pn_15.Controls.Add(this.cus15_3);
             this.pn_15.Controls.Add(this.cus15_2);
             this.pn_15.Controls.Add(this.cus15_1);
-            this.pn_15.Location = new System.Drawing.Point(875, 460);
+            this.pn_15.Location = new System.Drawing.Point(1134, 475);
             this.pn_15.Name = "pn_15";
             this.pn_15.Size = new System.Drawing.Size(200, 180);
             this.pn_15.TabIndex = 18;
             this.pn_15.Click += new System.EventHandler(this.pn_Click);
+            this.pn_15.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
             // 
             // label11
             // 
@@ -265,6 +355,7 @@
             // 
             // pn_14
             // 
+            this.pn_14.BackColor = System.Drawing.Color.White;
             this.pn_14.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.table;
             this.pn_14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -273,11 +364,12 @@
             this.pn_14.Controls.Add(this.cus14_3);
             this.pn_14.Controls.Add(this.cus14_2);
             this.pn_14.Controls.Add(this.cus14_1);
-            this.pn_14.Location = new System.Drawing.Point(660, 460);
+            this.pn_14.Location = new System.Drawing.Point(919, 475);
             this.pn_14.Name = "pn_14";
             this.pn_14.Size = new System.Drawing.Size(200, 180);
             this.pn_14.TabIndex = 17;
             this.pn_14.Click += new System.EventHandler(this.pn_Click);
+            this.pn_14.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
             // 
             // label12
             // 
@@ -333,6 +425,7 @@
             // 
             // pn_13
             // 
+            this.pn_13.BackColor = System.Drawing.Color.White;
             this.pn_13.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.table;
             this.pn_13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -341,11 +434,12 @@
             this.pn_13.Controls.Add(this.cus13_3);
             this.pn_13.Controls.Add(this.cus13_2);
             this.pn_13.Controls.Add(this.cus13_1);
-            this.pn_13.Location = new System.Drawing.Point(444, 460);
+            this.pn_13.Location = new System.Drawing.Point(703, 475);
             this.pn_13.Name = "pn_13";
             this.pn_13.Size = new System.Drawing.Size(200, 180);
             this.pn_13.TabIndex = 16;
             this.pn_13.Click += new System.EventHandler(this.pn_Click);
+            this.pn_13.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
             // 
             // label13
             // 
@@ -401,6 +495,7 @@
             // 
             // pn_12
             // 
+            this.pn_12.BackColor = System.Drawing.Color.White;
             this.pn_12.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.table;
             this.pn_12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -409,11 +504,12 @@
             this.pn_12.Controls.Add(this.cus12_3);
             this.pn_12.Controls.Add(this.cus12_2);
             this.pn_12.Controls.Add(this.cus12_1);
-            this.pn_12.Location = new System.Drawing.Point(230, 460);
+            this.pn_12.Location = new System.Drawing.Point(489, 475);
             this.pn_12.Name = "pn_12";
             this.pn_12.Size = new System.Drawing.Size(200, 180);
             this.pn_12.TabIndex = 15;
             this.pn_12.Click += new System.EventHandler(this.pn_Click);
+            this.pn_12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
             // 
             // label14
             // 
@@ -469,6 +565,7 @@
             // 
             // pn_11
             // 
+            this.pn_11.BackColor = System.Drawing.Color.White;
             this.pn_11.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.table;
             this.pn_11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -477,11 +574,12 @@
             this.pn_11.Controls.Add(this.cus11_3);
             this.pn_11.Controls.Add(this.cus11_2);
             this.pn_11.Controls.Add(this.cus11_1);
-            this.pn_11.Location = new System.Drawing.Point(15, 460);
+            this.pn_11.Location = new System.Drawing.Point(274, 475);
             this.pn_11.Name = "pn_11";
             this.pn_11.Size = new System.Drawing.Size(200, 180);
             this.pn_11.TabIndex = 14;
             this.pn_11.Click += new System.EventHandler(this.pn_Click);
+            this.pn_11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
             // 
             // label15
             // 
@@ -537,6 +635,7 @@
             // 
             // pn_10
             // 
+            this.pn_10.BackColor = System.Drawing.Color.White;
             this.pn_10.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.table;
             this.pn_10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -545,11 +644,12 @@
             this.pn_10.Controls.Add(this.cus10_3);
             this.pn_10.Controls.Add(this.cus10_2);
             this.pn_10.Controls.Add(this.cus10_1);
-            this.pn_10.Location = new System.Drawing.Point(875, 260);
+            this.pn_10.Location = new System.Drawing.Point(1134, 275);
             this.pn_10.Name = "pn_10";
             this.pn_10.Size = new System.Drawing.Size(200, 180);
             this.pn_10.TabIndex = 13;
             this.pn_10.Click += new System.EventHandler(this.pn_Click);
+            this.pn_10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
             // 
             // label6
             // 
@@ -605,6 +705,7 @@
             // 
             // pn_5
             // 
+            this.pn_5.BackColor = System.Drawing.Color.White;
             this.pn_5.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.table;
             this.pn_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -613,11 +714,12 @@
             this.pn_5.Controls.Add(this.cus5_3);
             this.pn_5.Controls.Add(this.cus5_2);
             this.pn_5.Controls.Add(this.cus5_1);
-            this.pn_5.Location = new System.Drawing.Point(875, 61);
+            this.pn_5.Location = new System.Drawing.Point(1134, 76);
             this.pn_5.Name = "pn_5";
             this.pn_5.Size = new System.Drawing.Size(200, 180);
             this.pn_5.TabIndex = 8;
             this.pn_5.Click += new System.EventHandler(this.pn_Click);
+            this.pn_5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
             // 
             // label5
             // 
@@ -673,6 +775,7 @@
             // 
             // pn_9
             // 
+            this.pn_9.BackColor = System.Drawing.Color.White;
             this.pn_9.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.table;
             this.pn_9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -681,11 +784,12 @@
             this.pn_9.Controls.Add(this.cus9_3);
             this.pn_9.Controls.Add(this.cus9_2);
             this.pn_9.Controls.Add(this.cus9_1);
-            this.pn_9.Location = new System.Drawing.Point(660, 260);
+            this.pn_9.Location = new System.Drawing.Point(919, 275);
             this.pn_9.Name = "pn_9";
             this.pn_9.Size = new System.Drawing.Size(200, 180);
             this.pn_9.TabIndex = 12;
             this.pn_9.Click += new System.EventHandler(this.pn_Click);
+            this.pn_9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
             // 
             // label7
             // 
@@ -741,6 +845,7 @@
             // 
             // pn_4
             // 
+            this.pn_4.BackColor = System.Drawing.Color.White;
             this.pn_4.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.table;
             this.pn_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -749,11 +854,12 @@
             this.pn_4.Controls.Add(this.cus4_3);
             this.pn_4.Controls.Add(this.cus4_2);
             this.pn_4.Controls.Add(this.cus4_1);
-            this.pn_4.Location = new System.Drawing.Point(660, 61);
+            this.pn_4.Location = new System.Drawing.Point(919, 76);
             this.pn_4.Name = "pn_4";
             this.pn_4.Size = new System.Drawing.Size(200, 180);
             this.pn_4.TabIndex = 7;
             this.pn_4.Click += new System.EventHandler(this.pn_Click);
+            this.pn_4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
             // 
             // label3
             // 
@@ -809,6 +915,7 @@
             // 
             // pn_8
             // 
+            this.pn_8.BackColor = System.Drawing.Color.White;
             this.pn_8.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.table;
             this.pn_8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -817,11 +924,12 @@
             this.pn_8.Controls.Add(this.cus8_3);
             this.pn_8.Controls.Add(this.cus8_2);
             this.pn_8.Controls.Add(this.cus8_1);
-            this.pn_8.Location = new System.Drawing.Point(444, 260);
+            this.pn_8.Location = new System.Drawing.Point(703, 275);
             this.pn_8.Name = "pn_8";
             this.pn_8.Size = new System.Drawing.Size(200, 180);
             this.pn_8.TabIndex = 11;
             this.pn_8.Click += new System.EventHandler(this.pn_Click);
+            this.pn_8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
             // 
             // label8
             // 
@@ -877,6 +985,7 @@
             // 
             // pn_3
             // 
+            this.pn_3.BackColor = System.Drawing.Color.White;
             this.pn_3.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.table;
             this.pn_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -885,11 +994,12 @@
             this.pn_3.Controls.Add(this.cus3_3);
             this.pn_3.Controls.Add(this.cus3_2);
             this.pn_3.Controls.Add(this.cus3_1);
-            this.pn_3.Location = new System.Drawing.Point(445, 61);
+            this.pn_3.Location = new System.Drawing.Point(704, 76);
             this.pn_3.Name = "pn_3";
             this.pn_3.Size = new System.Drawing.Size(200, 180);
             this.pn_3.TabIndex = 6;
             this.pn_3.Click += new System.EventHandler(this.pn_Click);
+            this.pn_3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
             // 
             // label4
             // 
@@ -945,6 +1055,7 @@
             // 
             // pn_7
             // 
+            this.pn_7.BackColor = System.Drawing.Color.White;
             this.pn_7.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.table;
             this.pn_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -953,11 +1064,12 @@
             this.pn_7.Controls.Add(this.cus7_3);
             this.pn_7.Controls.Add(this.cus7_2);
             this.pn_7.Controls.Add(this.cus7_1);
-            this.pn_7.Location = new System.Drawing.Point(230, 260);
+            this.pn_7.Location = new System.Drawing.Point(489, 275);
             this.pn_7.Name = "pn_7";
             this.pn_7.Size = new System.Drawing.Size(200, 180);
             this.pn_7.TabIndex = 10;
             this.pn_7.Click += new System.EventHandler(this.pn_Click);
+            this.pn_7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
             // 
             // label9
             // 
@@ -1013,6 +1125,7 @@
             // 
             // pn_2
             // 
+            this.pn_2.BackColor = System.Drawing.Color.White;
             this.pn_2.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.table;
             this.pn_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -1021,11 +1134,12 @@
             this.pn_2.Controls.Add(this.cus2_3);
             this.pn_2.Controls.Add(this.cus2_2);
             this.pn_2.Controls.Add(this.cus2_1);
-            this.pn_2.Location = new System.Drawing.Point(230, 61);
+            this.pn_2.Location = new System.Drawing.Point(489, 76);
             this.pn_2.Name = "pn_2";
             this.pn_2.Size = new System.Drawing.Size(200, 180);
             this.pn_2.TabIndex = 5;
             this.pn_2.Click += new System.EventHandler(this.pn_Click);
+            this.pn_2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
             // 
             // label2
             // 
@@ -1081,6 +1195,7 @@
             // 
             // pn_6
             // 
+            this.pn_6.BackColor = System.Drawing.Color.White;
             this.pn_6.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.table;
             this.pn_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -1089,11 +1204,12 @@
             this.pn_6.Controls.Add(this.cus6_3);
             this.pn_6.Controls.Add(this.cus6_2);
             this.pn_6.Controls.Add(this.cus6_1);
-            this.pn_6.Location = new System.Drawing.Point(15, 260);
+            this.pn_6.Location = new System.Drawing.Point(274, 275);
             this.pn_6.Name = "pn_6";
             this.pn_6.Size = new System.Drawing.Size(200, 180);
             this.pn_6.TabIndex = 9;
             this.pn_6.Click += new System.EventHandler(this.pn_Click);
+            this.pn_6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
             // 
             // label10
             // 
@@ -1149,6 +1265,7 @@
             // 
             // pn_1
             // 
+            this.pn_1.BackColor = System.Drawing.Color.White;
             this.pn_1.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.table;
             this.pn_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pn_1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -1157,11 +1274,12 @@
             this.pn_1.Controls.Add(this.cus1_3);
             this.pn_1.Controls.Add(this.cus1_2);
             this.pn_1.Controls.Add(this.cus1_1);
-            this.pn_1.Location = new System.Drawing.Point(15, 61);
+            this.pn_1.Location = new System.Drawing.Point(274, 76);
             this.pn_1.Name = "pn_1";
             this.pn_1.Size = new System.Drawing.Size(200, 180);
             this.pn_1.TabIndex = 0;
             this.pn_1.Click += new System.EventHandler(this.pn_Click);
+            this.pn_1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
             // 
             // label1
             // 
@@ -1215,11 +1333,41 @@
             this.cus1_1.TabIndex = 0;
             this.cus1_1.TabStop = false;
             // 
+            // lb_clock
+            // 
+            this.lb_clock.AutoSize = true;
+            this.lb_clock.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_clock.Location = new System.Drawing.Point(1190, 24);
+            this.lb_clock.Name = "lb_clock";
+            this.lb_clock.Size = new System.Drawing.Size(144, 29);
+            this.lb_clock.TabIndex = 23;
+            this.lb_clock.Text = "00:00:00 AM";
+            // 
+            // timer_Clock
+            // 
+            this.timer_Clock.Interval = 1000;
+            this.timer_Clock.Tick += new System.EventHandler(this.timer_Clock_Tick);
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(27, 76);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(219, 379);
+            this.panel1.TabIndex = 24;
+            // 
             // WorkStation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1090, 700);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1366, 720);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lb_clock);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.bt_checkOUT);
             this.Controls.Add(this.pn_15);
             this.Controls.Add(this.pn_14);
             this.Controls.Add(this.pn_13);
@@ -1239,6 +1387,10 @@
             this.Name = "WorkStation";
             this.Text = "WorkStation";
             this.Load += new System.EventHandler(this.WorkStation_Load);
+            this.option.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pn_15.ResumeLayout(false);
             this.pn_15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cus15_4)).EndInit();
@@ -1330,6 +1482,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cus1_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cus1_1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1425,5 +1578,16 @@
         private System.Windows.Forms.PictureBox cus11_3;
         private System.Windows.Forms.PictureBox cus11_2;
         private System.Windows.Forms.PictureBox cus11_1;
+        private System.Windows.Forms.ContextMenuStrip option;
+        private System.Windows.Forms.ToolStripMenuItem newOrder;
+        private System.Windows.Forms.ToolStripMenuItem exportReceipt;
+        private System.Windows.Forms.ToolStripMenuItem removeTable;
+        private System.Windows.Forms.Button bt_checkOUT;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label lb_clock;
+        private System.Windows.Forms.Timer timer_Clock;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -10,7 +10,7 @@ namespace WinFormsRestaurant
 {
     internal class DB_Class
     {
-        SqlConnection con = new SqlConnection(@"Data Source=MIKYKL\SQLEXPRESS01;Initial Catalog=WinFormRestaurant;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        SqlConnection con = new SqlConnection(@"Data Source=LOKI;Initial Catalog=WinFormRestaurant;Integrated Security=True;Connect Timeout=30;Encrypt=False");
 
         // get the connection
         public SqlConnection getConnection
