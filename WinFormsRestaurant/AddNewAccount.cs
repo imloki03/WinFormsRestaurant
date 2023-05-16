@@ -119,7 +119,7 @@ namespace WinFormsRestaurant
                 }
 
                 int duplicateCount = 0;
-                string fileName = tb_name.Text;
+                string fileName = StaticVars_Class.username;
                 string fileExtension = ".png";
                 string newFileName = fileName;
 
@@ -190,6 +190,10 @@ namespace WinFormsRestaurant
             device.Stop();
         }
 
+        private void bt_add_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     
