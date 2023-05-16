@@ -15,12 +15,12 @@ namespace WinFormsRestaurant
         static void Main()
         {
             Methods methods = new Methods();
-            methods.scheduleShift(5);
+            //methods.scheduleShift(5);
             Employee_Class employee = new Employee_Class();
             //MessageBox.Show("" + employee.getEmID(2));
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login);
+            Application.Run(new Login());
         }
     }
 }
