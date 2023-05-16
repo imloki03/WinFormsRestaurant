@@ -29,42 +29,40 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.chart_salary = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_salary)).BeginInit();
             this.SuspendLayout();
             // 
-            // chart1
+            // chart_salary
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(44, 27);
-            this.chart1.Name = "chart1";
+            this.chart_salary.ChartAreas.Add(chartArea1);
+            this.chart_salary.Location = new System.Drawing.Point(3, 27);
+            this.chart_salary.Name = "chart_salary";
             series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
+            series1.LabelAngle = 90;
             series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(970, 500);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.chart_salary.Series.Add(series1);
+            this.chart_salary.Size = new System.Drawing.Size(1049, 500);
+            this.chart_salary.TabIndex = 0;
+            this.chart_salary.Text = "chart1";
             // 
             // SalaryStatics
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1052, 553);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.chart_salary);
             this.Name = "SalaryStatics";
             this.Text = "SalaryStatics";
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.Load += new System.EventHandler(this.SalaryStatics_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.chart_salary)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart_salary;
     }
 }
