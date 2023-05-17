@@ -20,6 +20,7 @@ namespace WinFormsRestaurant
         DB_Class db = new DB_Class();
         bool leftMouse = true;
         public static int guest;
+        public DataTable[] orderList = new DataTable[20];
         private void WorkStation_Load(object sender, EventArgs e)
         {
             timer_Clock.Start();
@@ -100,6 +101,7 @@ namespace WinFormsRestaurant
                         Order order = new Order();   /// mo form order
                         if (order.ShowDialog() == DialogResult.OK)
                         {
+                            orderList[num] = Order.order;
                             for (int i=1;i<=guest;i++)
                             {
                                 PictureBox pic = (PictureBox)panel.Controls["cus" + num + "_" + i];
@@ -154,6 +156,7 @@ namespace WinFormsRestaurant
                 Order order = new Order();   /// mo form order
                 if (order.ShowDialog() == DialogResult.OK)
                 {
+                    orderList[num] = Order.order;
                     for (int i = 1; i <= guest; i++)
                     {
                         PictureBox pic = (PictureBox)panel.Controls["cus" + num + "_" + i];
