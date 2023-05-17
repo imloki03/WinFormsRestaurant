@@ -18,12 +18,13 @@ namespace WinFormsRestaurant
         }
         public static DataTable food_Order;
         public static DataTable drink_Order;
+        public static DataTable order;
         private void bt_select_Click(object sender, EventArgs e)
         {
             SelectDishes selectDishes = new SelectDishes();
             if (selectDishes.ShowDialog() == DialogResult.OK)
             {
-                DataTable order = food_Order;
+                order = food_Order;
                 order.Merge(drink_Order);
                 for (int i = 0; i < order.Rows.Count; i++)
                 {
@@ -33,6 +34,7 @@ namespace WinFormsRestaurant
                     }
                 }
                 order.AcceptChanges();
+
                 list_dishes.DataSource = order;
                 list_dishes.Columns[0].Visible = false;
                 list_dishes.Columns[1].HeaderText = "Dish";
