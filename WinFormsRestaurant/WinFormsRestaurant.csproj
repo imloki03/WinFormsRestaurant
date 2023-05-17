@@ -151,6 +151,7 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard_Class.cs" />
     <Compile Include="DB_Class.cs" />
     <Compile Include="EditAccount.cs">
       <SubType>Form</SubType>

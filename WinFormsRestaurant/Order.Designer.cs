@@ -76,6 +76,7 @@
             // 
             // list_dishes
             // 
+            this.list_dishes.AllowUserToAddRows = false;
             this.list_dishes.AllowUserToDeleteRows = false;
             this.list_dishes.AllowUserToResizeColumns = false;
             this.list_dishes.AllowUserToResizeRows = false;
@@ -133,6 +134,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Order";
             this.Text = "Order";
+            this.Load += new System.EventHandler(this.Order_Load);
             ((System.ComponentModel.ISupportInitialize)(this.list_dishes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -142,12 +144,12 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lb_table;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tb_amountOfDiner;
         private System.Windows.Forms.DataGridView list_dishes;
         private System.Windows.Forms.Button bt_select;
         private System.Windows.Forms.Button bt_order;
         private System.Windows.Forms.Button bt_cancel;
+        public System.Windows.Forms.Label lb_table;
     }
 }

@@ -31,6 +31,7 @@
             this.pic_picture = new System.Windows.Forms.PictureBox();
             this.bt_upload = new System.Windows.Forms.Button();
             this.bt_update = new System.Windows.Forms.Button();
+            this.tb_id = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_picture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,11 +63,19 @@
             this.bt_update.UseVisualStyleBackColor = true;
             this.bt_update.Click += new System.EventHandler(this.bt_update_Click);
             // 
+            // tb_id
+            // 
+            this.tb_id.Location = new System.Drawing.Point(161, 48);
+            this.tb_id.Name = "tb_id";
+            this.tb_id.Size = new System.Drawing.Size(113, 20);
+            this.tb_id.TabIndex = 3;
+            // 
             // _0_Temp_addDish
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(606, 450);
+            this.Controls.Add(this.tb_id);
             this.Controls.Add(this.bt_update);
             this.Controls.Add(this.bt_upload);
             this.Controls.Add(this.pic_picture);
@@ -74,6 +83,7 @@
             this.Text = "_0_Temp_addDish";
             ((System.ComponentModel.ISupportInitialize)(this.pic_picture)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -82,5 +92,6 @@
         private System.Windows.Forms.PictureBox pic_picture;
         private System.Windows.Forms.Button bt_upload;
         private System.Windows.Forms.Button bt_update;
+        private System.Windows.Forms.TextBox tb_id;
     }
 }

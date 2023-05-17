@@ -28,17 +28,38 @@ namespace WinFormsRestaurant
         {
             currentButton = bt_food;
             ShiftButtonClickUI(currentButton);
-            bt_food.Invoke(new MethodInvoker(()=>bt_food_Click(bt_food, new EventArgs())));
 
             SqlCommand cmd = new SqlCommand("select dishID, name from Dishes where dishID like '%Food%'", db.getConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(food);
             food.Columns.Add(new DataColumn("num", typeof(int)));
+            food.Columns.Add(new DataColumn("max", typeof(int)));
+            foreach (DataRow row in food.Rows)
+            {
+                row[3] = getMaxDish(row[0].ToString());
+            }
 
             cmd = new SqlCommand("select dishID, name from Dishes where dishID like '%Drink%'", db.getConnection);
             adapter = new SqlDataAdapter(cmd);
             adapter.Fill(drink);
             drink.Columns.Add(new DataColumn("num", typeof(int)));
+            drink.Columns.Add(new DataColumn("max", typeof(int)));
+            foreach (DataRow row in drink.Rows)
+            {
+                row[3] = getMaxDish(row[0].ToString());
+            }
+
+            bt_food.Invoke(new MethodInvoker(()=>bt_food_Click(bt_food, new EventArgs())));
+
+        }
+        public int getMaxDish(string id)
+        {
+            SqlCommand cmd = new SqlCommand("select min(Q.num) from (SELECT (i.quantity/r.quantity) as num FROM Dishes d, Recipe r, Ingredient i WHERE d.recipeID= r.recipeID AND r.ingredientID=i.ingredientID AND d.dishID = @id) Q", db.getConnection);
+            cmd.Parameters.Add("@id", System.Data.SqlDbType.NVarChar).Value = id;
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return int.Parse(table.Rows[0][0].ToString());
         }
         public Panel createPanel(string PanelName, string dishName, MemoryStream pic)
         {
@@ -93,13 +114,17 @@ namespace WinFormsRestaurant
             Label lb_number = new Label();
             lb_number.Name = "lb_num_" + num;
             panel.Controls.Add(lb_number);
-            lb_number.Text = "0";
+            if (currentButton == bt_food)
+                lb_number.Text = food.Rows[num - 1][2].ToString();
+            else
+                lb_number.Text = drink.Rows[num - 1][2].ToString();
+            if (lb_number.Text == "")
+                lb_number.Text = "0";
             lb_number.Size = new Size(180, 40);
             lb_number.Location = new Point(0, 128);
             lb_number.Font = new Font("Microsoft Sans Serif", 16, FontStyle.Bold);
             lb_number.TextAlign = ContentAlignment.MiddleCenter;
 
-            //panel.Click += panel_Click;
             return panel;
         }
         private void subtract_Click(object sender, EventArgs e)
@@ -119,7 +144,8 @@ namespace WinFormsRestaurant
                 ((Button)sender).Enabled = false;
             else
                 ((Button)sender).Enabled = true;
-            //set up for Add Button
+            Button button = (Button)panel.Controls["bt_a_" + num];
+            button.Enabled = true;
         }
         private void add_Click(object sender, EventArgs e)
         {
@@ -131,13 +157,24 @@ namespace WinFormsRestaurant
             int n = int.Parse(label.Text);
             n++;
             label.Text = n + "";
+            int max;
             if (currentButton == bt_food)
+            {
                 food.Rows[num - 1][2] = n;
+                max = (int)food.Rows[num - 1][3];
+            }
             else
+            {
                 drink.Rows[num - 1][2] = n;
+                max = (int)drink.Rows[num - 1][3];
+            }
+
+            if (n >= max)
+                ((Button)sender).Enabled = false;
+            else
+                ((Button)sender).Enabled = true;
             Button button = (Button)panel.Controls["bt_s_" + num];
             button.Enabled = true;
-            //set up for Add Button
         }
         private void panel_Click(object sender, EventArgs e)
         {
@@ -189,6 +226,8 @@ namespace WinFormsRestaurant
 
         private void bt_order_Click(object sender, EventArgs e)
         {
+            food.Columns.RemoveAt(3);
+            drink.Columns.RemoveAt(3);
             Order.food_Order = food;
             Order.drink_Order = drink;
             this.DialogResult = DialogResult.OK;

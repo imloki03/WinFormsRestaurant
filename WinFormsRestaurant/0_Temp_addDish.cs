@@ -32,10 +32,11 @@ namespace WinFormsRestaurant
         DB_Class db = new DB_Class();   
         private void bt_update_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("UPDATE Dishes SET picture=@pic", db.getConnection);
+            SqlCommand cmd = new SqlCommand("UPDATE Dishes SET picture=@pic where dishID=@id", db.getConnection);
             MemoryStream pic = new MemoryStream();
             pic_picture.Image.Save(pic, pic_picture.Image.RawFormat);
             cmd.Parameters.Add("@pic", System.Data.SqlDbType.Image).Value = pic.ToArray();
+            cmd.Parameters.Add("@id", System.Data.SqlDbType.NVarChar).Value = tb_id.Text;
             db.openConnection();
             cmd.ExecuteNonQuery();
             db.closeConnection();
