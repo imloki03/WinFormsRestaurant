@@ -22,6 +22,26 @@ namespace WinFormsRestaurant
             return table;
         }
 
+        public string getCheckin()
+        {
+            SqlCommand cmd = new SqlCommand("SELECT w.Checkin FROM WorkSchedule w, Shifts s, Employee e WHERE w.ShiftID = s.ShiftID AND w.EmployeeID = e.EmployeeID  AND w.EmployeeID = @eid AND s.Date = @today AND s.Shift = '" + StaticVars_Class.shifttime + "'", dB.getConnection);
+            cmd.Parameters.Add("@eid", SqlDbType.NVarChar).Value = StaticVars_Class.emID;
+            cmd.Parameters.Add("@today", SqlDbType.Date).Value = DateTime.Now.Date;
+            DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(table);
+            return table.Rows[0][0].ToString();
+        }
+        public string getCheckout()
+        {
+            SqlCommand cmd = new SqlCommand("SELECT w.Checkout FROM WorkSchedule w, Shifts s, Employee e WHERE w.ShiftID = s.ShiftID AND w.EmployeeID = e.EmployeeID  AND w.EmployeeID = @eid AND s.Date = @today AND s.Shift = '" + StaticVars_Class.shifttime + "'", dB.getConnection);
+            cmd.Parameters.Add("@eid", SqlDbType.NVarChar).Value = StaticVars_Class.emID;
+            cmd.Parameters.Add("@today", SqlDbType.Date).Value = DateTime.Now.Date;
+            DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(table);
+            return table.Rows[0][0].ToString();
+        }
         public bool checkhaveWorkSchedule()
         {
             SqlCommand cmd = new SqlCommand("SELECT * FROM WorkSchedule w, Shifts s, Employee e WHERE w.ShiftID = s.ShiftID AND w.EmployeeID = e.EmployeeID  AND w.EmployeeID = @eid AND s.Date = @today AND s.Shift = '" + StaticVars_Class.shifttime + "'", dB.getConnection);
@@ -59,12 +79,12 @@ namespace WinFormsRestaurant
             cmd.Parameters.Add("@eid", SqlDbType.NVarChar).Value = StaticVars_Class.emID;
             cmd.Parameters.Add("@today", SqlDbType.Date).Value = DateTime.Now.Date;
             cmd.Parameters.Add("@now", SqlDbType.DateTime).Value = DateTime.Now;
-            if (cmd.ExecuteNonQuery()==1)
-             MessageBox.Show("Check-in Succesfully");
+            dB.openConnection();
+            if (cmd.ExecuteNonQuery() == 1)
+                MessageBox.Show("Check-in Successfully");
             else
-            {
-                MessageBox.Show("Check-in Failed");
-            }
+                MessageBox.Show("Check-in Unsuccessfully!!!");
+            dB.closeConnection();
         }
 
         public void checkOut()
@@ -73,12 +93,12 @@ namespace WinFormsRestaurant
             cmd.Parameters.Add("@eid", SqlDbType.NVarChar).Value = StaticVars_Class.emID;
             cmd.Parameters.Add("@today", SqlDbType.Date).Value = DateTime.Now.Date;
             cmd.Parameters.Add("@now", SqlDbType.DateTime).Value = DateTime.Now;
+            dB.openConnection();
             if (cmd.ExecuteNonQuery() == 1)
-                MessageBox.Show("Check-out Succesfully");
+                MessageBox.Show("Check-in Successfully");
             else
-            {
-                MessageBox.Show("Check-out Failed");
-            }
+                MessageBox.Show("Check-in Unsuccessfully!!!");
+            dB.closeConnection();
         }
 
     }

@@ -68,7 +68,6 @@ namespace WinFormsRestaurant
                     status.scheduled++;
             }
             return status;
-
         }
         public DataTable getShiftStatics()
         {

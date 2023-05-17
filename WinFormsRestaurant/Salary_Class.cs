@@ -23,17 +23,18 @@ namespace WinFormsRestaurant
                 tb.Columns.Add(new DataColumn());
             for (int i = 0; i < table.Rows.Count; i++)
                 tb.Rows.Add(tb.NewRow());
+            DateTime now = DateTime.Now;
             for (int i = 0; i < table.Rows.Count; i++)
             {
                 tb.Rows[i][0] = table.Rows[i][0];
                 tb.Rows[i][1] = table.Rows[i][1];
                 tb.Rows[i][2] = getTimeWorking(table.Rows[i][0].ToString());
-                tb.Rows[i][3] = getTotalTimeWorking(table.Rows[i][0].ToString(), DateTime.Now);
-                tb.Rows[i][4] = salaryByTimeWorking(getTotalTimeWorking(table.Rows[i][0].ToString(), DateTime.Now));
-                tb.Rows[i][5] = fine(table.Rows[i][0].ToString(), DateTime.Now);
-                tb.Rows[i][6] = temporarySalary(table.Rows[i][0].ToString(), DateTime.Now);
-                if (actuallyReceivedSalary(table.Rows[i][0].ToString(), DateTime.Now) != 0)
-                    tb.Rows[i][7] = actuallyReceivedSalary(table.Rows[i][0].ToString(), DateTime.Now);
+                tb.Rows[i][3] = getTotalTimeWorking(table.Rows[i][0].ToString(), now);
+                tb.Rows[i][4] = salaryByTimeWorking(getTotalTimeWorking(table.Rows[i][0].ToString(), now));
+                tb.Rows[i][5] = fine(table.Rows[i][0].ToString(), now);
+                tb.Rows[i][6] = temporarySalary(table.Rows[i][0].ToString(), now);
+                if (actuallyReceivedSalary(table.Rows[i][0].ToString(), now) != 0)
+                    tb.Rows[i][7] = actuallyReceivedSalary(table.Rows[i][0].ToString(), now);
             }
             return tb;
         }

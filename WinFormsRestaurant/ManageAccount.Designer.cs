@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pn_manageAccount = new System.Windows.Forms.Panel();
             this.list_account = new System.Windows.Forms.DataGridView();
             this.bt_delete = new System.Windows.Forms.Button();
@@ -52,8 +52,9 @@
             this.pn_manageAccount.Controls.Add(this.tb_search);
             this.pn_manageAccount.Controls.Add(this.label1);
             this.pn_manageAccount.Location = new System.Drawing.Point(1, -1);
+            this.pn_manageAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pn_manageAccount.Name = "pn_manageAccount";
-            this.pn_manageAccount.Size = new System.Drawing.Size(1073, 664);
+            this.pn_manageAccount.Size = new System.Drawing.Size(1431, 817);
             this.pn_manageAccount.TabIndex = 0;
             // 
             // list_account
@@ -63,43 +64,48 @@
             this.list_account.AllowUserToResizeColumns = false;
             this.list_account.AllowUserToResizeRows = false;
             this.list_account.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.list_account.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.list_account.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.list_account.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.list_account.DefaultCellStyle = dataGridViewCellStyle4;
-            this.list_account.Location = new System.Drawing.Point(38, 94);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.list_account.DefaultCellStyle = dataGridViewCellStyle2;
+            this.list_account.Location = new System.Drawing.Point(51, 116);
+            this.list_account.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.list_account.Name = "list_account";
             this.list_account.RowHeadersVisible = false;
-            this.list_account.Size = new System.Drawing.Size(823, 532);
+            this.list_account.RowHeadersWidth = 51;
+            this.list_account.Size = new System.Drawing.Size(1097, 655);
             this.list_account.TabIndex = 14;
             // 
             // bt_delete
             // 
-            this.bt_delete.Location = new System.Drawing.Point(881, 188);
+            this.bt_delete.Location = new System.Drawing.Point(1175, 231);
+            this.bt_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bt_delete.Name = "bt_delete";
-            this.bt_delete.Size = new System.Drawing.Size(115, 41);
+            this.bt_delete.Size = new System.Drawing.Size(153, 50);
             this.bt_delete.TabIndex = 13;
             this.bt_delete.Text = "Delete";
             this.bt_delete.UseVisualStyleBackColor = true;
+            this.bt_delete.Click += new System.EventHandler(this.bt_delete_Click);
             // 
             // bt_edit
             // 
-            this.bt_edit.Location = new System.Drawing.Point(881, 141);
+            this.bt_edit.Location = new System.Drawing.Point(1175, 174);
+            this.bt_edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bt_edit.Name = "bt_edit";
-            this.bt_edit.Size = new System.Drawing.Size(115, 41);
+            this.bt_edit.Size = new System.Drawing.Size(153, 50);
             this.bt_edit.TabIndex = 12;
             this.bt_edit.Text = "Edit";
             this.bt_edit.UseVisualStyleBackColor = true;
@@ -107,9 +113,10 @@
             // 
             // bt_add
             // 
-            this.bt_add.Location = new System.Drawing.Point(881, 94);
+            this.bt_add.Location = new System.Drawing.Point(1175, 116);
+            this.bt_add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bt_add.Name = "bt_add";
-            this.bt_add.Size = new System.Drawing.Size(115, 41);
+            this.bt_add.Size = new System.Drawing.Size(153, 50);
             this.bt_add.TabIndex = 11;
             this.bt_add.Text = "Add";
             this.bt_add.UseVisualStyleBackColor = true;
@@ -117,9 +124,10 @@
             // 
             // bt_search
             // 
-            this.bt_search.Location = new System.Drawing.Point(770, 47);
+            this.bt_search.Location = new System.Drawing.Point(1027, 58);
+            this.bt_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bt_search.Name = "bt_search";
-            this.bt_search.Size = new System.Drawing.Size(91, 32);
+            this.bt_search.Size = new System.Drawing.Size(121, 39);
             this.bt_search.TabIndex = 9;
             this.bt_search.Text = "Search";
             this.bt_search.UseVisualStyleBackColor = true;
@@ -127,30 +135,33 @@
             // 
             // tb_search
             // 
-            this.tb_search.Location = new System.Drawing.Point(39, 52);
+            this.tb_search.Location = new System.Drawing.Point(52, 64);
+            this.tb_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_search.Multiline = true;
             this.tb_search.Name = "tb_search";
-            this.tb_search.Size = new System.Drawing.Size(725, 22);
+            this.tb_search.Size = new System.Drawing.Size(965, 26);
             this.tb_search.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(35, 29);
+            this.label1.Location = new System.Drawing.Point(47, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 18);
+            this.label1.Size = new System.Drawing.Size(150, 24);
             this.label1.TabIndex = 7;
             this.label1.Text = "Search Account:";
             // 
             // ManageAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1074, 661);
+            this.ClientSize = new System.Drawing.Size(1429, 804);
             this.Controls.Add(this.pn_manageAccount);
-            this.MaximumSize = new System.Drawing.Size(1090, 700);
-            this.MinimumSize = new System.Drawing.Size(1090, 700);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(1447, 851);
+            this.MinimumSize = new System.Drawing.Size(1447, 851);
             this.Name = "ManageAccount";
             this.Text = "ManageAccount";
             this.Load += new System.EventHandler(this.ManageAccount_Load);

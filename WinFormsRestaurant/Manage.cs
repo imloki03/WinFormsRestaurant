@@ -41,5 +41,10 @@ namespace WinFormsRestaurant
         {
             methods.fillPanel(pn_main, new Statics(), 1);
         }
+
+        private void Manage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

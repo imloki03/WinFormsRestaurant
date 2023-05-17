@@ -33,11 +33,20 @@ namespace WinFormsRestaurant
             string password = tb_password.Text; 
             if (login.checklogin(user,password))
             { 
-                OverView overView = new OverView();
                 StaticVars_Class.username = user;
                 StaticVars_Class.emID = em.whatEmIDByAcc(user);
                 StaticVars_Class.shifttime = shift.whatshiftnow();
-                overView.Show(this);
+
+                if (em.getEmjob(StaticVars_Class.emID) == "Employee")
+                {
+                    OverView overView = new OverView();
+                    overView.Show(this);
+                }
+                else
+                {
+                    Manage manage = new Manage();
+                    manage.Show(this);
+                }
             }
             else
                 MessageBox.Show("Ivalid Username or Password","Login",MessageBoxButtons.OK,MessageBoxIcon.Error);

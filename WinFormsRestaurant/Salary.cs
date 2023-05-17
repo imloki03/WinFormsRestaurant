@@ -18,7 +18,8 @@ namespace WinFormsRestaurant
         {
             InitializeComponent();
         }
-
+        Salary_Class salary = new Salary_Class();
+        WorkSchedule_Class workSchedule = new WorkSchedule_Class();
         private void Salary_Load(object sender, EventArgs e)
         {
             Employee_Class employee = new Employee_Class();
@@ -32,7 +33,7 @@ namespace WinFormsRestaurant
             lb_jobtitle.Text = table_emp.Rows[0]["JobTitle"].ToString();
             //byte[] imageData = (byte[])table_emp.Rows[0]["Picture"];
             //Bitmap imageBitmap = new Bitmap(new MemoryStream(imageData));
-            //overView.pb_avatar.Image = imageBitmap;
+            //pb_avatar.Image = imageBitmap;
             bool gender = Convert.ToBoolean(table_emp.Rows[0]["Gender"]);
 
             if (gender)
@@ -40,7 +41,17 @@ namespace WinFormsRestaurant
             else
                 rb_female.Checked = true;
 
-            
+            DataTable salarytable = salary.getSalarySummary(new SqlCommand("SELECT EmployeeID, Name FROM Employee WHERE EmployeeID = '" + StaticVars_Class.emID + "'"));
+          
+
+            lb_workdate.Text = "Work Date: " + DateTime.Now.Date;
+            lb_checkin.Text = "Check-in: " + workSchedule.getCheckin();
+            lb_checkout.Text = "Check-out: " + workSchedule.getCheckout();
+            lb_worktime.Text = "Work Time: " + salarytable.Rows[0][2];
+            lb_salarybytime.Text = "Salary By Time: " + salarytable.Rows[0][4];
+            lb_penalty.Text = "Penalty: " + salarytable.Rows[0][5];
+            lb_stemp.Text = "Temporay Calculate: " + salarytable.Rows[0][6];
+            lb_rsalary.Text = "Total: " + salarytable.Rows[0][7];
         }
     }
 }
