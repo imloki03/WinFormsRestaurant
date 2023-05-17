@@ -19,6 +19,7 @@ namespace WinFormsRestaurant
         }
         DB_Class db = new DB_Class();
         bool leftMouse = true;
+        public static int guest;
         private void WorkStation_Load(object sender, EventArgs e)
         {
             timer_Clock.Start();
@@ -96,7 +97,15 @@ namespace WinFormsRestaurant
                     PictureBox pictureBox = (PictureBox)panel.Controls["cus" + num + "_" + 1];
                     if (pictureBox.Visible == false)
                     {
-                        MessageBox.Show("order");   /// mo form order
+                        Order order = new Order();   /// mo form order
+                        if (order.ShowDialog() == DialogResult.OK)
+                        {
+                            for (int i=1;i<=guest;i++)
+                            {
+                                PictureBox pic = (PictureBox)panel.Controls["cus" + num + "_" + i];
+                                pic.Visible = true;
+                            }
+                        }
                     }
                     else
                     {
@@ -117,7 +126,7 @@ namespace WinFormsRestaurant
                     {
                         option.Items[0].Visible = false;
                         option.Items[1].Visible = true;
-                        option.Items[2].Enabled = false;
+                        option.Items[2].Visible = false;
                     }
                     option.Show(panel, mouse);
                 }
@@ -140,7 +149,17 @@ namespace WinFormsRestaurant
             option.Close();
             if (e.ClickedItem == newOrder)
             {
-                MessageBox.Show("order");   /// mo form order
+                Panel panel = selectedPanel;
+                int num = int.Parse(panel.Name.Substring(3));
+                Order order = new Order();   /// mo form order
+                if (order.ShowDialog() == DialogResult.OK)
+                {
+                    for (int i = 1; i <= guest; i++)
+                    {
+                        PictureBox pic = (PictureBox)panel.Controls["cus" + num + "_" + i];
+                        pic.Visible = true;
+                    }
+                }
             }
             else
             {
