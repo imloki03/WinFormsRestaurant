@@ -21,6 +21,7 @@ namespace WinFormsRestaurant
         bool leftMouse = true;
         public static int guest;
         public DataTable[] orderList = new DataTable[20];
+        public string[] orderID = new string[20];
         private void WorkStation_Load(object sender, EventArgs e)
         {
             timer_Clock.Start();
@@ -99,9 +100,11 @@ namespace WinFormsRestaurant
                     if (pictureBox.Visible == false)
                     {
                         Order order = new Order();   /// mo form order
+                        order.lb_table.Text=num.ToString();
                         if (order.ShowDialog() == DialogResult.OK)
                         {
                             orderList[num] = Order.order;
+                            orderID[num] = Order.static_orderID;
                             for (int i=1;i<=guest;i++)
                             {
                                 PictureBox pic = (PictureBox)panel.Controls["cus" + num + "_" + i];
@@ -154,6 +157,8 @@ namespace WinFormsRestaurant
                 Panel panel = selectedPanel;
                 int num = int.Parse(panel.Name.Substring(3));
                 Order order = new Order();   /// mo form order
+                orderID[num] = Order.static_orderID;
+                order.lb_table.Text = num.ToString();
                 if (order.ShowDialog() == DialogResult.OK)
                 {
                     orderList[num] = Order.order;

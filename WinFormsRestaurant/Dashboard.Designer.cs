@@ -43,7 +43,7 @@
             this.lb_orders = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pn_totalrevenue = new System.Windows.Forms.Panel();
-            this.lb_dishes = new System.Windows.Forms.Label();
+            this.lb_diners = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lb_revenue = new System.Windows.Forms.Label();
@@ -170,22 +170,22 @@
             // pn_totalrevenue
             // 
             this.pn_totalrevenue.BackColor = System.Drawing.Color.White;
-            this.pn_totalrevenue.Controls.Add(this.lb_dishes);
+            this.pn_totalrevenue.Controls.Add(this.lb_diners);
             this.pn_totalrevenue.Controls.Add(this.label5);
             this.pn_totalrevenue.Location = new System.Drawing.Point(364, 43);
             this.pn_totalrevenue.Name = "pn_totalrevenue";
             this.pn_totalrevenue.Size = new System.Drawing.Size(346, 80);
             this.pn_totalrevenue.TabIndex = 6;
             // 
-            // lb_dishes
+            // lb_diners
             // 
-            this.lb_dishes.AutoSize = true;
-            this.lb_dishes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_dishes.Location = new System.Drawing.Point(57, 35);
-            this.lb_dishes.Name = "lb_dishes";
-            this.lb_dishes.Size = new System.Drawing.Size(67, 25);
-            this.lb_dishes.TabIndex = 3;
-            this.lb_dishes.Text = "10000";
+            this.lb_diners.AutoSize = true;
+            this.lb_diners.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_diners.Location = new System.Drawing.Point(57, 35);
+            this.lb_diners.Name = "lb_diners";
+            this.lb_diners.Size = new System.Drawing.Size(67, 25);
+            this.lb_diners.TabIndex = 3;
+            this.lb_diners.Text = "10000";
             // 
             // label5
             // 
@@ -194,9 +194,9 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label5.Location = new System.Drawing.Point(61, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 13);
+            this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Dishes";
+            this.label5.Text = "Diners";
             // 
             // panel3
             // 
@@ -447,7 +447,7 @@
         private System.Windows.Forms.Label lb_orders;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pn_totalrevenue;
-        private System.Windows.Forms.Label lb_dishes;
+        private System.Windows.Forms.Label lb_diners;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lb_revenue;
