@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pb_logo = new System.Windows.Forms.PictureBox();
             this.pb_avatar = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -255,9 +255,9 @@
             this.dv_workschedule.Margin = new System.Windows.Forms.Padding(4);
             this.dv_workschedule.Name = "dv_workschedule";
             this.dv_workschedule.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Transparent;
-            this.dv_workschedule.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Transparent;
+            this.dv_workschedule.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dv_workschedule.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dv_workschedule.Size = new System.Drawing.Size(949, 209);
             this.dv_workschedule.TabIndex = 19;
@@ -372,6 +372,7 @@
             // 
             // cb_dayRange
             // 
+            this.cb_dayRange.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_dayRange.FormattingEnabled = true;
             this.cb_dayRange.Location = new System.Drawing.Point(740, 262);
             this.cb_dayRange.Margin = new System.Windows.Forms.Padding(4);

@@ -8,6 +8,8 @@ using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -88,7 +90,25 @@ namespace WinFormsRestaurant
                             checkout = ((DateTime)table.Rows[st][3]);
                         if (current.AddDays(i).Date<DateTime.Now.Date)
                         {
-                            if (checkin == DateTime.MinValue)
+                            if (checkin == DateTime.MinValue || checkout ==  DateTime.MinValue)
+                            {
+                                dv_workschedule.Rows[j].Cells[i].Style.BackColor = colors[3];
+                            }
+                            else
+                            {
+                                if ((checkout - checkin).TotalMinutes >= 225)
+                                    dv_workschedule.Rows[j].Cells[i].Style.BackColor = colors[1];
+                                else
+                                    dv_workschedule.Rows[j].Cells[i].Style.BackColor = colors[2];
+                            }
+                        }
+                        string[] parts = table.Rows[st][6].ToString().Split('-');
+                        string endTimeString = parts[1].Trim();
+                        DateTime endTime;
+                        DateTime.TryParseExact(endTimeString, "h:mmtt", CultureInfo.InvariantCulture, DateTimeStyles.None, out endTime);
+                        if (current.AddDays(i).Date == DateTime.Now.Date && DateTime.Now.TimeOfDay > endTime.TimeOfDay)
+                        {       
+                            if (checkin == DateTime.MinValue && checkout == DateTime.MinValue)
                             {
                                 dv_workschedule.Rows[j].Cells[i].Style.BackColor = colors[3];
                             }
@@ -117,10 +137,9 @@ namespace WinFormsRestaurant
             lb_birth.Text = dateOnly.Date.ToString("dd/MM/yyyy");
             lb_phone.Text = table_emp.Rows[0]["Phone"].ToString();
             lb_jobtitle.Text = table_emp.Rows[0]["JobTitle"].ToString();
-            lb_state.Text = StaticVars_Class.state;
             //byte[] imageData = (byte[])table_emp.Rows[0]["Picture"];
             //Bitmap imageBitmap = new Bitmap(new MemoryStream(imageData));
-            //overView.pb_avatar.Image = imageBitmap;
+            //pb_avatar.Image = imageBitmap;
             bool gender = Convert.ToBoolean(table_emp.Rows[0]["Gender"]);
 
             if (gender)
@@ -166,7 +185,8 @@ namespace WinFormsRestaurant
             else
             {
                 workSchedule.checkstate();
-                if(StaticVars_Class.state == StaticVars_Class.loginstate[0])
+                lb_state.Text = StaticVars_Class.state;
+                if (StaticVars_Class.state == StaticVars_Class.loginstate[0])
                 {
                     bt_checkin.Enabled = true;
                     bt_checkout.Enabled = false;

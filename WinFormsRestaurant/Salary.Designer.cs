@@ -35,7 +35,7 @@
             this.lb_workdate = new System.Windows.Forms.Label();
             this.lb_worktime = new System.Windows.Forms.Label();
             this.lb_checkin = new System.Windows.Forms.Label();
-            this.lb_ot = new System.Windows.Forms.Label();
+            this.lb_salarybytime = new System.Windows.Forms.Label();
             this.lb_checkout = new System.Windows.Forms.Label();
             this.lb_penalty = new System.Windows.Forms.Label();
             this.lb_stemp = new System.Windows.Forms.Label();
@@ -96,73 +96,73 @@
             // lb_workdate
             // 
             this.lb_workdate.AutoSize = true;
-            this.lb_workdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_workdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_workdate.Location = new System.Drawing.Point(125, 297);
             this.lb_workdate.Name = "lb_workdate";
-            this.lb_workdate.Size = new System.Drawing.Size(407, 20);
+            this.lb_workdate.Size = new System.Drawing.Size(482, 25);
             this.lb_workdate.TabIndex = 9;
             this.lb_workdate.Text = "adfddafdafavadfddafdafadfadfddafdafadfadfddafdafadf";
             // 
             // lb_worktime
             // 
             this.lb_worktime.AutoSize = true;
-            this.lb_worktime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_worktime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_worktime.Location = new System.Drawing.Point(125, 405);
             this.lb_worktime.Name = "lb_worktime";
-            this.lb_worktime.Size = new System.Drawing.Size(407, 20);
+            this.lb_worktime.Size = new System.Drawing.Size(482, 25);
             this.lb_worktime.TabIndex = 10;
             this.lb_worktime.Text = "adfddafdafavadfddafdafadfadfddafdafadfadfddafdafadf";
             // 
             // lb_checkin
             // 
             this.lb_checkin.AutoSize = true;
-            this.lb_checkin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_checkin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_checkin.Location = new System.Drawing.Point(125, 351);
             this.lb_checkin.Name = "lb_checkin";
-            this.lb_checkin.Size = new System.Drawing.Size(407, 20);
+            this.lb_checkin.Size = new System.Drawing.Size(482, 25);
             this.lb_checkin.TabIndex = 11;
             this.lb_checkin.Text = "adfddafdafavadfddafdafadfadfddafdafadfadfddafdafadf";
             // 
-            // lb_ot
+            // lb_salarybytime
             // 
-            this.lb_ot.AutoSize = true;
-            this.lb_ot.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ot.ForeColor = System.Drawing.Color.Cyan;
-            this.lb_ot.Location = new System.Drawing.Point(125, 455);
-            this.lb_ot.Name = "lb_ot";
-            this.lb_ot.Size = new System.Drawing.Size(407, 20);
-            this.lb_ot.TabIndex = 12;
-            this.lb_ot.Text = "adfddafdafavadfddafdafadfadfddafdafadfadfddafdafadf";
+            this.lb_salarybytime.AutoSize = true;
+            this.lb_salarybytime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_salarybytime.ForeColor = System.Drawing.Color.Cyan;
+            this.lb_salarybytime.Location = new System.Drawing.Point(125, 461);
+            this.lb_salarybytime.Name = "lb_salarybytime";
+            this.lb_salarybytime.Size = new System.Drawing.Size(482, 25);
+            this.lb_salarybytime.TabIndex = 12;
+            this.lb_salarybytime.Text = "adfddafdafavadfddafdafadfadfddafdafadfadfddafdafadf";
             // 
             // lb_checkout
             // 
             this.lb_checkout.AutoSize = true;
-            this.lb_checkout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_checkout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_checkout.Location = new System.Drawing.Point(752, 297);
             this.lb_checkout.Name = "lb_checkout";
-            this.lb_checkout.Size = new System.Drawing.Size(407, 20);
+            this.lb_checkout.Size = new System.Drawing.Size(482, 25);
             this.lb_checkout.TabIndex = 13;
             this.lb_checkout.Text = "adfddafdafavadfddafdafadfadfddafdafadfadfddafdafadf";
             // 
             // lb_penalty
             // 
             this.lb_penalty.AutoSize = true;
-            this.lb_penalty.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_penalty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_penalty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_penalty.Location = new System.Drawing.Point(750, 455);
+            this.lb_penalty.Location = new System.Drawing.Point(752, 461);
             this.lb_penalty.Name = "lb_penalty";
-            this.lb_penalty.Size = new System.Drawing.Size(407, 20);
+            this.lb_penalty.Size = new System.Drawing.Size(482, 25);
             this.lb_penalty.TabIndex = 14;
             this.lb_penalty.Text = "adfddafdafavadfddafdafadfadfddafdafadfadfddafdafadf";
             // 
             // lb_stemp
             // 
             this.lb_stemp.AutoSize = true;
-            this.lb_stemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_stemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_stemp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lb_stemp.Location = new System.Drawing.Point(125, 515);
             this.lb_stemp.Name = "lb_stemp";
-            this.lb_stemp.Size = new System.Drawing.Size(407, 20);
+            this.lb_stemp.Size = new System.Drawing.Size(482, 25);
             this.lb_stemp.TabIndex = 15;
             this.lb_stemp.Text = "adfddafdafavadfddafdafadfadfddafdafadfadfddafdafadf";
             // 
@@ -288,11 +288,11 @@
             // lb_rsalary
             // 
             this.lb_rsalary.AutoSize = true;
-            this.lb_rsalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_rsalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_rsalary.ForeColor = System.Drawing.Color.Lime;
             this.lb_rsalary.Location = new System.Drawing.Point(750, 515);
             this.lb_rsalary.Name = "lb_rsalary";
-            this.lb_rsalary.Size = new System.Drawing.Size(407, 20);
+            this.lb_rsalary.Size = new System.Drawing.Size(482, 25);
             this.lb_rsalary.TabIndex = 27;
             this.lb_rsalary.Text = "adfddafdafavadfddafdafadfadfddafdafadfadfddafdafadf";
             // 
@@ -315,7 +315,7 @@
             this.Controls.Add(this.lb_stemp);
             this.Controls.Add(this.lb_penalty);
             this.Controls.Add(this.lb_checkout);
-            this.Controls.Add(this.lb_ot);
+            this.Controls.Add(this.lb_salarybytime);
             this.Controls.Add(this.lb_checkin);
             this.Controls.Add(this.lb_worktime);
             this.Controls.Add(this.lb_workdate);
@@ -342,7 +342,7 @@
         private System.Windows.Forms.Label lb_workdate;
         private System.Windows.Forms.Label lb_worktime;
         private System.Windows.Forms.Label lb_checkin;
-        private System.Windows.Forms.Label lb_ot;
+        private System.Windows.Forms.Label lb_salarybytime;
         private System.Windows.Forms.Label lb_checkout;
         private System.Windows.Forms.Label lb_penalty;
         private System.Windows.Forms.Label lb_stemp;

@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,47 +19,45 @@ namespace WinFormsRestaurant
     {
         Methods methods = new Methods();
         WorkSchedule_Class workSchedule = new WorkSchedule_Class();
+        private TcpListener listener;
         private TcpClient client;
         private NetworkStream stream;
         private BinaryReader reader;
         private Process process;
+
         public CheckIN_OUT()
         {
             InitializeComponent();
         }
-        string script = "E:\\Python\\FaceRecog\\recognition.py";
+
         private void CheckIN_OUT_Load(object sender, EventArgs e)
         {
-            //process = new Process
-            //{
-            //    StartInfo = new ProcessStartInfo
-            //    {
-            //        FileName = "python",
-            //        Arguments = script,
-            //        UseShellExecute = false,
-            //        RedirectStandardOutput = true,
-            //        RedirectStandardError = true,
-            //        CreateNoWindow = true,
-            //    }
-            //};
-            //process.Start();
+            process = new Process
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = "python",
+                    Arguments = "recognition.py",
+                    UseShellExecute = false,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true,
+                    CreateNoWindow = true,
+                }
+            };
+            process.Start();
 
+            listener = new TcpListener(IPAddress.Any, 8000);
+            listener.Start();
 
-            //// Wait for process to exit
+            // Accept client connection
+            client = listener.AcceptTcpClient();
+            stream = client.GetStream();
+            reader = new BinaryReader(stream);
 
-            //client = new TcpClient("localhost", 8000);
-            //stream = client.GetStream();
-            //reader = new BinaryReader(stream);
-
-            //// Start receiving images in a separate thread
-            //var t = new System.Threading.Thread(ReceiveImages);
-            //t.IsBackground = true;
-            //t.Start();
-            if (StaticVars_Class.state == StaticVars_Class.loginstate[0])
-                workSchedule.checkIn();
-            if (StaticVars_Class.state == StaticVars_Class.loginstate[1])
-                workSchedule.checkOut();
-
+            // Start receiving images in a separate thread
+            var t = new System.Threading.Thread(ReceiveImages);
+            t.IsBackground = true;
+            t.Start();
         }
         private void ReceiveImages()
         {
@@ -87,7 +86,23 @@ namespace WinFormsRestaurant
                 catch (IOException)
                 {
                     string output = process.StandardOutput.ReadToEnd().Trim();
-                    MessageBox.Show(output);
+                    if (output == StaticVars_Class.emID)
+                    {
+                        if (StaticVars_Class.state == StaticVars_Class.loginstate[0])
+                        {
+                            workSchedule.checkIn();
+                            MessageBox.Show("Check-In Succesfully");
+                        }
+                        if (StaticVars_Class.state == StaticVars_Class.loginstate[1])
+                        {
+                            workSchedule.checkOut();
+                            MessageBox.Show("Check-Out Succesfully");
+                            Salary salary = new Salary();
+                            salary.Show(this);
+                        }
+                    }
+                    else
+                        MessageBox.Show("Check-In Unsuccesfully!!!!");
                     this.Close(); 
                     break;
                 }

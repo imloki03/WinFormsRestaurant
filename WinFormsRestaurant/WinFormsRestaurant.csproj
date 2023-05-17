@@ -159,6 +159,7 @@
       <DependentUpon>EditAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee_Class.cs" />
+    <Compile Include="Exception_Class.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -340,6 +341,9 @@
   <ItemGroup>
     <Content Include="Pictures\logo_winforms.png" />
     <Content Include="Pictures\logo_winforms_mini.png" />
+    <Content Include="recognition.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\receptionIcon.png" />
     <None Include="Resources\entranceIcon.PNG" />
     <None Include="Resources\wcIcon.png" />

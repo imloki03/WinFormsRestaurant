@@ -26,7 +26,9 @@ namespace WinFormsRestaurant
 
         private void bt_edit_Click(object sender, EventArgs e)
         {
-            methods.fillPanel(pn_manageAccount, new EditAccount(), 0);
+            EditAccount editAccount = new EditAccount();
+            editAccount.selectededEid = list_account.CurrentRow.Cells[0].Value.ToString();
+            methods.fillPanel(pn_manageAccount,editAccount, 0);
         }
         public void fillGrid(SqlCommand cmd)
         {
@@ -62,6 +64,11 @@ namespace WinFormsRestaurant
         private void bt_search_Click(object sender, EventArgs e)
         {
             fillGrid(new SqlCommand("SELECT * from Employee where CONCAT(EmployeeID,Name,Phone,Address,JobTitle,Account) like '%" + tb_search.Text+"%'"));
+        }
+
+        private void bt_delete_Click(object sender, EventArgs e)
+        {
+            employee.deleteEmployee(list_account.CurrentRow.Cells[0].Value.ToString());
         }
     }
 }

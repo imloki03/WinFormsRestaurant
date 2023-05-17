@@ -218,6 +218,7 @@
             // 
             // cb_province
             // 
+            this.cb_province.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_province.FormattingEnabled = true;
             this.cb_province.Location = new System.Drawing.Point(152, 330);
             this.cb_province.Margin = new System.Windows.Forms.Padding(4);
@@ -229,6 +230,7 @@
             // 
             // cb_district
             // 
+            this.cb_district.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_district.FormattingEnabled = true;
             this.cb_district.Location = new System.Drawing.Point(152, 379);
             this.cb_district.Margin = new System.Windows.Forms.Padding(4);
@@ -239,6 +241,7 @@
             // 
             // cb_ward
             // 
+            this.cb_ward.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_ward.FormattingEnabled = true;
             this.cb_ward.Location = new System.Drawing.Point(152, 428);
             this.cb_ward.Margin = new System.Windows.Forms.Padding(4);

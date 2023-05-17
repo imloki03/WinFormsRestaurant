@@ -33,7 +33,13 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -50,6 +56,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Yellow;
+            this.panel5.Controls.Add(this.button2);
             this.panel5.Location = new System.Drawing.Point(357, 1);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(355, 50);
@@ -58,6 +65,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Red;
+            this.panel6.Controls.Add(this.button3);
             this.panel6.Location = new System.Drawing.Point(713, 1);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(355, 50);
@@ -66,6 +74,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(1, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(355, 50);
@@ -79,6 +88,36 @@
             this.panel8.Size = new System.Drawing.Size(1070, 600);
             this.panel8.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(130, 11);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Shift ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(91, 21);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Salary";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(133, 23);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "WorkTime";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Statics
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -88,6 +127,9 @@
             this.Name = "Statics";
             this.Text = "Statics";
             this.panel1.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -99,5 +141,8 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
     }
 }

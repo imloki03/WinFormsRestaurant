@@ -11,6 +11,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VisioForge.MediaFramework.FFMPEGCore.Enums;
@@ -29,7 +30,10 @@ namespace WinFormsRestaurant
         VideoCaptureDevice device = new VideoCaptureDevice();
         private VideoCapture video_capture;
         private Bitmap image;
+
         Methods methods = new Methods();
+        Exception_Class exc = new Exception_Class();
+        Employee_Class emp = new Employee_Class();
 
         static HttpClient client = new HttpClient();
         static List<Province> provinces = new List<Province>();
@@ -63,6 +67,7 @@ namespace WinFormsRestaurant
             device = deviceForm.VideoDevice;
             device.NewFrame += new NewFrameEventHandler(video_NewFrame);
             device.Start();
+            bt_add.Enabled = false;
             getProvince();
         }
         private void video_NewFrame(object sender, NewFrameEventArgs eventArgs)
@@ -106,93 +111,85 @@ namespace WinFormsRestaurant
 
         private void bt_scan_Click(object sender, EventArgs e)
         {
-            if (!tb_name.Text.IsNullOrEmpty())
+            if (exc.BlankBox(this))
             {
-                if (pg_scan.Value + 100 / 8 < 100)
+                while (pg_scan.Value != 100)
                 {
-                    pg_scan.Value += 100 / 8;
-                }
-                else
-                {
-                    pg_scan.Value = 100;
-                    bt_scan.Enabled = false;
-                }
+                    if (pg_scan.Value + 100 / 8 < 100)
+                    {
+                        pg_scan.Value += 100 / 8;
+                    }
+                    else
+                    {
+                        pg_scan.Value = 100;
+                        bt_scan.Enabled = false;
+                        bt_add.Enabled = true;
+                    }
 
-                int duplicateCount = 0;
-                string fileName = StaticVars_Class.username;
-                string fileExtension = ".png";
-                string newFileName = fileName;
-
-                try
-                {
-                    // Get the current directory path
+                    int duplicateCount = 0;
+                    string fileName = emp.getNextEmID();
+                    string fileExtension = ".png";
+                    string newFileName = fileName;
+         
                     string cDirectory = Directory.GetCurrentDirectory();
-
                     // Combine the current directory path with the folder name
                     string fPath = Path.Combine(cDirectory, "Faces");
-
                     // Check if the folder already exists
                     if (Directory.Exists(fPath))
                     {
-                        try
+                        // Get the current directory path
+                        string currentDirectory = Directory.GetCurrentDirectory();
+                        // Combine the current directory path with the folder name
+                        string folderPath = Path.Combine(currentDirectory + "\\Faces", fileName);
+                        // Check if the folder already exists
+                        if (Directory.Exists(folderPath))
                         {
-                            // Get the current directory path
-                            string currentDirectory = Directory.GetCurrentDirectory();
-
-                            // Combine the current directory path with the folder name
-                            string folderPath = Path.Combine(currentDirectory + "\\Faces", fileName);
-
-                            // Check if the folder already exists
-                            if (Directory.Exists(folderPath))
+                            Bitmap varBmp = new Bitmap(pb_camera.Image);
+                            Bitmap newBitmap = new Bitmap(varBmp);
+                            while (File.Exists(folderPath + "\\" + newFileName + fileExtension))
                             {
-                                Bitmap varBmp = new Bitmap(pb_camera.Image);
-                                Bitmap newBitmap = new Bitmap(varBmp);
-                                while (File.Exists(folderPath + "\\" + newFileName + fileExtension))
-                                {
-                                    duplicateCount++;
-                                    newFileName = fileName + " (" + duplicateCount.ToString() + ")";
-                                }
-                                varBmp.Save(folderPath + "\\" + newFileName + fileExtension, ImageFormat.Png);
-                                //Now Dispose to free the memory
-                                varBmp.Dispose();
-                                varBmp = null;
-                                return;
+                                duplicateCount++;
+                                newFileName = fileName + " (" + duplicateCount.ToString() + ")";
                             }
-
-                            // Create the folder
-                            Directory.CreateDirectory(folderPath);
-
-                            Console.WriteLine("Folder created successfully.");
+                            varBmp.Save(folderPath + "\\" + newFileName + fileExtension, ImageFormat.Png);
+                            varBmp.Save(picture, ImageFormat.Png);
+                            //Now Dispose to free the memory
+                            varBmp.Dispose();
+                            varBmp = null;
                         }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine("Error creating folder: " + ex.Message);
-                        }
+                        // Create the folder
+                        Directory.CreateDirectory(folderPath);
                     }
-
                     // Create the folder
-                    Directory.CreateDirectory(fPath);
-
-                    Console.WriteLine("Folder created successfully.");
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Error creating folder: " + ex.Message);
+                    Directory.CreateDirectory(fPath);           
+                    Thread.Sleep(1000);
                 }
             }
             else
                 MessageBox.Show("Missing Fields");
         }
 
+        int i = 0;
+
         private void bt_cancel_Click(object sender, EventArgs e)
         {
             this.Close();
             device.Stop();
         }
-
+        MemoryStream picture = new MemoryStream();
         private void bt_add_Click(object sender, EventArgs e)
         {
-
+            string name = tb_name.Text;
+            bool gender;
+            if (rb_male.Checked)
+                gender = true;
+            else
+                gender = false;
+            string phone = tb_phone.Text;
+            string address = tb_street.Text+" "+cb_ward.Text+" "+cb_district.Text+cb_province.Text;
+            string birthday = dt_birthday.Value.Date.ToString();
+      
+            emp.addEmployee(name, gender, phone, address, birthday, picture);
         }
     }
 }
