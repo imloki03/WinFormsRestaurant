@@ -31,10 +31,7 @@ namespace WinFormsRestaurant
         public void ShiftButtonClickUI(object button)
         {
             var btn = (Button)button;
-            //highlight button
             btn.BackColor = bt_shift1.FlatAppearance.BorderColor;
-            //btn.ForeColor = Color.White;
-            //unhighlight button
             if (currentButton!=null && currentButton!=btn)
             {
                 currentButton.BackColor = Color.FromArgb(219, 250, 255);
