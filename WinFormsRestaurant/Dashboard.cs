@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace WinFormsRestaurant
 {
@@ -51,6 +52,52 @@ namespace WinFormsRestaurant
             lb_orders.Text = "" + dashboard.numberOfOrders(start, end);
             lb_diners.Text = "" + dashboard.numberOfDiners(start, end);
             lb_revenue.Text = "" + dashboard.totalOfRevenue(start, end);
+
+            //pie
+            chart_bestseller.Series.Clear();
+            chart_bestseller.Titles.Clear();
+            Series series2 = new Series();
+            series2.ChartType = SeriesChartType.Pie;
+            series2.IsValueShownAsLabel = true;
+
+            foreach (DataRow row in dashboard.getBestSeller(start, end).Rows)
+            {
+                string name = row["name"].ToString();
+                double total = Convert.ToDouble(row["total"]);
+
+                series2.Points.AddXY(name, total);
+            }
+
+            chart_bestseller.Series.Add(series2);
+            chart_bestseller.Titles.Add("Best Seller");
+            chart_bestseller.Titles[0].Font = new Font(chart_bestseller.Titles[0].Font.FontFamily, 20, FontStyle.Bold);
+
+            //col
+            Series series = new Series();
+            chart_order.Series.Clear();
+            chart_order.Titles.Clear();
+            chart_order.ChartAreas[0].AxisX.Interval = 1;
+            series.ChartType = SeriesChartType.Column;
+            series.XValueType = ChartValueType.String;
+            series.IsValueShownAsLabel = true;
+            series.IsVisibleInLegend = false;
+            DataTable table = dashboard.getOrdersperHour(start,end);
+            foreach (DataRow row in table.Rows)
+            {
+                series.Points.AddXY(row[0], row[1]);
+            }
+            chart_order.Series.Add(series);
+            chart_order.Titles.Add("Orders By Hours");
+            chart_order.Titles[0].Font = new Font(chart_order.Titles[0].Font.FontFamily, 20, FontStyle.Bold);
+            chart_order.ChartAreas[0].AxisX.LabelStyle.Angle = 0;
+            chart_order.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+            chart_order.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
+            chart_order.ChartAreas[0].AxisX.Title = "(Orders)";
+            chart_order.ChartAreas[0].AxisX.ArrowStyle = AxisArrowStyle.SharpTriangle;
+            chart_order.ChartAreas[0].AxisY.ArrowStyle = AxisArrowStyle.SharpTriangle;
+            chart_order.ChartAreas[0].AxisY.Title = "(Hour)";
+            chart_order.ChartAreas[0].AxisY.TitleAlignment = StringAlignment.Far;
+            chart_order.ChartAreas[0].AxisY.TextOrientation = TextOrientation.Horizontal;
         }
         private void bt_shift1_Click(object sender, EventArgs e)
         {

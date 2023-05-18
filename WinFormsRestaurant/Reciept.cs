@@ -70,5 +70,10 @@ namespace WinFormsRestaurant
             QRDiscount qrDiscount = new QRDiscount();
             qrDiscount.Show(this);
         }
+
+        private void bt_cancle_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
     }
 }

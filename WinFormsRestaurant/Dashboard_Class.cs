@@ -75,6 +75,8 @@ namespace WinFormsRestaurant
             DataTable tb = new DataTable();
             tb.Columns.Add(new DataColumn("hour", typeof(int)));
             tb.Columns.Add(new DataColumn("order", typeof(int)));
+            for (int i = 0; i < 4; i++)
+                tb.Rows.Add(tb.NewRow());
             for (int i=0;i<4;i++)
             {
                 DataTable table = new DataTable();

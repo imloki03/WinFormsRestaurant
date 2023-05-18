@@ -127,8 +127,6 @@
             this.cus1_3 = new System.Windows.Forms.PictureBox();
             this.cus1_2 = new System.Windows.Forms.PictureBox();
             this.cus1_1 = new System.Windows.Forms.PictureBox();
-            this.lb_clock = new System.Windows.Forms.Label();
-            this.timer_Clock = new System.Windows.Forms.Timer(this.components);
             this.list_log = new System.Windows.Forms.ListView();
             this.option.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -246,7 +244,7 @@
             this.bt_checkOUT.FlatAppearance.BorderSize = 2;
             this.bt_checkOUT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_checkOUT.Location = new System.Drawing.Point(1671, 820);
-            this.bt_checkOUT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_checkOUT.Margin = new System.Windows.Forms.Padding(4);
             this.bt_checkOUT.Name = "bt_checkOUT";
             this.bt_checkOUT.Size = new System.Drawing.Size(133, 52);
             this.bt_checkOUT.TabIndex = 19;
@@ -259,7 +257,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.receptionIcon;
             this.pictureBox3.Location = new System.Drawing.Point(3, 689);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(107, 91);
             this.pictureBox3.TabIndex = 22;
@@ -271,7 +269,7 @@
             this.pictureBox2.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.entranceIcon;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Location = new System.Drawing.Point(101, 830);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(80, 70);
             this.pictureBox2.TabIndex = 21;
@@ -283,7 +281,7 @@
             this.pictureBox1.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.wcIcon;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(61, -17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(107, 63);
             this.pictureBox1.TabIndex = 20;
@@ -301,7 +299,7 @@
             this.pn_15.Controls.Add(this.cus15_2);
             this.pn_15.Controls.Add(this.cus15_1);
             this.pn_15.Location = new System.Drawing.Point(1512, 585);
-            this.pn_15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_15.Margin = new System.Windows.Forms.Padding(4);
             this.pn_15.Name = "pn_15";
             this.pn_15.Size = new System.Drawing.Size(265, 221);
             this.pn_15.TabIndex = 18;
@@ -326,7 +324,7 @@
             this.cus15_4.BackColor = System.Drawing.Color.Transparent;
             this.cus15_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus15_4.Location = new System.Drawing.Point(148, 146);
-            this.cus15_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus15_4.Margin = new System.Windows.Forms.Padding(4);
             this.cus15_4.Name = "cus15_4";
             this.cus15_4.Size = new System.Drawing.Size(73, 65);
             this.cus15_4.TabIndex = 3;
@@ -337,7 +335,7 @@
             this.cus15_3.BackColor = System.Drawing.Color.Transparent;
             this.cus15_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus15_3.Location = new System.Drawing.Point(44, 148);
-            this.cus15_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus15_3.Margin = new System.Windows.Forms.Padding(4);
             this.cus15_3.Name = "cus15_3";
             this.cus15_3.Size = new System.Drawing.Size(73, 65);
             this.cus15_3.TabIndex = 2;
@@ -348,7 +346,7 @@
             this.cus15_2.BackColor = System.Drawing.Color.Transparent;
             this.cus15_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus15_2.Location = new System.Drawing.Point(149, 15);
-            this.cus15_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus15_2.Margin = new System.Windows.Forms.Padding(4);
             this.cus15_2.Name = "cus15_2";
             this.cus15_2.Size = new System.Drawing.Size(73, 65);
             this.cus15_2.TabIndex = 1;
@@ -359,7 +357,7 @@
             this.cus15_1.BackColor = System.Drawing.Color.Transparent;
             this.cus15_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus15_1.Location = new System.Drawing.Point(48, 14);
-            this.cus15_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus15_1.Margin = new System.Windows.Forms.Padding(4);
             this.cus15_1.Name = "cus15_1";
             this.cus15_1.Size = new System.Drawing.Size(73, 65);
             this.cus15_1.TabIndex = 0;
@@ -377,7 +375,7 @@
             this.pn_14.Controls.Add(this.cus14_2);
             this.pn_14.Controls.Add(this.cus14_1);
             this.pn_14.Location = new System.Drawing.Point(1225, 585);
-            this.pn_14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_14.Margin = new System.Windows.Forms.Padding(4);
             this.pn_14.Name = "pn_14";
             this.pn_14.Size = new System.Drawing.Size(265, 221);
             this.pn_14.TabIndex = 17;
@@ -402,7 +400,7 @@
             this.cus14_4.BackColor = System.Drawing.Color.Transparent;
             this.cus14_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus14_4.Location = new System.Drawing.Point(148, 146);
-            this.cus14_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus14_4.Margin = new System.Windows.Forms.Padding(4);
             this.cus14_4.Name = "cus14_4";
             this.cus14_4.Size = new System.Drawing.Size(73, 65);
             this.cus14_4.TabIndex = 3;
@@ -413,7 +411,7 @@
             this.cus14_3.BackColor = System.Drawing.Color.Transparent;
             this.cus14_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus14_3.Location = new System.Drawing.Point(44, 148);
-            this.cus14_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus14_3.Margin = new System.Windows.Forms.Padding(4);
             this.cus14_3.Name = "cus14_3";
             this.cus14_3.Size = new System.Drawing.Size(73, 65);
             this.cus14_3.TabIndex = 2;
@@ -424,7 +422,7 @@
             this.cus14_2.BackColor = System.Drawing.Color.Transparent;
             this.cus14_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus14_2.Location = new System.Drawing.Point(149, 15);
-            this.cus14_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus14_2.Margin = new System.Windows.Forms.Padding(4);
             this.cus14_2.Name = "cus14_2";
             this.cus14_2.Size = new System.Drawing.Size(73, 65);
             this.cus14_2.TabIndex = 1;
@@ -435,7 +433,7 @@
             this.cus14_1.BackColor = System.Drawing.Color.Transparent;
             this.cus14_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus14_1.Location = new System.Drawing.Point(48, 14);
-            this.cus14_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus14_1.Margin = new System.Windows.Forms.Padding(4);
             this.cus14_1.Name = "cus14_1";
             this.cus14_1.Size = new System.Drawing.Size(73, 65);
             this.cus14_1.TabIndex = 0;
@@ -453,7 +451,7 @@
             this.pn_13.Controls.Add(this.cus13_2);
             this.pn_13.Controls.Add(this.cus13_1);
             this.pn_13.Location = new System.Drawing.Point(937, 585);
-            this.pn_13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_13.Margin = new System.Windows.Forms.Padding(4);
             this.pn_13.Name = "pn_13";
             this.pn_13.Size = new System.Drawing.Size(265, 221);
             this.pn_13.TabIndex = 16;
@@ -478,7 +476,7 @@
             this.cus13_4.BackColor = System.Drawing.Color.Transparent;
             this.cus13_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus13_4.Location = new System.Drawing.Point(148, 146);
-            this.cus13_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus13_4.Margin = new System.Windows.Forms.Padding(4);
             this.cus13_4.Name = "cus13_4";
             this.cus13_4.Size = new System.Drawing.Size(73, 65);
             this.cus13_4.TabIndex = 3;
@@ -489,7 +487,7 @@
             this.cus13_3.BackColor = System.Drawing.Color.Transparent;
             this.cus13_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus13_3.Location = new System.Drawing.Point(44, 148);
-            this.cus13_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus13_3.Margin = new System.Windows.Forms.Padding(4);
             this.cus13_3.Name = "cus13_3";
             this.cus13_3.Size = new System.Drawing.Size(73, 65);
             this.cus13_3.TabIndex = 2;
@@ -500,7 +498,7 @@
             this.cus13_2.BackColor = System.Drawing.Color.Transparent;
             this.cus13_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus13_2.Location = new System.Drawing.Point(149, 15);
-            this.cus13_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus13_2.Margin = new System.Windows.Forms.Padding(4);
             this.cus13_2.Name = "cus13_2";
             this.cus13_2.Size = new System.Drawing.Size(73, 65);
             this.cus13_2.TabIndex = 1;
@@ -511,7 +509,7 @@
             this.cus13_1.BackColor = System.Drawing.Color.Transparent;
             this.cus13_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus13_1.Location = new System.Drawing.Point(48, 14);
-            this.cus13_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus13_1.Margin = new System.Windows.Forms.Padding(4);
             this.cus13_1.Name = "cus13_1";
             this.cus13_1.Size = new System.Drawing.Size(73, 65);
             this.cus13_1.TabIndex = 0;
@@ -529,7 +527,7 @@
             this.pn_12.Controls.Add(this.cus12_2);
             this.pn_12.Controls.Add(this.cus12_1);
             this.pn_12.Location = new System.Drawing.Point(652, 585);
-            this.pn_12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_12.Margin = new System.Windows.Forms.Padding(4);
             this.pn_12.Name = "pn_12";
             this.pn_12.Size = new System.Drawing.Size(265, 221);
             this.pn_12.TabIndex = 15;
@@ -554,7 +552,7 @@
             this.cus12_4.BackColor = System.Drawing.Color.Transparent;
             this.cus12_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus12_4.Location = new System.Drawing.Point(148, 146);
-            this.cus12_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus12_4.Margin = new System.Windows.Forms.Padding(4);
             this.cus12_4.Name = "cus12_4";
             this.cus12_4.Size = new System.Drawing.Size(73, 65);
             this.cus12_4.TabIndex = 3;
@@ -565,7 +563,7 @@
             this.cus12_3.BackColor = System.Drawing.Color.Transparent;
             this.cus12_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus12_3.Location = new System.Drawing.Point(44, 148);
-            this.cus12_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus12_3.Margin = new System.Windows.Forms.Padding(4);
             this.cus12_3.Name = "cus12_3";
             this.cus12_3.Size = new System.Drawing.Size(73, 65);
             this.cus12_3.TabIndex = 2;
@@ -576,7 +574,7 @@
             this.cus12_2.BackColor = System.Drawing.Color.Transparent;
             this.cus12_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus12_2.Location = new System.Drawing.Point(149, 15);
-            this.cus12_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus12_2.Margin = new System.Windows.Forms.Padding(4);
             this.cus12_2.Name = "cus12_2";
             this.cus12_2.Size = new System.Drawing.Size(73, 65);
             this.cus12_2.TabIndex = 1;
@@ -587,7 +585,7 @@
             this.cus12_1.BackColor = System.Drawing.Color.Transparent;
             this.cus12_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus12_1.Location = new System.Drawing.Point(48, 14);
-            this.cus12_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus12_1.Margin = new System.Windows.Forms.Padding(4);
             this.cus12_1.Name = "cus12_1";
             this.cus12_1.Size = new System.Drawing.Size(73, 65);
             this.cus12_1.TabIndex = 0;
@@ -605,7 +603,7 @@
             this.pn_11.Controls.Add(this.cus11_2);
             this.pn_11.Controls.Add(this.cus11_1);
             this.pn_11.Location = new System.Drawing.Point(365, 585);
-            this.pn_11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_11.Margin = new System.Windows.Forms.Padding(4);
             this.pn_11.Name = "pn_11";
             this.pn_11.Size = new System.Drawing.Size(265, 221);
             this.pn_11.TabIndex = 14;
@@ -630,7 +628,7 @@
             this.cus11_4.BackColor = System.Drawing.Color.Transparent;
             this.cus11_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus11_4.Location = new System.Drawing.Point(148, 146);
-            this.cus11_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus11_4.Margin = new System.Windows.Forms.Padding(4);
             this.cus11_4.Name = "cus11_4";
             this.cus11_4.Size = new System.Drawing.Size(73, 65);
             this.cus11_4.TabIndex = 3;
@@ -641,7 +639,7 @@
             this.cus11_3.BackColor = System.Drawing.Color.Transparent;
             this.cus11_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus11_3.Location = new System.Drawing.Point(44, 148);
-            this.cus11_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus11_3.Margin = new System.Windows.Forms.Padding(4);
             this.cus11_3.Name = "cus11_3";
             this.cus11_3.Size = new System.Drawing.Size(73, 65);
             this.cus11_3.TabIndex = 2;
@@ -652,7 +650,7 @@
             this.cus11_2.BackColor = System.Drawing.Color.Transparent;
             this.cus11_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus11_2.Location = new System.Drawing.Point(149, 15);
-            this.cus11_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus11_2.Margin = new System.Windows.Forms.Padding(4);
             this.cus11_2.Name = "cus11_2";
             this.cus11_2.Size = new System.Drawing.Size(73, 65);
             this.cus11_2.TabIndex = 1;
@@ -663,7 +661,7 @@
             this.cus11_1.BackColor = System.Drawing.Color.Transparent;
             this.cus11_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus11_1.Location = new System.Drawing.Point(48, 14);
-            this.cus11_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus11_1.Margin = new System.Windows.Forms.Padding(4);
             this.cus11_1.Name = "cus11_1";
             this.cus11_1.Size = new System.Drawing.Size(73, 65);
             this.cus11_1.TabIndex = 0;
@@ -681,7 +679,7 @@
             this.pn_10.Controls.Add(this.cus10_2);
             this.pn_10.Controls.Add(this.cus10_1);
             this.pn_10.Location = new System.Drawing.Point(1512, 338);
-            this.pn_10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_10.Margin = new System.Windows.Forms.Padding(4);
             this.pn_10.Name = "pn_10";
             this.pn_10.Size = new System.Drawing.Size(265, 221);
             this.pn_10.TabIndex = 13;
@@ -706,7 +704,7 @@
             this.cus10_4.BackColor = System.Drawing.Color.Transparent;
             this.cus10_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus10_4.Location = new System.Drawing.Point(148, 146);
-            this.cus10_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus10_4.Margin = new System.Windows.Forms.Padding(4);
             this.cus10_4.Name = "cus10_4";
             this.cus10_4.Size = new System.Drawing.Size(73, 65);
             this.cus10_4.TabIndex = 3;
@@ -717,7 +715,7 @@
             this.cus10_3.BackColor = System.Drawing.Color.Transparent;
             this.cus10_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus10_3.Location = new System.Drawing.Point(44, 148);
-            this.cus10_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus10_3.Margin = new System.Windows.Forms.Padding(4);
             this.cus10_3.Name = "cus10_3";
             this.cus10_3.Size = new System.Drawing.Size(73, 65);
             this.cus10_3.TabIndex = 2;
@@ -728,7 +726,7 @@
             this.cus10_2.BackColor = System.Drawing.Color.Transparent;
             this.cus10_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus10_2.Location = new System.Drawing.Point(149, 15);
-            this.cus10_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus10_2.Margin = new System.Windows.Forms.Padding(4);
             this.cus10_2.Name = "cus10_2";
             this.cus10_2.Size = new System.Drawing.Size(73, 65);
             this.cus10_2.TabIndex = 1;
@@ -739,7 +737,7 @@
             this.cus10_1.BackColor = System.Drawing.Color.Transparent;
             this.cus10_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus10_1.Location = new System.Drawing.Point(48, 15);
-            this.cus10_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus10_1.Margin = new System.Windows.Forms.Padding(4);
             this.cus10_1.Name = "cus10_1";
             this.cus10_1.Size = new System.Drawing.Size(73, 65);
             this.cus10_1.TabIndex = 0;
@@ -757,7 +755,7 @@
             this.pn_5.Controls.Add(this.cus5_2);
             this.pn_5.Controls.Add(this.cus5_1);
             this.pn_5.Location = new System.Drawing.Point(1512, 94);
-            this.pn_5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_5.Margin = new System.Windows.Forms.Padding(4);
             this.pn_5.Name = "pn_5";
             this.pn_5.Size = new System.Drawing.Size(265, 221);
             this.pn_5.TabIndex = 8;
@@ -782,7 +780,7 @@
             this.cus5_4.BackColor = System.Drawing.Color.Transparent;
             this.cus5_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus5_4.Location = new System.Drawing.Point(148, 146);
-            this.cus5_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus5_4.Margin = new System.Windows.Forms.Padding(4);
             this.cus5_4.Name = "cus5_4";
             this.cus5_4.Size = new System.Drawing.Size(73, 65);
             this.cus5_4.TabIndex = 3;
@@ -793,7 +791,7 @@
             this.cus5_3.BackColor = System.Drawing.Color.Transparent;
             this.cus5_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus5_3.Location = new System.Drawing.Point(44, 148);
-            this.cus5_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus5_3.Margin = new System.Windows.Forms.Padding(4);
             this.cus5_3.Name = "cus5_3";
             this.cus5_3.Size = new System.Drawing.Size(73, 65);
             this.cus5_3.TabIndex = 2;
@@ -804,7 +802,7 @@
             this.cus5_2.BackColor = System.Drawing.Color.Transparent;
             this.cus5_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus5_2.Location = new System.Drawing.Point(149, 15);
-            this.cus5_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus5_2.Margin = new System.Windows.Forms.Padding(4);
             this.cus5_2.Name = "cus5_2";
             this.cus5_2.Size = new System.Drawing.Size(73, 65);
             this.cus5_2.TabIndex = 1;
@@ -815,7 +813,7 @@
             this.cus5_1.BackColor = System.Drawing.Color.Transparent;
             this.cus5_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus5_1.Location = new System.Drawing.Point(48, 14);
-            this.cus5_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus5_1.Margin = new System.Windows.Forms.Padding(4);
             this.cus5_1.Name = "cus5_1";
             this.cus5_1.Size = new System.Drawing.Size(73, 65);
             this.cus5_1.TabIndex = 0;
@@ -833,7 +831,7 @@
             this.pn_9.Controls.Add(this.cus9_2);
             this.pn_9.Controls.Add(this.cus9_1);
             this.pn_9.Location = new System.Drawing.Point(1225, 338);
-            this.pn_9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_9.Margin = new System.Windows.Forms.Padding(4);
             this.pn_9.Name = "pn_9";
             this.pn_9.Size = new System.Drawing.Size(265, 221);
             this.pn_9.TabIndex = 12;
@@ -858,7 +856,7 @@
             this.cus9_4.BackColor = System.Drawing.Color.Transparent;
             this.cus9_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus9_4.Location = new System.Drawing.Point(148, 146);
-            this.cus9_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus9_4.Margin = new System.Windows.Forms.Padding(4);
             this.cus9_4.Name = "cus9_4";
             this.cus9_4.Size = new System.Drawing.Size(73, 65);
             this.cus9_4.TabIndex = 3;
@@ -869,7 +867,7 @@
             this.cus9_3.BackColor = System.Drawing.Color.Transparent;
             this.cus9_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus9_3.Location = new System.Drawing.Point(44, 148);
-            this.cus9_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus9_3.Margin = new System.Windows.Forms.Padding(4);
             this.cus9_3.Name = "cus9_3";
             this.cus9_3.Size = new System.Drawing.Size(73, 65);
             this.cus9_3.TabIndex = 2;
@@ -880,7 +878,7 @@
             this.cus9_2.BackColor = System.Drawing.Color.Transparent;
             this.cus9_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus9_2.Location = new System.Drawing.Point(149, 15);
-            this.cus9_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus9_2.Margin = new System.Windows.Forms.Padding(4);
             this.cus9_2.Name = "cus9_2";
             this.cus9_2.Size = new System.Drawing.Size(73, 65);
             this.cus9_2.TabIndex = 1;
@@ -891,7 +889,7 @@
             this.cus9_1.BackColor = System.Drawing.Color.Transparent;
             this.cus9_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus9_1.Location = new System.Drawing.Point(48, 14);
-            this.cus9_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus9_1.Margin = new System.Windows.Forms.Padding(4);
             this.cus9_1.Name = "cus9_1";
             this.cus9_1.Size = new System.Drawing.Size(73, 65);
             this.cus9_1.TabIndex = 0;
@@ -909,7 +907,7 @@
             this.pn_4.Controls.Add(this.cus4_2);
             this.pn_4.Controls.Add(this.cus4_1);
             this.pn_4.Location = new System.Drawing.Point(1225, 94);
-            this.pn_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_4.Margin = new System.Windows.Forms.Padding(4);
             this.pn_4.Name = "pn_4";
             this.pn_4.Size = new System.Drawing.Size(265, 221);
             this.pn_4.TabIndex = 7;
@@ -934,7 +932,7 @@
             this.cus4_4.BackColor = System.Drawing.Color.Transparent;
             this.cus4_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus4_4.Location = new System.Drawing.Point(148, 146);
-            this.cus4_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus4_4.Margin = new System.Windows.Forms.Padding(4);
             this.cus4_4.Name = "cus4_4";
             this.cus4_4.Size = new System.Drawing.Size(73, 65);
             this.cus4_4.TabIndex = 3;
@@ -945,7 +943,7 @@
             this.cus4_3.BackColor = System.Drawing.Color.Transparent;
             this.cus4_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus4_3.Location = new System.Drawing.Point(44, 148);
-            this.cus4_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus4_3.Margin = new System.Windows.Forms.Padding(4);
             this.cus4_3.Name = "cus4_3";
             this.cus4_3.Size = new System.Drawing.Size(73, 65);
             this.cus4_3.TabIndex = 2;
@@ -956,7 +954,7 @@
             this.cus4_2.BackColor = System.Drawing.Color.Transparent;
             this.cus4_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus4_2.Location = new System.Drawing.Point(149, 15);
-            this.cus4_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus4_2.Margin = new System.Windows.Forms.Padding(4);
             this.cus4_2.Name = "cus4_2";
             this.cus4_2.Size = new System.Drawing.Size(73, 65);
             this.cus4_2.TabIndex = 1;
@@ -967,7 +965,7 @@
             this.cus4_1.BackColor = System.Drawing.Color.Transparent;
             this.cus4_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus4_1.Location = new System.Drawing.Point(48, 14);
-            this.cus4_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus4_1.Margin = new System.Windows.Forms.Padding(4);
             this.cus4_1.Name = "cus4_1";
             this.cus4_1.Size = new System.Drawing.Size(73, 65);
             this.cus4_1.TabIndex = 0;
@@ -985,7 +983,7 @@
             this.pn_8.Controls.Add(this.cus8_2);
             this.pn_8.Controls.Add(this.cus8_1);
             this.pn_8.Location = new System.Drawing.Point(937, 338);
-            this.pn_8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_8.Margin = new System.Windows.Forms.Padding(4);
             this.pn_8.Name = "pn_8";
             this.pn_8.Size = new System.Drawing.Size(265, 221);
             this.pn_8.TabIndex = 11;
@@ -1010,7 +1008,7 @@
             this.cus8_4.BackColor = System.Drawing.Color.Transparent;
             this.cus8_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus8_4.Location = new System.Drawing.Point(148, 146);
-            this.cus8_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus8_4.Margin = new System.Windows.Forms.Padding(4);
             this.cus8_4.Name = "cus8_4";
             this.cus8_4.Size = new System.Drawing.Size(73, 65);
             this.cus8_4.TabIndex = 3;
@@ -1021,7 +1019,7 @@
             this.cus8_3.BackColor = System.Drawing.Color.Transparent;
             this.cus8_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus8_3.Location = new System.Drawing.Point(44, 148);
-            this.cus8_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus8_3.Margin = new System.Windows.Forms.Padding(4);
             this.cus8_3.Name = "cus8_3";
             this.cus8_3.Size = new System.Drawing.Size(73, 65);
             this.cus8_3.TabIndex = 2;
@@ -1032,7 +1030,7 @@
             this.cus8_2.BackColor = System.Drawing.Color.Transparent;
             this.cus8_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus8_2.Location = new System.Drawing.Point(149, 15);
-            this.cus8_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus8_2.Margin = new System.Windows.Forms.Padding(4);
             this.cus8_2.Name = "cus8_2";
             this.cus8_2.Size = new System.Drawing.Size(73, 65);
             this.cus8_2.TabIndex = 1;
@@ -1043,7 +1041,7 @@
             this.cus8_1.BackColor = System.Drawing.Color.Transparent;
             this.cus8_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus8_1.Location = new System.Drawing.Point(48, 15);
-            this.cus8_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus8_1.Margin = new System.Windows.Forms.Padding(4);
             this.cus8_1.Name = "cus8_1";
             this.cus8_1.Size = new System.Drawing.Size(73, 65);
             this.cus8_1.TabIndex = 0;
@@ -1061,7 +1059,7 @@
             this.pn_3.Controls.Add(this.cus3_2);
             this.pn_3.Controls.Add(this.cus3_1);
             this.pn_3.Location = new System.Drawing.Point(939, 94);
-            this.pn_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_3.Margin = new System.Windows.Forms.Padding(4);
             this.pn_3.Name = "pn_3";
             this.pn_3.Size = new System.Drawing.Size(265, 221);
             this.pn_3.TabIndex = 6;
@@ -1086,7 +1084,7 @@
             this.cus3_4.BackColor = System.Drawing.Color.Transparent;
             this.cus3_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus3_4.Location = new System.Drawing.Point(148, 146);
-            this.cus3_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus3_4.Margin = new System.Windows.Forms.Padding(4);
             this.cus3_4.Name = "cus3_4";
             this.cus3_4.Size = new System.Drawing.Size(73, 65);
             this.cus3_4.TabIndex = 3;
@@ -1097,7 +1095,7 @@
             this.cus3_3.BackColor = System.Drawing.Color.Transparent;
             this.cus3_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus3_3.Location = new System.Drawing.Point(44, 148);
-            this.cus3_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus3_3.Margin = new System.Windows.Forms.Padding(4);
             this.cus3_3.Name = "cus3_3";
             this.cus3_3.Size = new System.Drawing.Size(73, 65);
             this.cus3_3.TabIndex = 2;
@@ -1108,7 +1106,7 @@
             this.cus3_2.BackColor = System.Drawing.Color.Transparent;
             this.cus3_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus3_2.Location = new System.Drawing.Point(149, 15);
-            this.cus3_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus3_2.Margin = new System.Windows.Forms.Padding(4);
             this.cus3_2.Name = "cus3_2";
             this.cus3_2.Size = new System.Drawing.Size(73, 65);
             this.cus3_2.TabIndex = 1;
@@ -1119,7 +1117,7 @@
             this.cus3_1.BackColor = System.Drawing.Color.Transparent;
             this.cus3_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus3_1.Location = new System.Drawing.Point(48, 14);
-            this.cus3_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus3_1.Margin = new System.Windows.Forms.Padding(4);
             this.cus3_1.Name = "cus3_1";
             this.cus3_1.Size = new System.Drawing.Size(73, 65);
             this.cus3_1.TabIndex = 0;
@@ -1137,7 +1135,7 @@
             this.pn_7.Controls.Add(this.cus7_2);
             this.pn_7.Controls.Add(this.cus7_1);
             this.pn_7.Location = new System.Drawing.Point(652, 338);
-            this.pn_7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_7.Margin = new System.Windows.Forms.Padding(4);
             this.pn_7.Name = "pn_7";
             this.pn_7.Size = new System.Drawing.Size(265, 221);
             this.pn_7.TabIndex = 10;
@@ -1162,7 +1160,7 @@
             this.cus7_4.BackColor = System.Drawing.Color.Transparent;
             this.cus7_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus7_4.Location = new System.Drawing.Point(148, 146);
-            this.cus7_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus7_4.Margin = new System.Windows.Forms.Padding(4);
             this.cus7_4.Name = "cus7_4";
             this.cus7_4.Size = new System.Drawing.Size(73, 65);
             this.cus7_4.TabIndex = 3;
@@ -1173,7 +1171,7 @@
             this.cus7_3.BackColor = System.Drawing.Color.Transparent;
             this.cus7_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus7_3.Location = new System.Drawing.Point(44, 148);
-            this.cus7_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus7_3.Margin = new System.Windows.Forms.Padding(4);
             this.cus7_3.Name = "cus7_3";
             this.cus7_3.Size = new System.Drawing.Size(73, 65);
             this.cus7_3.TabIndex = 2;
@@ -1184,7 +1182,7 @@
             this.cus7_2.BackColor = System.Drawing.Color.Transparent;
             this.cus7_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus7_2.Location = new System.Drawing.Point(149, 15);
-            this.cus7_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus7_2.Margin = new System.Windows.Forms.Padding(4);
             this.cus7_2.Name = "cus7_2";
             this.cus7_2.Size = new System.Drawing.Size(73, 65);
             this.cus7_2.TabIndex = 1;
@@ -1195,7 +1193,7 @@
             this.cus7_1.BackColor = System.Drawing.Color.Transparent;
             this.cus7_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus7_1.Location = new System.Drawing.Point(48, 15);
-            this.cus7_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus7_1.Margin = new System.Windows.Forms.Padding(4);
             this.cus7_1.Name = "cus7_1";
             this.cus7_1.Size = new System.Drawing.Size(73, 65);
             this.cus7_1.TabIndex = 0;
@@ -1213,7 +1211,7 @@
             this.pn_2.Controls.Add(this.cus2_2);
             this.pn_2.Controls.Add(this.cus2_1);
             this.pn_2.Location = new System.Drawing.Point(652, 94);
-            this.pn_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_2.Margin = new System.Windows.Forms.Padding(4);
             this.pn_2.Name = "pn_2";
             this.pn_2.Size = new System.Drawing.Size(265, 221);
             this.pn_2.TabIndex = 5;
@@ -1238,7 +1236,7 @@
             this.cus2_4.BackColor = System.Drawing.Color.Transparent;
             this.cus2_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus2_4.Location = new System.Drawing.Point(148, 146);
-            this.cus2_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus2_4.Margin = new System.Windows.Forms.Padding(4);
             this.cus2_4.Name = "cus2_4";
             this.cus2_4.Size = new System.Drawing.Size(73, 65);
             this.cus2_4.TabIndex = 3;
@@ -1249,7 +1247,7 @@
             this.cus2_3.BackColor = System.Drawing.Color.Transparent;
             this.cus2_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus2_3.Location = new System.Drawing.Point(44, 148);
-            this.cus2_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus2_3.Margin = new System.Windows.Forms.Padding(4);
             this.cus2_3.Name = "cus2_3";
             this.cus2_3.Size = new System.Drawing.Size(73, 65);
             this.cus2_3.TabIndex = 2;
@@ -1260,7 +1258,7 @@
             this.cus2_2.BackColor = System.Drawing.Color.Transparent;
             this.cus2_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus2_2.Location = new System.Drawing.Point(149, 12);
-            this.cus2_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus2_2.Margin = new System.Windows.Forms.Padding(4);
             this.cus2_2.Name = "cus2_2";
             this.cus2_2.Size = new System.Drawing.Size(73, 65);
             this.cus2_2.TabIndex = 1;
@@ -1271,7 +1269,7 @@
             this.cus2_1.BackColor = System.Drawing.Color.Transparent;
             this.cus2_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus2_1.Location = new System.Drawing.Point(48, 14);
-            this.cus2_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus2_1.Margin = new System.Windows.Forms.Padding(4);
             this.cus2_1.Name = "cus2_1";
             this.cus2_1.Size = new System.Drawing.Size(73, 65);
             this.cus2_1.TabIndex = 0;
@@ -1289,7 +1287,7 @@
             this.pn_6.Controls.Add(this.cus6_2);
             this.pn_6.Controls.Add(this.cus6_1);
             this.pn_6.Location = new System.Drawing.Point(365, 338);
-            this.pn_6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_6.Margin = new System.Windows.Forms.Padding(4);
             this.pn_6.Name = "pn_6";
             this.pn_6.Size = new System.Drawing.Size(265, 221);
             this.pn_6.TabIndex = 9;
@@ -1314,7 +1312,7 @@
             this.cus6_4.BackColor = System.Drawing.Color.Transparent;
             this.cus6_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus6_4.Location = new System.Drawing.Point(148, 146);
-            this.cus6_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus6_4.Margin = new System.Windows.Forms.Padding(4);
             this.cus6_4.Name = "cus6_4";
             this.cus6_4.Size = new System.Drawing.Size(73, 65);
             this.cus6_4.TabIndex = 3;
@@ -1325,7 +1323,7 @@
             this.cus6_3.BackColor = System.Drawing.Color.Transparent;
             this.cus6_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus6_3.Location = new System.Drawing.Point(44, 148);
-            this.cus6_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus6_3.Margin = new System.Windows.Forms.Padding(4);
             this.cus6_3.Name = "cus6_3";
             this.cus6_3.Size = new System.Drawing.Size(73, 65);
             this.cus6_3.TabIndex = 2;
@@ -1336,7 +1334,7 @@
             this.cus6_2.BackColor = System.Drawing.Color.Transparent;
             this.cus6_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus6_2.Location = new System.Drawing.Point(149, 15);
-            this.cus6_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus6_2.Margin = new System.Windows.Forms.Padding(4);
             this.cus6_2.Name = "cus6_2";
             this.cus6_2.Size = new System.Drawing.Size(73, 65);
             this.cus6_2.TabIndex = 1;
@@ -1347,7 +1345,7 @@
             this.cus6_1.BackColor = System.Drawing.Color.Transparent;
             this.cus6_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus6_1.Location = new System.Drawing.Point(48, 15);
-            this.cus6_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus6_1.Margin = new System.Windows.Forms.Padding(4);
             this.cus6_1.Name = "cus6_1";
             this.cus6_1.Size = new System.Drawing.Size(73, 65);
             this.cus6_1.TabIndex = 0;
@@ -1365,7 +1363,7 @@
             this.pn_1.Controls.Add(this.cus1_2);
             this.pn_1.Controls.Add(this.cus1_1);
             this.pn_1.Location = new System.Drawing.Point(365, 94);
-            this.pn_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_1.Margin = new System.Windows.Forms.Padding(4);
             this.pn_1.Name = "pn_1";
             this.pn_1.Size = new System.Drawing.Size(265, 221);
             this.pn_1.TabIndex = 0;
@@ -1390,7 +1388,7 @@
             this.cus1_4.BackColor = System.Drawing.Color.Transparent;
             this.cus1_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus1_4.Location = new System.Drawing.Point(148, 146);
-            this.cus1_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus1_4.Margin = new System.Windows.Forms.Padding(4);
             this.cus1_4.Name = "cus1_4";
             this.cus1_4.Size = new System.Drawing.Size(73, 65);
             this.cus1_4.TabIndex = 3;
@@ -1401,7 +1399,7 @@
             this.cus1_3.BackColor = System.Drawing.Color.Transparent;
             this.cus1_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
             this.cus1_3.Location = new System.Drawing.Point(45, 148);
-            this.cus1_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus1_3.Margin = new System.Windows.Forms.Padding(4);
             this.cus1_3.Name = "cus1_3";
             this.cus1_3.Size = new System.Drawing.Size(73, 65);
             this.cus1_3.TabIndex = 2;
@@ -1412,7 +1410,7 @@
             this.cus1_2.BackColor = System.Drawing.Color.Transparent;
             this.cus1_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus1_2.Location = new System.Drawing.Point(149, 12);
-            this.cus1_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus1_2.Margin = new System.Windows.Forms.Padding(4);
             this.cus1_2.Name = "cus1_2";
             this.cus1_2.Size = new System.Drawing.Size(73, 65);
             this.cus1_2.TabIndex = 1;
@@ -1423,31 +1421,14 @@
             this.cus1_1.BackColor = System.Drawing.Color.Transparent;
             this.cus1_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
             this.cus1_1.Location = new System.Drawing.Point(48, 12);
-            this.cus1_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cus1_1.Margin = new System.Windows.Forms.Padding(4);
             this.cus1_1.Name = "cus1_1";
             this.cus1_1.Size = new System.Drawing.Size(73, 65);
             this.cus1_1.TabIndex = 0;
             this.cus1_1.TabStop = false;
             // 
-            // lb_clock
-            // 
-            this.lb_clock.AutoSize = true;
-            this.lb_clock.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_clock.Location = new System.Drawing.Point(1587, 30);
-            this.lb_clock.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lb_clock.Name = "lb_clock";
-            this.lb_clock.Size = new System.Drawing.Size(187, 36);
-            this.lb_clock.TabIndex = 23;
-            this.lb_clock.Text = "00:00:00 AM";
-            // 
-            // timer_Clock
-            // 
-            this.timer_Clock.Interval = 1000;
-            this.timer_Clock.Tick += new System.EventHandler(this.timer_Clock_Tick);
-            // 
             // list_log
             // 
-
             this.list_log.HideSelection = false;
             this.list_log.Location = new System.Drawing.Point(21, 76);
             this.list_log.Name = "list_log";
@@ -1455,18 +1436,15 @@
             this.list_log.TabIndex = 24;
             this.list_log.UseCompatibleStateImageBehavior = false;
             this.list_log.View = System.Windows.Forms.View.List;
-
             // 
             // WorkStation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-
-            this.ClientSize = new System.Drawing.Size(1366, 720);
+            this.ClientSize = new System.Drawing.Size(1893, 858);
             this.Controls.Add(this.list_log);
-          
-            this.Controls.Add(this.lb_clock);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -1487,7 +1465,7 @@
             this.Controls.Add(this.pn_6);
             this.Controls.Add(this.pn_1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "WorkStation";
             this.Text = "WorkStation";
             this.Load += new System.EventHandler(this.WorkStation_Load);
@@ -1586,7 +1564,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cus1_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cus1_1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1690,8 +1667,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label lb_clock;
-        private System.Windows.Forms.Timer timer_Clock;
         private System.Windows.Forms.ListView list_log;
     }
 }

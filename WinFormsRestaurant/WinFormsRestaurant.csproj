@@ -380,6 +380,8 @@
     <Content Include="recognition.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Voucher.png" />
+    <None Include="Resources\MoMo_Logo.png" />
     <None Include="Resources\receptionIcon.png" />
     <None Include="Resources\entranceIcon.PNG" />
     <None Include="Resources\wcIcon.png" />

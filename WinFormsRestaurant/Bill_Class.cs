@@ -24,7 +24,7 @@ namespace WinFormsRestaurant
 
         public void addBill(int guest, int money, string tableid, string orderID,DateTime time)
         {
-            SqlCommand command = new SqlCommand("insert into Bill values ([dbo].[AUTO_IDBill](),@guest,@money, @tid, @oid ,@time)", dB.getConnection);
+            SqlCommand command = new SqlCommand("insert into Bill(billID, guest, money, tableID, orderID, time) values ([dbo].[AUTO_IDBill](),@guest,@money, @tid, @oid ,@time)", dB.getConnection);
   
             command.Parameters.Add("@guest", System.Data.SqlDbType.Int).Value = guest;
             command.Parameters.Add("@money", System.Data.SqlDbType.Int).Value = money;

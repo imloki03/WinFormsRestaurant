@@ -18,13 +18,13 @@ namespace WinFormsRestaurant
             InitializeComponent();
         }
         DB_Class db = new DB_Class();
+        Employee_Class employee = new Employee_Class();
         bool leftMouse = true;
         public static int guest;
         public DataTable[] orderList = new DataTable[20];
         public string[] orderID = new string[20];
         private void WorkStation_Load(object sender, EventArgs e)
         {
-            timer_Clock.Start();
             list_log.Columns.Add("log",232);
             SqlCommand cmd = new SqlCommand("select * from [Table]", db.getConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -120,7 +120,16 @@ namespace WinFormsRestaurant
                         reciept.oderid = orderID[num];
                         reciept.table = num;
                         reciept.qguest = guest;
-                        reciept.Show(this);
+                        if (reciept.ShowDialog() == DialogResult.OK)
+                        {
+                            Panel panel1 = (Panel)this.Controls["pn_" + num];
+                            for (int j = 1; j <= 4; j++)
+                            {
+                                PictureBox pictureBox1 = (PictureBox)panel1.Controls["cus" + num + "_" + j];
+                                pictureBox1.Visible = false;
+                            }
+                            list_log.Items.Insert(0, new ListViewItem("<< " + guest + " diners out of Table " + num));
+                        }
                     }
                 }
                 else
@@ -180,7 +189,21 @@ namespace WinFormsRestaurant
             {
                 if (e.ClickedItem == exportReceipt)
                 {
-                    MessageBox.Show("payment");  // mo form payment
+                    int num = int.Parse(selectedPanel.Name.Substring(3));
+                    Reciept reciept = new Reciept();
+                    reciept.oderid = orderID[num];
+                    reciept.table = num;
+                    reciept.qguest = guest;
+                    if (reciept.ShowDialog()==DialogResult.OK)
+                    {
+                        Panel panel = (Panel)this.Controls["pn_" + num];
+                        for (int j = 1; j <= 4; j++)
+                        {
+                            PictureBox pictureBox = (PictureBox)panel.Controls["cus" + num + "_" + j];
+                            pictureBox.Visible = false;
+                        }
+                        list_log.Items.Insert(0, new ListViewItem("<< " + guest + " diners out of Table " + num));
+                    }
                 }
                 else
                 {
@@ -199,11 +222,7 @@ namespace WinFormsRestaurant
             }
         }
 
-        private void timer_Clock_Tick(object sender, EventArgs e)
-        {
-            lb_clock.Text = DateTime.Now.ToLongTimeString();
-        }
-
+  
         private void bt_checkOUT_Click(object sender, EventArgs e)
         {
             CheckIN_OUT checkIN_OUT = new CheckIN_OUT();
