@@ -20,6 +20,7 @@ namespace WinFormsRestaurant
         }
         Employee_Class em = new Employee_Class();
         Shift_Class shift = new Shift_Class();
+        WorkSchedule_Class work = new WorkSchedule_Class();
         private void Login_Load(object sender, EventArgs e)
         {
        
@@ -36,17 +37,11 @@ namespace WinFormsRestaurant
                 StaticVars_Class.username = user;
                 StaticVars_Class.emID = em.whatEmIDByAcc(user);
                 StaticVars_Class.shifttime = shift.whatshiftnow();
-
-                if (em.getEmjob(StaticVars_Class.emID) == "Employee")
-                {
-                    OverView overView = new OverView();
-                    overView.Show(this);
-                }
-                else
-                {
-                    Manage manage = new Manage();
-                    manage.Show(this);
-                }
+                if (work.checkhaveWorkSchedule())
+                    work.checkstate();
+                else if (em.getEmjob(StaticVars_Class.emID) !="Manager")
+                    MessageBox.Show("You dont have shifts at this time");   
+                this.DialogResult = DialogResult.OK;
             }
             else
                 MessageBox.Show("Ivalid Username or Password","Login",MessageBoxButtons.OK,MessageBoxIcon.Error);

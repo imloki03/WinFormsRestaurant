@@ -153,7 +153,7 @@ namespace WinFormsRestaurant
             int n = emp.amountOfEmloyees();
             //them mot exception neu x>n thi return error
             int T = (n % x != 0 ? n : n / x);  // circle
-            DateTime shift = DateTime.Now;//.AddDays(-10);
+            DateTime shift = DateTime.Now.AddDays(-5);
             DB_Class db = new DB_Class();
             SqlCommand cmd = new SqlCommand();
             DataTable table = new DataTable();

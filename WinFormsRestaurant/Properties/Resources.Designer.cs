@@ -93,6 +93,16 @@ namespace WinFormsRestaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MoMo_Logo {
+            get {
+                object obj = ResourceManager.GetObject("MoMo_Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap occupied {
             get {
                 object obj = ResourceManager.GetObject("occupied", resourceCulture);
@@ -136,6 +146,16 @@ namespace WinFormsRestaurant.Properties {
         internal static System.Drawing.Bitmap table {
             get {
                 object obj = ResourceManager.GetObject("table", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Voucher {
+            get {
+                object obj = ResourceManager.GetObject("Voucher", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

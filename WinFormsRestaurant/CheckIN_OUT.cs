@@ -92,6 +92,8 @@ namespace WinFormsRestaurant
                         {
                             workSchedule.checkIn();
                             MessageBox.Show("Check-In Succesfully");
+                            WorkStation work = new WorkStation();
+                            work.Show();
                         }
                         if (StaticVars_Class.state == StaticVars_Class.loginstate[1])
                         {
