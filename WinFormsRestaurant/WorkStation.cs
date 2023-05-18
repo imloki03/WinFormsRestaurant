@@ -116,7 +116,11 @@ namespace WinFormsRestaurant
                     }
                     else
                     {
-                        MessageBox.Show("payment");  // mo form payment
+                        Reciept reciept = new Reciept();
+                        reciept.oderid = orderID[num];
+                        reciept.table = num;
+                        reciept.qguest = guest;
+                        reciept.Show(this);
                     }
                 }
                 else
@@ -198,6 +202,12 @@ namespace WinFormsRestaurant
         private void timer_Clock_Tick(object sender, EventArgs e)
         {
             lb_clock.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void bt_checkOUT_Click(object sender, EventArgs e)
+        {
+            CheckIN_OUT checkIN_OUT = new CheckIN_OUT();
+            checkIN_OUT.Show();
         }
     }
 }
