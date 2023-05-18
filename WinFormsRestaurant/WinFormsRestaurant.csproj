@@ -133,6 +133,7 @@
     <Compile Include="AddNewAccount.Designer.cs">
       <DependentUpon>AddNewAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bill_Class.cs" />
     <Compile Include="ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +188,7 @@
     <Compile Include="Order.Designer.cs">
       <DependentUpon>Order.cs</DependentUpon>
     </Compile>
+    <Compile Include="Order_Class.cs" />
     <Compile Include="OverView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +197,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QRDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QRDiscount.Designer.cs">
+      <DependentUpon>QRDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QRpay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QRpay.Designer.cs">
+      <DependentUpon>QRpay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reciept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reciept.Designer.cs">
+      <DependentUpon>Reciept.cs</DependentUpon>
+    </Compile>
     <Compile Include="Salary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,6 +317,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QRDiscount.resx">
+      <DependentUpon>QRDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QRpay.resx">
+      <DependentUpon>QRpay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reciept.resx">
+      <DependentUpon>Reciept.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Salary.resx">
       <DependentUpon>Salary.cs</DependentUpon>
     </EmbeddedResource>
@@ -342,6 +371,12 @@
   <ItemGroup>
     <Content Include="Pictures\logo_winforms.png" />
     <Content Include="Pictures\logo_winforms_mini.png" />
+    <Content Include="Qrbank.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="QRscan.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="recognition.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

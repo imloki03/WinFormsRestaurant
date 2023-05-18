@@ -89,6 +89,16 @@ namespace WinFormsRestaurant
             adapter.Fill(table);
             return table.Rows[0]["JobTitle"].ToString();
         }
+
+        public string getEmName(string eid)
+        {
+            DataTable table = new DataTable();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Employee WHERE EmployeeID = @eid", dB.getConnection);
+            cmd.Parameters.Add("@eid", System.Data.SqlDbType.NVarChar).Value = eid;
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(table);
+            return table.Rows[0]["Name"].ToString();
+        }
         public void addEmployee(string name, bool gender, string phone, string address, string birthday, MemoryStream picture)
         {
             SqlCommand command = new SqlCommand("insert into Employee values ([dbo].[AUTO_IDEmployee](), @name, @gender, @phone, @address, @birth, @job, null, @picture)", dB.getConnection);

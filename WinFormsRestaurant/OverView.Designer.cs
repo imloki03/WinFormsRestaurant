@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pb_logo = new System.Windows.Forms.PictureBox();
             this.pb_avatar = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,7 +56,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.bt_checkin = new System.Windows.Forms.Button();
-            this.bt_checkout = new System.Windows.Forms.Button();
             this.bt_changepassword = new System.Windows.Forms.Button();
             this.cb_dayRange = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
@@ -255,9 +254,9 @@
             this.dv_workschedule.Margin = new System.Windows.Forms.Padding(4);
             this.dv_workschedule.Name = "dv_workschedule";
             this.dv_workschedule.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Transparent;
-            this.dv_workschedule.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
+            this.dv_workschedule.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dv_workschedule.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dv_workschedule.Size = new System.Drawing.Size(949, 209);
             this.dv_workschedule.TabIndex = 19;
@@ -340,7 +339,7 @@
             // 
             // bt_checkin
             // 
-            this.bt_checkin.Location = new System.Drawing.Point(292, 555);
+            this.bt_checkin.Location = new System.Drawing.Point(421, 564);
             this.bt_checkin.Margin = new System.Windows.Forms.Padding(4);
             this.bt_checkin.Name = "bt_checkin";
             this.bt_checkin.Size = new System.Drawing.Size(133, 49);
@@ -348,17 +347,6 @@
             this.bt_checkin.Text = "Check-IN";
             this.bt_checkin.UseVisualStyleBackColor = true;
             this.bt_checkin.Click += new System.EventHandler(this.bt_checkin_Click);
-            // 
-            // bt_checkout
-            // 
-            this.bt_checkout.Location = new System.Drawing.Point(548, 555);
-            this.bt_checkout.Margin = new System.Windows.Forms.Padding(4);
-            this.bt_checkout.Name = "bt_checkout";
-            this.bt_checkout.Size = new System.Drawing.Size(133, 49);
-            this.bt_checkout.TabIndex = 29;
-            this.bt_checkout.Text = "Check-OUT";
-            this.bt_checkout.UseVisualStyleBackColor = true;
-            this.bt_checkout.Click += new System.EventHandler(this.bt_checkout_Click);
             // 
             // bt_changepassword
             // 
@@ -388,7 +376,6 @@
             this.ClientSize = new System.Drawing.Size(981, 626);
             this.Controls.Add(this.cb_dayRange);
             this.Controls.Add(this.bt_changepassword);
-            this.Controls.Add(this.bt_checkout);
             this.Controls.Add(this.bt_checkin);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -455,7 +442,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button bt_checkin;
-        private System.Windows.Forms.Button bt_checkout;
         private System.Windows.Forms.Button bt_changepassword;
         public System.Windows.Forms.PictureBox pb_avatar;
         public System.Windows.Forms.Label lb_fullname;

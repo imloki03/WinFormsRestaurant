@@ -59,7 +59,7 @@ namespace WinFormsRestaurant
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             DataTable table = new DataTable();
             adapter.Fill(table);
-            return int.Parse(table.Rows[0][0].ToString());
+            return 10;//int.Parse(table.Rows[0][0].ToString());
         }
         public Panel createPanel(string PanelName, string dishName, MemoryStream pic)
         {

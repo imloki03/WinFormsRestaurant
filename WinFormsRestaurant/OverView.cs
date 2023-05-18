@@ -180,7 +180,6 @@ namespace WinFormsRestaurant
             if (workSchedule.checkhaveWorkSchedule() == false)
             {
                 bt_checkin.Enabled = false;
-                bt_checkout.Enabled = false;
             }
             else
             {
@@ -189,26 +188,18 @@ namespace WinFormsRestaurant
                 if (StaticVars_Class.state == StaticVars_Class.loginstate[0])
                 {
                     bt_checkin.Enabled = true;
-                    bt_checkout.Enabled = false;
                 }
                 if (StaticVars_Class.state == StaticVars_Class.loginstate[1])
                 {
                     bt_checkin.Enabled = false;
-                    bt_checkout.Enabled = true;
                 }
                 if (StaticVars_Class.state == StaticVars_Class.loginstate[2])
                 {
                     bt_checkin.Enabled = false;
-                    bt_checkout.Enabled = false;
                 }
             }
         }
 
-        private void bt_checkout_Click(object sender, EventArgs e)
-        {
-            CheckIN_OUT checkIN_OUT = new CheckIN_OUT();
-            checkIN_OUT.Show();
-        }
 
         private void bt_checkin_Click(object sender, EventArgs e)
         {
