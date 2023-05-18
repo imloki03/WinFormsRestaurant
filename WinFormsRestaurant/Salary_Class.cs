@@ -120,10 +120,10 @@ namespace WinFormsRestaurant
             DataTable table = new DataTable();
             SqlCommand cmd = new SqlCommand("SELECT ws.EmployeeID, ws.Checkin, ws.Checkout FROM WorkSchedule ws, Shifts s WHERE ws.ShiftID=s.ShiftID AND ws.EmployeeID = @id AND s.Date = @date AND ws.Checkout IS NULL ORDER BY ws.ShiftID", db.getConnection);
             cmd.Parameters.Add("@id", System.Data.SqlDbType.NVarChar).Value = id;
-            cmd.Parameters.Add("@date", System.Data.SqlDbType.Date).Value = DateTime.Now.ToShortDateString();
+            cmd.Parameters.Add("@date", System.Data.SqlDbType.Date).Value = date.ToShortDateString();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(table);
-            if (table.Rows.Count > 0)
+            if (date.ToShortDateString()==DateTime.Now.ToShortDateString() && DateTime.Now.Hour<10 && table.Rows.Count > 0)
                 return 0;
             else
                 return temporarySalary(id, date);

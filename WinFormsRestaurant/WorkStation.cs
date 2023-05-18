@@ -25,6 +25,7 @@ namespace WinFormsRestaurant
         private void WorkStation_Load(object sender, EventArgs e)
         {
             timer_Clock.Start();
+            list_log.Columns.Add("log",232);
             SqlCommand cmd = new SqlCommand("select * from [Table]", db.getConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             DataTable table = new DataTable();
@@ -110,6 +111,7 @@ namespace WinFormsRestaurant
                                 PictureBox pic = (PictureBox)panel.Controls["cus" + num + "_" + i];
                                 pic.Visible = true;
                             }
+                            list_log.Items.Insert(0,new ListViewItem(">> "+guest+" diners to Table "+ num));
                         }
                     }
                     else
@@ -168,6 +170,7 @@ namespace WinFormsRestaurant
                         pic.Visible = true;
                     }
                 }
+                list_log.Items.Insert(0, new ListViewItem(">> " + guest + " diners to Table " + num));
             }
             else
             {

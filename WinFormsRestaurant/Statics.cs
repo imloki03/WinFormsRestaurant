@@ -16,23 +16,24 @@ namespace WinFormsRestaurant
         {
             InitializeComponent();
         }
-
+        Methods methods = new Methods();
         private void button1_Click(object sender, EventArgs e)
         {
             ShiftStatics shiftStatics = new ShiftStatics();
-            shiftStatics.Show(this);
+            methods.fillPanel(pn_main, shiftStatics, 1);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             SalaryStatics salaryStatics = new SalaryStatics();
-            salaryStatics.Show(this);
+            methods.fillPanel(pn_main, salaryStatics, 1);
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             WorkTimeStatics workTimeStatics = new WorkTimeStatics();
-            workTimeStatics.Show(this);
+            methods.fillPanel(pn_main, workTimeStatics, 1);
         }
     }
 }
