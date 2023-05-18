@@ -34,6 +34,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dt_date = new System.Windows.Forms.DateTimePicker();
             this.bt_shift1 = new System.Windows.Forms.Button();
@@ -60,14 +61,18 @@
             this.label10 = new System.Windows.Forms.Label();
             this.lb_total = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.lb_date = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.list_ingredient = new System.Windows.Forms.DataGridView();
             this.pn_orders.SuspendLayout();
             this.pn_totalrevenue.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.list_ingredient)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -341,9 +346,9 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label12.Location = new System.Drawing.Point(42, 87);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(91, 13);
+            this.label12.Size = new System.Drawing.Size(58, 13);
             this.label12.TabIndex = 3;
-            this.label12.Text = "Scheduled Today";
+            this.label12.Text = "Scheduled";
             // 
             // label10
             // 
@@ -376,15 +381,6 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Total";
             // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(209, 409);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(501, 243);
-            this.listView1.TabIndex = 9;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // lb_date
             // 
             this.lb_date.AutoSize = true;
@@ -397,14 +393,58 @@
             this.lb_date.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lb_date.Click += new System.EventHandler(this.lb_date_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.list_ingredient);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Location = new System.Drawing.Point(210, 409);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(500, 243);
+            this.panel1.TabIndex = 9;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(6, 5);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(98, 25);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Ingredient";
+            // 
+            // list_ingredient
+            // 
+            this.list_ingredient.AllowUserToAddRows = false;
+            this.list_ingredient.AllowUserToDeleteRows = false;
+            this.list_ingredient.AllowUserToResizeColumns = false;
+            this.list_ingredient.AllowUserToResizeRows = false;
+            this.list_ingredient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.list_ingredient.BackgroundColor = System.Drawing.Color.White;
+            this.list_ingredient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.list_ingredient.ColumnHeadersVisible = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.list_ingredient.DefaultCellStyle = dataGridViewCellStyle1;
+            this.list_ingredient.Location = new System.Drawing.Point(45, 33);
+            this.list_ingredient.Name = "list_ingredient";
+            this.list_ingredient.RowHeadersVisible = false;
+            this.list_ingredient.Size = new System.Drawing.Size(410, 210);
+            this.list_ingredient.TabIndex = 3;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(237)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1074, 661);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lb_date);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.chart2);
             this.Controls.Add(this.chart1);
@@ -431,6 +471,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.list_ingredient)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -464,7 +507,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lb_total;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label lb_date;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView list_ingredient;
+        private System.Windows.Forms.Label label15;
     }
 }

@@ -129,7 +129,7 @@
             this.cus1_1 = new System.Windows.Forms.PictureBox();
             this.lb_clock = new System.Windows.Forms.Label();
             this.timer_Clock = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.list_log = new System.Windows.Forms.ListView();
             this.option.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -1445,22 +1445,27 @@
             this.timer_Clock.Interval = 1000;
             this.timer_Clock.Tick += new System.EventHandler(this.timer_Clock_Tick);
             // 
-            // panel1
+            // list_log
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(36, 94);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(291, 466);
-            this.panel1.TabIndex = 24;
+
+            this.list_log.HideSelection = false;
+            this.list_log.Location = new System.Drawing.Point(21, 76);
+            this.list_log.Name = "list_log";
+            this.list_log.Size = new System.Drawing.Size(232, 379);
+            this.list_log.TabIndex = 24;
+            this.list_log.UseCompatibleStateImageBehavior = false;
+            this.list_log.View = System.Windows.Forms.View.List;
+
             // 
             // WorkStation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1821, 886);
-            this.Controls.Add(this.panel1);
+
+            this.ClientSize = new System.Drawing.Size(1366, 720);
+            this.Controls.Add(this.list_log);
+          
             this.Controls.Add(this.lb_clock);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -1687,6 +1692,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lb_clock;
         private System.Windows.Forms.Timer timer_Clock;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListView list_log;
     }
 }

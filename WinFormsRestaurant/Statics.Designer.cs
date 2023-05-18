@@ -30,12 +30,12 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.bt_salary = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.bt_worktime = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.bt_shift = new System.Windows.Forms.Button();
+            this.pn_main = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -56,73 +56,73 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Yellow;
-            this.panel5.Controls.Add(this.button2);
+            this.panel5.Controls.Add(this.bt_salary);
             this.panel5.Location = new System.Drawing.Point(357, 1);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(355, 50);
             this.panel5.TabIndex = 2;
             // 
+            // bt_salary
+            // 
+            this.bt_salary.Location = new System.Drawing.Point(0, -1);
+            this.bt_salary.Name = "bt_salary";
+            this.bt_salary.Size = new System.Drawing.Size(355, 51);
+            this.bt_salary.TabIndex = 1;
+            this.bt_salary.Text = "Salary";
+            this.bt_salary.UseVisualStyleBackColor = true;
+            this.bt_salary.Click += new System.EventHandler(this.button2_Click);
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Red;
-            this.panel6.Controls.Add(this.button3);
+            this.panel6.Controls.Add(this.bt_worktime);
             this.panel6.Location = new System.Drawing.Point(713, 1);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(355, 50);
             this.panel6.TabIndex = 1;
             // 
+            // bt_worktime
+            // 
+            this.bt_worktime.Location = new System.Drawing.Point(0, -1);
+            this.bt_worktime.Name = "bt_worktime";
+            this.bt_worktime.Size = new System.Drawing.Size(354, 51);
+            this.bt_worktime.TabIndex = 2;
+            this.bt_worktime.Text = "WorkTime";
+            this.bt_worktime.UseVisualStyleBackColor = true;
+            this.bt_worktime.Click += new System.EventHandler(this.button3_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.bt_shift);
             this.panel2.Location = new System.Drawing.Point(1, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(355, 50);
             this.panel2.TabIndex = 0;
             // 
-            // panel8
+            // bt_shift
             // 
-            this.panel8.BackColor = System.Drawing.Color.Magenta;
-            this.panel8.Location = new System.Drawing.Point(1, 52);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1070, 600);
-            this.panel8.TabIndex = 2;
+            this.bt_shift.Location = new System.Drawing.Point(0, 0);
+            this.bt_shift.Name = "bt_shift";
+            this.bt_shift.Size = new System.Drawing.Size(356, 51);
+            this.bt_shift.TabIndex = 0;
+            this.bt_shift.Text = "Shift ";
+            this.bt_shift.UseVisualStyleBackColor = true;
+            this.bt_shift.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button1
+            // pn_main
             // 
-            this.button1.Location = new System.Drawing.Point(130, 11);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Shift ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(91, 21);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Salary";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(133, 23);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "WorkTime";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.pn_main.BackColor = System.Drawing.Color.White;
+            this.pn_main.Location = new System.Drawing.Point(1, 52);
+            this.pn_main.Name = "pn_main";
+            this.pn_main.Size = new System.Drawing.Size(1070, 600);
+            this.pn_main.TabIndex = 2;
             // 
             // Statics
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1072, 653);
-            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.pn_main);
             this.Controls.Add(this.panel1);
             this.Name = "Statics";
             this.Text = "Statics";
@@ -140,9 +140,9 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel pn_main;
+        private System.Windows.Forms.Button bt_salary;
+        private System.Windows.Forms.Button bt_worktime;
+        private System.Windows.Forms.Button bt_shift;
     }
 }
