@@ -99,6 +99,7 @@
             // 
             this.tb_password.Location = new System.Drawing.Point(105, 324);
             this.tb_password.Name = "tb_password";
+            this.tb_password.PasswordChar = '*';
             this.tb_password.Size = new System.Drawing.Size(264, 22);
             this.tb_password.TabIndex = 6;
             this.tb_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -113,34 +114,49 @@
             // 
             // pb_hidepassword
             // 
+            this.pb_hidepassword.BackColor = System.Drawing.Color.Transparent;
+            this.pb_hidepassword.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.hidepas;
+            this.pb_hidepassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb_hidepassword.Location = new System.Drawing.Point(409, 311);
             this.pb_hidepassword.Name = "pb_hidepassword";
             this.pb_hidepassword.Size = new System.Drawing.Size(45, 35);
+            this.pb_hidepassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_hidepassword.TabIndex = 4;
             this.pb_hidepassword.TabStop = false;
             this.pb_hidepassword.Click += new System.EventHandler(this.pb_hidepassword_Click);
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.password;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Location = new System.Drawing.Point(25, 313);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(41, 33);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.username;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Location = new System.Drawing.Point(25, 224);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(41, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(142, 32);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.logo_winforms;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(105, 32);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(181, 135);
+            this.pictureBox1.Size = new System.Drawing.Size(272, 169);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 

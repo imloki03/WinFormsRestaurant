@@ -137,9 +137,9 @@ namespace WinFormsRestaurant
             lb_birth.Text = dateOnly.Date.ToString("dd/MM/yyyy");
             lb_phone.Text = table_emp.Rows[0]["Phone"].ToString();
             lb_jobtitle.Text = table_emp.Rows[0]["JobTitle"].ToString();
-            //byte[] imageData = (byte[])table_emp.Rows[0]["Picture"];
-            //Bitmap imageBitmap = new Bitmap(new MemoryStream(imageData));
-            //pb_avatar.Image = imageBitmap;
+            byte[] imageData = (byte[])table_emp.Rows[0]["Picture"];
+            Bitmap imageBitmap = new Bitmap(new MemoryStream(imageData));
+            pb_avatar.Image = imageBitmap;
             bool gender = Convert.ToBoolean(table_emp.Rows[0]["Gender"]);
 
             if (gender)
@@ -206,7 +206,7 @@ namespace WinFormsRestaurant
             if (StaticVars_Class.shifttime != StaticVars_Class.closetime)
             {
                 CheckIN_OUT checkIN_OUT = new CheckIN_OUT();
-                checkIN_OUT.Show();
+                checkIN_OUT.ShowDialog();
             }
             else
                 MessageBox.Show(StaticVars_Class.closetime);
@@ -216,6 +216,18 @@ namespace WinFormsRestaurant
         {
             Shift_Class.DayRange range = (Shift_Class.DayRange)cb_dayRange.SelectedValue;
             fillGrid(range.start, range.end);
+        }
+
+        private void bt_workstation_Click(object sender, EventArgs e)
+        {
+            workSchedule.checkstate();
+            if (StaticVars_Class.state == StaticVars_Class.loginstate[1])
+            {
+                WorkStation workStation = new WorkStation();
+                workStation.Show();
+            }
+            else
+                MessageBox.Show("Not Check-in yet");
         }
     }
 }

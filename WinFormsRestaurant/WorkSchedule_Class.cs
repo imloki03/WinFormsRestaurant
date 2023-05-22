@@ -95,9 +95,9 @@ namespace WinFormsRestaurant
             cmd.Parameters.Add("@now", SqlDbType.DateTime).Value = DateTime.Now;
             dB.openConnection();
             if (cmd.ExecuteNonQuery() == 1)
-                MessageBox.Show("Check-in Successfully");
+                MessageBox.Show("Check-out Successfully");
             else
-                MessageBox.Show("Check-in Unsuccessfully!!!");
+                MessageBox.Show("Check-out Unsuccessfully!!!");
             dB.closeConnection();
         }
 

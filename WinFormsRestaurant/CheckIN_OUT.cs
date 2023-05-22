@@ -9,6 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -85,15 +86,15 @@ namespace WinFormsRestaurant
                 }
                 catch (IOException)
                 {
+                    workSchedule.checkstate();
                     string output = process.StandardOutput.ReadToEnd().Trim();
+                    process.Close();
                     if (output == StaticVars_Class.emID)
                     {
                         if (StaticVars_Class.state == StaticVars_Class.loginstate[0])
                         {
                             workSchedule.checkIn();
                             MessageBox.Show("Check-In Succesfully");
-                            WorkStation work = new WorkStation();
-                            work.Show();
                         }
                         if (StaticVars_Class.state == StaticVars_Class.loginstate[1])
                         {
@@ -105,7 +106,9 @@ namespace WinFormsRestaurant
                     }
                     else
                         MessageBox.Show("Check-In Unsuccesfully!!!!");
-                    this.Close(); 
+                    client.Dispose();
+                    client.Close();
+                    this.Close();
                     break;
                 }
             }
@@ -115,8 +118,10 @@ namespace WinFormsRestaurant
         {
             if (client != null)
             {
+                client.Dispose();
                 client.Close();
             }
+
         }
     }
 }
