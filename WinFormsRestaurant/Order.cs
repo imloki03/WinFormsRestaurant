@@ -51,26 +51,30 @@ namespace WinFormsRestaurant
             this.Close();
         }
         DB_Class db = new DB_Class();
+        Exception_Class ex = new Exception_Class();
         private void bt_order_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("SELECT [dbo].[AUTO_IDOrder]()", db.getConnection);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataTable table = new DataTable();
-            adapter.Fill(table);
-            string orderID = table.Rows[0][0].ToString();
-            foreach (DataRow row in order.Rows)
+            if (ex.BlankBox(this))
             {
-                cmd = new SqlCommand("INSERT [Order] VALUES (@id, @dish, @quantity)", db.getConnection);
-                cmd.Parameters.Add("@id", System.Data.SqlDbType.NVarChar).Value = orderID;
-                cmd.Parameters.Add("@dish", System.Data.SqlDbType.NVarChar).Value = row[0].ToString();
-                cmd.Parameters.Add("@quantity", System.Data.SqlDbType.Int).Value = row[2].ToString();
-                db.openConnection();
-                cmd.ExecuteNonQuery();
-                db.closeConnection();
+                SqlCommand cmd = new SqlCommand("SELECT [dbo].[AUTO_IDOrder]()", db.getConnection);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                string orderID = table.Rows[0][0].ToString();
+                foreach (DataRow row in order.Rows)
+                {
+                    cmd = new SqlCommand("INSERT [Order] VALUES (@id, @dish, @quantity)", db.getConnection);
+                    cmd.Parameters.Add("@id", System.Data.SqlDbType.NVarChar).Value = orderID;
+                    cmd.Parameters.Add("@dish", System.Data.SqlDbType.NVarChar).Value = row[0].ToString();
+                    cmd.Parameters.Add("@quantity", System.Data.SqlDbType.Int).Value = row[2].ToString();
+                    db.openConnection();
+                    cmd.ExecuteNonQuery();
+                    db.closeConnection();
+                }
+                WorkStation.guest = int.Parse(tb_amountOfDiner.Text);
+                static_orderID = orderID;
+                this.DialogResult = DialogResult.OK;
             }
-            WorkStation.guest = int.Parse(tb_amountOfDiner.Text);
-            static_orderID = orderID;
-            this.DialogResult = DialogResult.OK;
         }
 
         private void Order_Load(object sender, EventArgs e)

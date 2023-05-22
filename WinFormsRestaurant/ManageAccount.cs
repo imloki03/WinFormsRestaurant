@@ -28,6 +28,13 @@ namespace WinFormsRestaurant
         {
             EditAccount editAccount = new EditAccount();
             editAccount.selectededEid = list_account.CurrentRow.Cells[0].Value.ToString();
+            editAccount.tb_name.Text = list_account.CurrentRow.Cells[1].Value.ToString();
+            editAccount.dt_birthday.Text = list_account.CurrentRow.Cells[5].Value.ToString();
+            editAccount.tb_phone.Text = list_account.CurrentRow.Cells[3].Value.ToString();
+            if (list_account.CurrentRow.Cells[2].Value.ToString() == "True")
+                editAccount.rb_male.Checked = true;
+            else
+                editAccount.rb_female.Checked = true;
             methods.fillPanel(pn_manageAccount,editAccount, 0);
         }
         public void fillGrid(SqlCommand cmd)

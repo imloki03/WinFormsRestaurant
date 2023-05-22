@@ -344,28 +344,28 @@
 
         #endregion
 
-        private System.Windows.Forms.ProgressBar pg_scan;
-        private System.Windows.Forms.Button bt_scan;
-        private System.Windows.Forms.PictureBox pb_camera;
-        private System.Windows.Forms.Button bt_cancel;
-        private System.Windows.Forms.Button bt_edit;
-        private System.Windows.Forms.ComboBox cb_ward;
-        private System.Windows.Forms.ComboBox cb_district;
-        private System.Windows.Forms.ComboBox cb_province;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dt_birthday;
-        private System.Windows.Forms.RadioButton rb_female;
-        private System.Windows.Forms.RadioButton rb_male;
-        private System.Windows.Forms.TextBox tb_street;
-        private System.Windows.Forms.TextBox tb_phone;
-        private System.Windows.Forms.TextBox tb_name;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.ProgressBar pg_scan;
+        public System.Windows.Forms.Button bt_scan;
+        public System.Windows.Forms.PictureBox pb_camera;
+        public System.Windows.Forms.Button bt_cancel;
+        public System.Windows.Forms.Button bt_edit;
+        public System.Windows.Forms.ComboBox cb_ward;
+        public System.Windows.Forms.ComboBox cb_district;
+        public System.Windows.Forms.ComboBox cb_province;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.DateTimePicker dt_birthday;
+        public System.Windows.Forms.RadioButton rb_female;
+        public System.Windows.Forms.RadioButton rb_male;
+        public System.Windows.Forms.TextBox tb_street;
+        public System.Windows.Forms.TextBox tb_phone;
+        public System.Windows.Forms.TextBox tb_name;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label1;
     }
 }

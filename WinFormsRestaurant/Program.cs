@@ -15,37 +15,39 @@ namespace WinFormsRestaurant
         [STAThread]
         static void Main()
         {
-            //Methods methods = new Methods();
-            //methods.scheduleShift(5);
+            Shift_Class shift = new Shift_Class();
+            DateTime currentDate = shift.getLastDayinCircle().AddDays(-1);
+            Methods methods = new Methods();
+            if (DateTime.Now> new DateTime(currentDate.Year, currentDate.Month, currentDate.Day, 22, 0, 0))
+            methods.scheduleShift(5);
             Employee_Class em = new Employee_Class();
-            //MessageBox.Show("" + employee.getEmID(2));
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Login lg= new Login();
-            if (lg.ShowDialog() == DialogResult.OK)
-            {
-                if (em.getEmjob(StaticVars_Class.emID) == "Employee")
-                {
-                    if (StaticVars_Class.state == StaticVars_Class.loginstate[0])
-                    {
-                        OverView overView = new OverView();
-                        Application.Run(overView);
-                    }
-                    else
-                    {
-                        WorkStation workStation = new WorkStation();
-                        Application.Run(workStation);
-                    }
-                }
-                else
-                {
-                    Manage manage = new Manage();
-                    Application.Run(manage);
-                }
-            }
-            else
-                Application.Exit();
-           
+            //Login lg = new Login();
+            //if (lg.ShowDialog() == DialogResult.OK)
+            //{
+            //    if (em.getEmjob(StaticVars_Class.emID) == "Employee")
+            //    {
+            //        if (StaticVars_Class.state == StaticVars_Class.loginstate[0])
+            //        {
+            //            OverView overView = new OverView();
+            //            Application.Run(overView);
+            //        }
+            //        else
+            //        {
+            //            WorkStation workStation = new WorkStation();
+            //            Application.Run(workStation);
+            //        }
+            //    }
+            //    else
+            //    {
+            //        Manage manage = new Manage();
+            //        Application.Run(manage);
+            //    }
+            //}
+            //else
+            //    Application.Exit();
+            Application.Run(new WorkStation());
         }
     }
 }

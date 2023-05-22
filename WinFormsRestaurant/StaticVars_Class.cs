@@ -9,11 +9,11 @@ namespace WinFormsRestaurant
 {
     internal class StaticVars_Class
     {
-        public static string username;
+        public static string username = "EMP001";
 
         public static int employeePerShift;
 
-        public static string emID;
+        public static string emID = "EMP001";
 
         public static string shifttime;
 

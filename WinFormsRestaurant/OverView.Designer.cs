@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pb_logo = new System.Windows.Forms.PictureBox();
             this.pb_avatar = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,6 +58,7 @@
             this.bt_checkin = new System.Windows.Forms.Button();
             this.bt_changepassword = new System.Windows.Forms.Button();
             this.cb_dayRange = new System.Windows.Forms.ComboBox();
+            this.bt_workstation = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_avatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_state)).BeginInit();
@@ -85,6 +86,7 @@
             this.pb_avatar.Margin = new System.Windows.Forms.Padding(4);
             this.pb_avatar.Name = "pb_avatar";
             this.pb_avatar.Size = new System.Drawing.Size(133, 157);
+            this.pb_avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_avatar.TabIndex = 2;
             this.pb_avatar.TabStop = false;
             // 
@@ -254,15 +256,16 @@
             this.dv_workschedule.Margin = new System.Windows.Forms.Padding(4);
             this.dv_workschedule.Name = "dv_workschedule";
             this.dv_workschedule.RowHeadersWidth = 51;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
-            this.dv_workschedule.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Transparent;
+            this.dv_workschedule.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dv_workschedule.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dv_workschedule.Size = new System.Drawing.Size(949, 209);
             this.dv_workschedule.TabIndex = 19;
             // 
             // pb_state1
             // 
+            this.pb_state1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.pb_state1.Location = new System.Drawing.Point(244, 511);
             this.pb_state1.Margin = new System.Windows.Forms.Padding(4);
             this.pb_state1.Name = "pb_state1";
@@ -282,6 +285,7 @@
             // 
             // pb_state3
             // 
+            this.pb_state3.BackColor = System.Drawing.Color.Blue;
             this.pb_state3.Location = new System.Drawing.Point(548, 511);
             this.pb_state3.Margin = new System.Windows.Forms.Padding(4);
             this.pb_state3.Name = "pb_state3";
@@ -291,6 +295,7 @@
             // 
             // pb_state4
             // 
+            this.pb_state4.BackColor = System.Drawing.Color.Red;
             this.pb_state4.Location = new System.Drawing.Point(683, 511);
             this.pb_state4.Margin = new System.Windows.Forms.Padding(4);
             this.pb_state4.Name = "pb_state4";
@@ -300,6 +305,7 @@
             // 
             // pb_state2
             // 
+            this.pb_state2.BackColor = System.Drawing.Color.Lime;
             this.pb_state2.Location = new System.Drawing.Point(404, 511);
             this.pb_state2.Margin = new System.Windows.Forms.Padding(4);
             this.pb_state2.Name = "pb_state2";
@@ -369,11 +375,23 @@
             this.cb_dayRange.TabIndex = 31;
             this.cb_dayRange.SelectedIndexChanged += new System.EventHandler(this.cb_dayRange_SelectedIndexChanged);
             // 
+            // bt_workstation
+            // 
+            this.bt_workstation.Location = new System.Drawing.Point(835, 564);
+            this.bt_workstation.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_workstation.Name = "bt_workstation";
+            this.bt_workstation.Size = new System.Drawing.Size(133, 49);
+            this.bt_workstation.TabIndex = 32;
+            this.bt_workstation.Text = "Work Station";
+            this.bt_workstation.UseVisualStyleBackColor = true;
+            this.bt_workstation.Click += new System.EventHandler(this.bt_workstation_Click);
+            // 
             // OverView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 626);
+            this.Controls.Add(this.bt_workstation);
             this.Controls.Add(this.cb_dayRange);
             this.Controls.Add(this.bt_changepassword);
             this.Controls.Add(this.bt_checkin);
@@ -451,5 +469,6 @@
         public System.Windows.Forms.RadioButton rb_male;
         public System.Windows.Forms.RadioButton rb_female;
         private System.Windows.Forms.ComboBox cb_dayRange;
+        private System.Windows.Forms.Button bt_workstation;
     }
 }

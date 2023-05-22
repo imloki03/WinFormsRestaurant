@@ -222,11 +222,12 @@ namespace WinFormsRestaurant
             }
         }
 
-  
+        WorkSchedule_Class work = new WorkSchedule_Class();
         private void bt_checkOUT_Click(object sender, EventArgs e)
         {
-            CheckIN_OUT checkIN_OUT = new CheckIN_OUT();
-            checkIN_OUT.Show();
+            work.checkOut();
+            Salary salary = new Salary();
+            salary.Show();
         }
     }
 }

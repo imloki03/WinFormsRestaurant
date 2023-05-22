@@ -380,6 +380,11 @@
     <Content Include="recognition.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\logo_winforms.png" />
+    <None Include="Resources\hidepas.png" />
+    <None Include="Resources\password1.png" />
+    <None Include="Resources\password.png" />
+    <None Include="Resources\username.png" />
     <None Include="Resources\Voucher.png" />
     <None Include="Resources\MoMo_Logo.png" />
     <None Include="Resources\receptionIcon.png" />
