@@ -217,25 +217,26 @@
             this.exportReceipt,
             this.removeTable});
             this.option.Name = "option";
-            this.option.Size = new System.Drawing.Size(176, 76);
+            this.option.Size = new System.Drawing.Size(181, 92);
+            this.option.Opening += new System.ComponentModel.CancelEventHandler(this.option_Opening);
             this.option.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.option_ItemClicked);
             // 
             // newOrder
             // 
             this.newOrder.Name = "newOrder";
-            this.newOrder.Size = new System.Drawing.Size(175, 24);
+            this.newOrder.Size = new System.Drawing.Size(180, 22);
             this.newOrder.Text = "New Order";
             // 
             // exportReceipt
             // 
             this.exportReceipt.Name = "exportReceipt";
-            this.exportReceipt.Size = new System.Drawing.Size(175, 24);
+            this.exportReceipt.Size = new System.Drawing.Size(180, 22);
             this.exportReceipt.Text = "Export Receipt";
             // 
             // removeTable
             // 
             this.removeTable.Name = "removeTable";
-            this.removeTable.Size = new System.Drawing.Size(175, 24);
+            this.removeTable.Size = new System.Drawing.Size(180, 22);
             this.removeTable.Text = "Remove Table";
             // 
             // bt_checkOUT
@@ -243,10 +244,9 @@
             this.bt_checkOUT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.bt_checkOUT.FlatAppearance.BorderSize = 2;
             this.bt_checkOUT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_checkOUT.Location = new System.Drawing.Point(1671, 820);
-            this.bt_checkOUT.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_checkOUT.Location = new System.Drawing.Point(1253, 666);
             this.bt_checkOUT.Name = "bt_checkOUT";
-            this.bt_checkOUT.Size = new System.Drawing.Size(133, 52);
+            this.bt_checkOUT.Size = new System.Drawing.Size(100, 42);
             this.bt_checkOUT.TabIndex = 19;
             this.bt_checkOUT.Text = "Check Out";
             this.bt_checkOUT.UseVisualStyleBackColor = false;
@@ -256,10 +256,9 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.receptionIcon;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 689);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Location = new System.Drawing.Point(2, 560);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(107, 91);
+            this.pictureBox3.Size = new System.Drawing.Size(80, 74);
             this.pictureBox3.TabIndex = 22;
             this.pictureBox3.TabStop = false;
             // 
@@ -268,10 +267,9 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.entranceIcon;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(101, 830);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(76, 674);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 70);
+            this.pictureBox2.Size = new System.Drawing.Size(60, 57);
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
             // 
@@ -280,10 +278,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::WinFormsRestaurant.Properties.Resources.wcIcon;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(61, -17);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(46, -14);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(107, 63);
+            this.pictureBox1.Size = new System.Drawing.Size(80, 51);
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
@@ -298,10 +295,9 @@
             this.pn_15.Controls.Add(this.cus15_3);
             this.pn_15.Controls.Add(this.cus15_2);
             this.pn_15.Controls.Add(this.cus15_1);
-            this.pn_15.Location = new System.Drawing.Point(1512, 585);
-            this.pn_15.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_15.Location = new System.Drawing.Point(1134, 475);
             this.pn_15.Name = "pn_15";
-            this.pn_15.Size = new System.Drawing.Size(265, 221);
+            this.pn_15.Size = new System.Drawing.Size(200, 180);
             this.pn_15.TabIndex = 18;
             this.pn_15.Click += new System.EventHandler(this.pn_Click);
             this.pn_15.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
@@ -311,10 +307,9 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("UTM Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(104, 87);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(78, 71);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(51, 48);
+            this.label11.Size = new System.Drawing.Size(41, 39);
             this.label11.TabIndex = 4;
             this.label11.Text = "15";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -323,10 +318,9 @@
             // 
             this.cus15_4.BackColor = System.Drawing.Color.Transparent;
             this.cus15_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus15_4.Location = new System.Drawing.Point(148, 146);
-            this.cus15_4.Margin = new System.Windows.Forms.Padding(4);
+            this.cus15_4.Location = new System.Drawing.Point(111, 119);
             this.cus15_4.Name = "cus15_4";
-            this.cus15_4.Size = new System.Drawing.Size(73, 65);
+            this.cus15_4.Size = new System.Drawing.Size(55, 53);
             this.cus15_4.TabIndex = 3;
             this.cus15_4.TabStop = false;
             // 
@@ -334,10 +328,9 @@
             // 
             this.cus15_3.BackColor = System.Drawing.Color.Transparent;
             this.cus15_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus15_3.Location = new System.Drawing.Point(44, 148);
-            this.cus15_3.Margin = new System.Windows.Forms.Padding(4);
+            this.cus15_3.Location = new System.Drawing.Point(33, 120);
             this.cus15_3.Name = "cus15_3";
-            this.cus15_3.Size = new System.Drawing.Size(73, 65);
+            this.cus15_3.Size = new System.Drawing.Size(55, 53);
             this.cus15_3.TabIndex = 2;
             this.cus15_3.TabStop = false;
             // 
@@ -345,10 +338,9 @@
             // 
             this.cus15_2.BackColor = System.Drawing.Color.Transparent;
             this.cus15_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus15_2.Location = new System.Drawing.Point(149, 15);
-            this.cus15_2.Margin = new System.Windows.Forms.Padding(4);
+            this.cus15_2.Location = new System.Drawing.Point(112, 12);
             this.cus15_2.Name = "cus15_2";
-            this.cus15_2.Size = new System.Drawing.Size(73, 65);
+            this.cus15_2.Size = new System.Drawing.Size(55, 53);
             this.cus15_2.TabIndex = 1;
             this.cus15_2.TabStop = false;
             // 
@@ -356,10 +348,9 @@
             // 
             this.cus15_1.BackColor = System.Drawing.Color.Transparent;
             this.cus15_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus15_1.Location = new System.Drawing.Point(48, 14);
-            this.cus15_1.Margin = new System.Windows.Forms.Padding(4);
+            this.cus15_1.Location = new System.Drawing.Point(36, 11);
             this.cus15_1.Name = "cus15_1";
-            this.cus15_1.Size = new System.Drawing.Size(73, 65);
+            this.cus15_1.Size = new System.Drawing.Size(55, 53);
             this.cus15_1.TabIndex = 0;
             this.cus15_1.TabStop = false;
             // 
@@ -374,10 +365,9 @@
             this.pn_14.Controls.Add(this.cus14_3);
             this.pn_14.Controls.Add(this.cus14_2);
             this.pn_14.Controls.Add(this.cus14_1);
-            this.pn_14.Location = new System.Drawing.Point(1225, 585);
-            this.pn_14.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_14.Location = new System.Drawing.Point(919, 475);
             this.pn_14.Name = "pn_14";
-            this.pn_14.Size = new System.Drawing.Size(265, 221);
+            this.pn_14.Size = new System.Drawing.Size(200, 180);
             this.pn_14.TabIndex = 17;
             this.pn_14.Click += new System.EventHandler(this.pn_Click);
             this.pn_14.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
@@ -387,10 +377,9 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("UTM Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(104, 87);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(78, 71);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(50, 48);
+            this.label12.Size = new System.Drawing.Size(40, 39);
             this.label12.TabIndex = 4;
             this.label12.Text = "14";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -399,10 +388,9 @@
             // 
             this.cus14_4.BackColor = System.Drawing.Color.Transparent;
             this.cus14_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus14_4.Location = new System.Drawing.Point(148, 146);
-            this.cus14_4.Margin = new System.Windows.Forms.Padding(4);
+            this.cus14_4.Location = new System.Drawing.Point(111, 119);
             this.cus14_4.Name = "cus14_4";
-            this.cus14_4.Size = new System.Drawing.Size(73, 65);
+            this.cus14_4.Size = new System.Drawing.Size(55, 53);
             this.cus14_4.TabIndex = 3;
             this.cus14_4.TabStop = false;
             // 
@@ -410,10 +398,9 @@
             // 
             this.cus14_3.BackColor = System.Drawing.Color.Transparent;
             this.cus14_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus14_3.Location = new System.Drawing.Point(44, 148);
-            this.cus14_3.Margin = new System.Windows.Forms.Padding(4);
+            this.cus14_3.Location = new System.Drawing.Point(33, 120);
             this.cus14_3.Name = "cus14_3";
-            this.cus14_3.Size = new System.Drawing.Size(73, 65);
+            this.cus14_3.Size = new System.Drawing.Size(55, 53);
             this.cus14_3.TabIndex = 2;
             this.cus14_3.TabStop = false;
             // 
@@ -421,10 +408,9 @@
             // 
             this.cus14_2.BackColor = System.Drawing.Color.Transparent;
             this.cus14_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus14_2.Location = new System.Drawing.Point(149, 15);
-            this.cus14_2.Margin = new System.Windows.Forms.Padding(4);
+            this.cus14_2.Location = new System.Drawing.Point(112, 12);
             this.cus14_2.Name = "cus14_2";
-            this.cus14_2.Size = new System.Drawing.Size(73, 65);
+            this.cus14_2.Size = new System.Drawing.Size(55, 53);
             this.cus14_2.TabIndex = 1;
             this.cus14_2.TabStop = false;
             // 
@@ -432,10 +418,9 @@
             // 
             this.cus14_1.BackColor = System.Drawing.Color.Transparent;
             this.cus14_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus14_1.Location = new System.Drawing.Point(48, 14);
-            this.cus14_1.Margin = new System.Windows.Forms.Padding(4);
+            this.cus14_1.Location = new System.Drawing.Point(36, 11);
             this.cus14_1.Name = "cus14_1";
-            this.cus14_1.Size = new System.Drawing.Size(73, 65);
+            this.cus14_1.Size = new System.Drawing.Size(55, 53);
             this.cus14_1.TabIndex = 0;
             this.cus14_1.TabStop = false;
             // 
@@ -450,10 +435,9 @@
             this.pn_13.Controls.Add(this.cus13_3);
             this.pn_13.Controls.Add(this.cus13_2);
             this.pn_13.Controls.Add(this.cus13_1);
-            this.pn_13.Location = new System.Drawing.Point(937, 585);
-            this.pn_13.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_13.Location = new System.Drawing.Point(703, 475);
             this.pn_13.Name = "pn_13";
-            this.pn_13.Size = new System.Drawing.Size(265, 221);
+            this.pn_13.Size = new System.Drawing.Size(200, 180);
             this.pn_13.TabIndex = 16;
             this.pn_13.Click += new System.EventHandler(this.pn_Click);
             this.pn_13.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
@@ -463,10 +447,9 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("UTM Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(104, 87);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(78, 71);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(51, 48);
+            this.label13.Size = new System.Drawing.Size(41, 39);
             this.label13.TabIndex = 4;
             this.label13.Text = "13";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -475,10 +458,9 @@
             // 
             this.cus13_4.BackColor = System.Drawing.Color.Transparent;
             this.cus13_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus13_4.Location = new System.Drawing.Point(148, 146);
-            this.cus13_4.Margin = new System.Windows.Forms.Padding(4);
+            this.cus13_4.Location = new System.Drawing.Point(111, 119);
             this.cus13_4.Name = "cus13_4";
-            this.cus13_4.Size = new System.Drawing.Size(73, 65);
+            this.cus13_4.Size = new System.Drawing.Size(55, 53);
             this.cus13_4.TabIndex = 3;
             this.cus13_4.TabStop = false;
             // 
@@ -486,10 +468,9 @@
             // 
             this.cus13_3.BackColor = System.Drawing.Color.Transparent;
             this.cus13_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus13_3.Location = new System.Drawing.Point(44, 148);
-            this.cus13_3.Margin = new System.Windows.Forms.Padding(4);
+            this.cus13_3.Location = new System.Drawing.Point(33, 120);
             this.cus13_3.Name = "cus13_3";
-            this.cus13_3.Size = new System.Drawing.Size(73, 65);
+            this.cus13_3.Size = new System.Drawing.Size(55, 53);
             this.cus13_3.TabIndex = 2;
             this.cus13_3.TabStop = false;
             // 
@@ -497,10 +478,9 @@
             // 
             this.cus13_2.BackColor = System.Drawing.Color.Transparent;
             this.cus13_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus13_2.Location = new System.Drawing.Point(149, 15);
-            this.cus13_2.Margin = new System.Windows.Forms.Padding(4);
+            this.cus13_2.Location = new System.Drawing.Point(112, 12);
             this.cus13_2.Name = "cus13_2";
-            this.cus13_2.Size = new System.Drawing.Size(73, 65);
+            this.cus13_2.Size = new System.Drawing.Size(55, 53);
             this.cus13_2.TabIndex = 1;
             this.cus13_2.TabStop = false;
             // 
@@ -508,10 +488,9 @@
             // 
             this.cus13_1.BackColor = System.Drawing.Color.Transparent;
             this.cus13_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus13_1.Location = new System.Drawing.Point(48, 14);
-            this.cus13_1.Margin = new System.Windows.Forms.Padding(4);
+            this.cus13_1.Location = new System.Drawing.Point(36, 11);
             this.cus13_1.Name = "cus13_1";
-            this.cus13_1.Size = new System.Drawing.Size(73, 65);
+            this.cus13_1.Size = new System.Drawing.Size(55, 53);
             this.cus13_1.TabIndex = 0;
             this.cus13_1.TabStop = false;
             // 
@@ -526,10 +505,9 @@
             this.pn_12.Controls.Add(this.cus12_3);
             this.pn_12.Controls.Add(this.cus12_2);
             this.pn_12.Controls.Add(this.cus12_1);
-            this.pn_12.Location = new System.Drawing.Point(652, 585);
-            this.pn_12.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_12.Location = new System.Drawing.Point(489, 475);
             this.pn_12.Name = "pn_12";
-            this.pn_12.Size = new System.Drawing.Size(265, 221);
+            this.pn_12.Size = new System.Drawing.Size(200, 180);
             this.pn_12.TabIndex = 15;
             this.pn_12.Click += new System.EventHandler(this.pn_Click);
             this.pn_12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
@@ -539,10 +517,9 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("UTM Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(105, 87);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(79, 71);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(50, 48);
+            this.label14.Size = new System.Drawing.Size(41, 39);
             this.label14.TabIndex = 4;
             this.label14.Text = "12";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -551,10 +528,9 @@
             // 
             this.cus12_4.BackColor = System.Drawing.Color.Transparent;
             this.cus12_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus12_4.Location = new System.Drawing.Point(148, 146);
-            this.cus12_4.Margin = new System.Windows.Forms.Padding(4);
+            this.cus12_4.Location = new System.Drawing.Point(111, 119);
             this.cus12_4.Name = "cus12_4";
-            this.cus12_4.Size = new System.Drawing.Size(73, 65);
+            this.cus12_4.Size = new System.Drawing.Size(55, 53);
             this.cus12_4.TabIndex = 3;
             this.cus12_4.TabStop = false;
             // 
@@ -562,10 +538,9 @@
             // 
             this.cus12_3.BackColor = System.Drawing.Color.Transparent;
             this.cus12_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus12_3.Location = new System.Drawing.Point(44, 148);
-            this.cus12_3.Margin = new System.Windows.Forms.Padding(4);
+            this.cus12_3.Location = new System.Drawing.Point(33, 120);
             this.cus12_3.Name = "cus12_3";
-            this.cus12_3.Size = new System.Drawing.Size(73, 65);
+            this.cus12_3.Size = new System.Drawing.Size(55, 53);
             this.cus12_3.TabIndex = 2;
             this.cus12_3.TabStop = false;
             // 
@@ -573,10 +548,9 @@
             // 
             this.cus12_2.BackColor = System.Drawing.Color.Transparent;
             this.cus12_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus12_2.Location = new System.Drawing.Point(149, 15);
-            this.cus12_2.Margin = new System.Windows.Forms.Padding(4);
+            this.cus12_2.Location = new System.Drawing.Point(112, 12);
             this.cus12_2.Name = "cus12_2";
-            this.cus12_2.Size = new System.Drawing.Size(73, 65);
+            this.cus12_2.Size = new System.Drawing.Size(55, 53);
             this.cus12_2.TabIndex = 1;
             this.cus12_2.TabStop = false;
             // 
@@ -584,10 +558,9 @@
             // 
             this.cus12_1.BackColor = System.Drawing.Color.Transparent;
             this.cus12_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus12_1.Location = new System.Drawing.Point(48, 14);
-            this.cus12_1.Margin = new System.Windows.Forms.Padding(4);
+            this.cus12_1.Location = new System.Drawing.Point(36, 11);
             this.cus12_1.Name = "cus12_1";
-            this.cus12_1.Size = new System.Drawing.Size(73, 65);
+            this.cus12_1.Size = new System.Drawing.Size(55, 53);
             this.cus12_1.TabIndex = 0;
             this.cus12_1.TabStop = false;
             // 
@@ -602,10 +575,9 @@
             this.pn_11.Controls.Add(this.cus11_3);
             this.pn_11.Controls.Add(this.cus11_2);
             this.pn_11.Controls.Add(this.cus11_1);
-            this.pn_11.Location = new System.Drawing.Point(365, 585);
-            this.pn_11.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_11.Location = new System.Drawing.Point(274, 475);
             this.pn_11.Name = "pn_11";
-            this.pn_11.Size = new System.Drawing.Size(265, 221);
+            this.pn_11.Size = new System.Drawing.Size(200, 180);
             this.pn_11.TabIndex = 14;
             this.pn_11.Click += new System.EventHandler(this.pn_Click);
             this.pn_11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
@@ -615,10 +587,9 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("UTM Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(107, 87);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(80, 71);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(46, 48);
+            this.label15.Size = new System.Drawing.Size(37, 39);
             this.label15.TabIndex = 4;
             this.label15.Text = "11";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -627,10 +598,9 @@
             // 
             this.cus11_4.BackColor = System.Drawing.Color.Transparent;
             this.cus11_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus11_4.Location = new System.Drawing.Point(148, 146);
-            this.cus11_4.Margin = new System.Windows.Forms.Padding(4);
+            this.cus11_4.Location = new System.Drawing.Point(111, 119);
             this.cus11_4.Name = "cus11_4";
-            this.cus11_4.Size = new System.Drawing.Size(73, 65);
+            this.cus11_4.Size = new System.Drawing.Size(55, 53);
             this.cus11_4.TabIndex = 3;
             this.cus11_4.TabStop = false;
             // 
@@ -638,10 +608,9 @@
             // 
             this.cus11_3.BackColor = System.Drawing.Color.Transparent;
             this.cus11_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus11_3.Location = new System.Drawing.Point(44, 148);
-            this.cus11_3.Margin = new System.Windows.Forms.Padding(4);
+            this.cus11_3.Location = new System.Drawing.Point(33, 120);
             this.cus11_3.Name = "cus11_3";
-            this.cus11_3.Size = new System.Drawing.Size(73, 65);
+            this.cus11_3.Size = new System.Drawing.Size(55, 53);
             this.cus11_3.TabIndex = 2;
             this.cus11_3.TabStop = false;
             // 
@@ -649,10 +618,9 @@
             // 
             this.cus11_2.BackColor = System.Drawing.Color.Transparent;
             this.cus11_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus11_2.Location = new System.Drawing.Point(149, 15);
-            this.cus11_2.Margin = new System.Windows.Forms.Padding(4);
+            this.cus11_2.Location = new System.Drawing.Point(112, 12);
             this.cus11_2.Name = "cus11_2";
-            this.cus11_2.Size = new System.Drawing.Size(73, 65);
+            this.cus11_2.Size = new System.Drawing.Size(55, 53);
             this.cus11_2.TabIndex = 1;
             this.cus11_2.TabStop = false;
             // 
@@ -660,10 +628,9 @@
             // 
             this.cus11_1.BackColor = System.Drawing.Color.Transparent;
             this.cus11_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus11_1.Location = new System.Drawing.Point(48, 14);
-            this.cus11_1.Margin = new System.Windows.Forms.Padding(4);
+            this.cus11_1.Location = new System.Drawing.Point(36, 11);
             this.cus11_1.Name = "cus11_1";
-            this.cus11_1.Size = new System.Drawing.Size(73, 65);
+            this.cus11_1.Size = new System.Drawing.Size(55, 53);
             this.cus11_1.TabIndex = 0;
             this.cus11_1.TabStop = false;
             // 
@@ -678,10 +645,9 @@
             this.pn_10.Controls.Add(this.cus10_3);
             this.pn_10.Controls.Add(this.cus10_2);
             this.pn_10.Controls.Add(this.cus10_1);
-            this.pn_10.Location = new System.Drawing.Point(1512, 338);
-            this.pn_10.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_10.Location = new System.Drawing.Point(1134, 275);
             this.pn_10.Name = "pn_10";
-            this.pn_10.Size = new System.Drawing.Size(265, 221);
+            this.pn_10.Size = new System.Drawing.Size(200, 180);
             this.pn_10.TabIndex = 13;
             this.pn_10.Click += new System.EventHandler(this.pn_Click);
             this.pn_10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
@@ -691,10 +657,9 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("UTM Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(105, 87);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(79, 71);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 48);
+            this.label6.Size = new System.Drawing.Size(41, 39);
             this.label6.TabIndex = 4;
             this.label6.Text = "10";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -703,10 +668,9 @@
             // 
             this.cus10_4.BackColor = System.Drawing.Color.Transparent;
             this.cus10_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus10_4.Location = new System.Drawing.Point(148, 146);
-            this.cus10_4.Margin = new System.Windows.Forms.Padding(4);
+            this.cus10_4.Location = new System.Drawing.Point(111, 119);
             this.cus10_4.Name = "cus10_4";
-            this.cus10_4.Size = new System.Drawing.Size(73, 65);
+            this.cus10_4.Size = new System.Drawing.Size(55, 53);
             this.cus10_4.TabIndex = 3;
             this.cus10_4.TabStop = false;
             // 
@@ -714,10 +678,9 @@
             // 
             this.cus10_3.BackColor = System.Drawing.Color.Transparent;
             this.cus10_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus10_3.Location = new System.Drawing.Point(44, 148);
-            this.cus10_3.Margin = new System.Windows.Forms.Padding(4);
+            this.cus10_3.Location = new System.Drawing.Point(33, 120);
             this.cus10_3.Name = "cus10_3";
-            this.cus10_3.Size = new System.Drawing.Size(73, 65);
+            this.cus10_3.Size = new System.Drawing.Size(55, 53);
             this.cus10_3.TabIndex = 2;
             this.cus10_3.TabStop = false;
             // 
@@ -725,10 +688,9 @@
             // 
             this.cus10_2.BackColor = System.Drawing.Color.Transparent;
             this.cus10_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus10_2.Location = new System.Drawing.Point(149, 15);
-            this.cus10_2.Margin = new System.Windows.Forms.Padding(4);
+            this.cus10_2.Location = new System.Drawing.Point(112, 12);
             this.cus10_2.Name = "cus10_2";
-            this.cus10_2.Size = new System.Drawing.Size(73, 65);
+            this.cus10_2.Size = new System.Drawing.Size(55, 53);
             this.cus10_2.TabIndex = 1;
             this.cus10_2.TabStop = false;
             // 
@@ -736,10 +698,9 @@
             // 
             this.cus10_1.BackColor = System.Drawing.Color.Transparent;
             this.cus10_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus10_1.Location = new System.Drawing.Point(48, 15);
-            this.cus10_1.Margin = new System.Windows.Forms.Padding(4);
+            this.cus10_1.Location = new System.Drawing.Point(36, 12);
             this.cus10_1.Name = "cus10_1";
-            this.cus10_1.Size = new System.Drawing.Size(73, 65);
+            this.cus10_1.Size = new System.Drawing.Size(55, 53);
             this.cus10_1.TabIndex = 0;
             this.cus10_1.TabStop = false;
             // 
@@ -754,10 +715,9 @@
             this.pn_5.Controls.Add(this.cus5_3);
             this.pn_5.Controls.Add(this.cus5_2);
             this.pn_5.Controls.Add(this.cus5_1);
-            this.pn_5.Location = new System.Drawing.Point(1512, 94);
-            this.pn_5.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_5.Location = new System.Drawing.Point(1134, 76);
             this.pn_5.Name = "pn_5";
-            this.pn_5.Size = new System.Drawing.Size(265, 221);
+            this.pn_5.Size = new System.Drawing.Size(200, 180);
             this.pn_5.TabIndex = 8;
             this.pn_5.Click += new System.EventHandler(this.pn_Click);
             this.pn_5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
@@ -767,10 +727,9 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("UTM Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(112, 87);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(84, 71);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 48);
+            this.label5.Size = new System.Drawing.Size(31, 39);
             this.label5.TabIndex = 4;
             this.label5.Text = "5";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -779,10 +738,9 @@
             // 
             this.cus5_4.BackColor = System.Drawing.Color.Transparent;
             this.cus5_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus5_4.Location = new System.Drawing.Point(148, 146);
-            this.cus5_4.Margin = new System.Windows.Forms.Padding(4);
+            this.cus5_4.Location = new System.Drawing.Point(111, 119);
             this.cus5_4.Name = "cus5_4";
-            this.cus5_4.Size = new System.Drawing.Size(73, 65);
+            this.cus5_4.Size = new System.Drawing.Size(55, 53);
             this.cus5_4.TabIndex = 3;
             this.cus5_4.TabStop = false;
             // 
@@ -790,10 +748,9 @@
             // 
             this.cus5_3.BackColor = System.Drawing.Color.Transparent;
             this.cus5_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus5_3.Location = new System.Drawing.Point(44, 148);
-            this.cus5_3.Margin = new System.Windows.Forms.Padding(4);
+            this.cus5_3.Location = new System.Drawing.Point(33, 120);
             this.cus5_3.Name = "cus5_3";
-            this.cus5_3.Size = new System.Drawing.Size(73, 65);
+            this.cus5_3.Size = new System.Drawing.Size(55, 53);
             this.cus5_3.TabIndex = 2;
             this.cus5_3.TabStop = false;
             // 
@@ -801,10 +758,9 @@
             // 
             this.cus5_2.BackColor = System.Drawing.Color.Transparent;
             this.cus5_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus5_2.Location = new System.Drawing.Point(149, 15);
-            this.cus5_2.Margin = new System.Windows.Forms.Padding(4);
+            this.cus5_2.Location = new System.Drawing.Point(112, 12);
             this.cus5_2.Name = "cus5_2";
-            this.cus5_2.Size = new System.Drawing.Size(73, 65);
+            this.cus5_2.Size = new System.Drawing.Size(55, 53);
             this.cus5_2.TabIndex = 1;
             this.cus5_2.TabStop = false;
             // 
@@ -812,10 +768,9 @@
             // 
             this.cus5_1.BackColor = System.Drawing.Color.Transparent;
             this.cus5_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus5_1.Location = new System.Drawing.Point(48, 14);
-            this.cus5_1.Margin = new System.Windows.Forms.Padding(4);
+            this.cus5_1.Location = new System.Drawing.Point(36, 11);
             this.cus5_1.Name = "cus5_1";
-            this.cus5_1.Size = new System.Drawing.Size(73, 65);
+            this.cus5_1.Size = new System.Drawing.Size(55, 53);
             this.cus5_1.TabIndex = 0;
             this.cus5_1.TabStop = false;
             // 
@@ -830,10 +785,9 @@
             this.pn_9.Controls.Add(this.cus9_3);
             this.pn_9.Controls.Add(this.cus9_2);
             this.pn_9.Controls.Add(this.cus9_1);
-            this.pn_9.Location = new System.Drawing.Point(1225, 338);
-            this.pn_9.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_9.Location = new System.Drawing.Point(919, 275);
             this.pn_9.Name = "pn_9";
-            this.pn_9.Size = new System.Drawing.Size(265, 221);
+            this.pn_9.Size = new System.Drawing.Size(200, 180);
             this.pn_9.TabIndex = 12;
             this.pn_9.Click += new System.EventHandler(this.pn_Click);
             this.pn_9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
@@ -843,10 +797,9 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("UTM Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(103, 87);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(77, 71);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 48);
+            this.label7.Size = new System.Drawing.Size(39, 39);
             this.label7.TabIndex = 4;
             this.label7.Text = " 9";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -855,10 +808,9 @@
             // 
             this.cus9_4.BackColor = System.Drawing.Color.Transparent;
             this.cus9_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus9_4.Location = new System.Drawing.Point(148, 146);
-            this.cus9_4.Margin = new System.Windows.Forms.Padding(4);
+            this.cus9_4.Location = new System.Drawing.Point(111, 119);
             this.cus9_4.Name = "cus9_4";
-            this.cus9_4.Size = new System.Drawing.Size(73, 65);
+            this.cus9_4.Size = new System.Drawing.Size(55, 53);
             this.cus9_4.TabIndex = 3;
             this.cus9_4.TabStop = false;
             // 
@@ -866,10 +818,9 @@
             // 
             this.cus9_3.BackColor = System.Drawing.Color.Transparent;
             this.cus9_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus9_3.Location = new System.Drawing.Point(44, 148);
-            this.cus9_3.Margin = new System.Windows.Forms.Padding(4);
+            this.cus9_3.Location = new System.Drawing.Point(33, 120);
             this.cus9_3.Name = "cus9_3";
-            this.cus9_3.Size = new System.Drawing.Size(73, 65);
+            this.cus9_3.Size = new System.Drawing.Size(55, 53);
             this.cus9_3.TabIndex = 2;
             this.cus9_3.TabStop = false;
             // 
@@ -877,10 +828,9 @@
             // 
             this.cus9_2.BackColor = System.Drawing.Color.Transparent;
             this.cus9_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus9_2.Location = new System.Drawing.Point(149, 15);
-            this.cus9_2.Margin = new System.Windows.Forms.Padding(4);
+            this.cus9_2.Location = new System.Drawing.Point(112, 12);
             this.cus9_2.Name = "cus9_2";
-            this.cus9_2.Size = new System.Drawing.Size(73, 65);
+            this.cus9_2.Size = new System.Drawing.Size(55, 53);
             this.cus9_2.TabIndex = 1;
             this.cus9_2.TabStop = false;
             // 
@@ -888,10 +838,9 @@
             // 
             this.cus9_1.BackColor = System.Drawing.Color.Transparent;
             this.cus9_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus9_1.Location = new System.Drawing.Point(48, 14);
-            this.cus9_1.Margin = new System.Windows.Forms.Padding(4);
+            this.cus9_1.Location = new System.Drawing.Point(36, 11);
             this.cus9_1.Name = "cus9_1";
-            this.cus9_1.Size = new System.Drawing.Size(73, 65);
+            this.cus9_1.Size = new System.Drawing.Size(55, 53);
             this.cus9_1.TabIndex = 0;
             this.cus9_1.TabStop = false;
             // 
@@ -906,10 +855,9 @@
             this.pn_4.Controls.Add(this.cus4_3);
             this.pn_4.Controls.Add(this.cus4_2);
             this.pn_4.Controls.Add(this.cus4_1);
-            this.pn_4.Location = new System.Drawing.Point(1225, 94);
-            this.pn_4.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_4.Location = new System.Drawing.Point(919, 76);
             this.pn_4.Name = "pn_4";
-            this.pn_4.Size = new System.Drawing.Size(265, 221);
+            this.pn_4.Size = new System.Drawing.Size(200, 180);
             this.pn_4.TabIndex = 7;
             this.pn_4.Click += new System.EventHandler(this.pn_Click);
             this.pn_4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
@@ -919,10 +867,9 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("UTM Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(111, 87);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(83, 71);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 48);
+            this.label3.Size = new System.Drawing.Size(30, 39);
             this.label3.TabIndex = 4;
             this.label3.Text = "4";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -931,10 +878,9 @@
             // 
             this.cus4_4.BackColor = System.Drawing.Color.Transparent;
             this.cus4_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus4_4.Location = new System.Drawing.Point(148, 146);
-            this.cus4_4.Margin = new System.Windows.Forms.Padding(4);
+            this.cus4_4.Location = new System.Drawing.Point(111, 119);
             this.cus4_4.Name = "cus4_4";
-            this.cus4_4.Size = new System.Drawing.Size(73, 65);
+            this.cus4_4.Size = new System.Drawing.Size(55, 53);
             this.cus4_4.TabIndex = 3;
             this.cus4_4.TabStop = false;
             // 
@@ -942,10 +888,9 @@
             // 
             this.cus4_3.BackColor = System.Drawing.Color.Transparent;
             this.cus4_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus4_3.Location = new System.Drawing.Point(44, 148);
-            this.cus4_3.Margin = new System.Windows.Forms.Padding(4);
+            this.cus4_3.Location = new System.Drawing.Point(33, 120);
             this.cus4_3.Name = "cus4_3";
-            this.cus4_3.Size = new System.Drawing.Size(73, 65);
+            this.cus4_3.Size = new System.Drawing.Size(55, 53);
             this.cus4_3.TabIndex = 2;
             this.cus4_3.TabStop = false;
             // 
@@ -953,10 +898,9 @@
             // 
             this.cus4_2.BackColor = System.Drawing.Color.Transparent;
             this.cus4_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus4_2.Location = new System.Drawing.Point(149, 15);
-            this.cus4_2.Margin = new System.Windows.Forms.Padding(4);
+            this.cus4_2.Location = new System.Drawing.Point(112, 12);
             this.cus4_2.Name = "cus4_2";
-            this.cus4_2.Size = new System.Drawing.Size(73, 65);
+            this.cus4_2.Size = new System.Drawing.Size(55, 53);
             this.cus4_2.TabIndex = 1;
             this.cus4_2.TabStop = false;
             // 
@@ -964,10 +908,9 @@
             // 
             this.cus4_1.BackColor = System.Drawing.Color.Transparent;
             this.cus4_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus4_1.Location = new System.Drawing.Point(48, 14);
-            this.cus4_1.Margin = new System.Windows.Forms.Padding(4);
+            this.cus4_1.Location = new System.Drawing.Point(36, 11);
             this.cus4_1.Name = "cus4_1";
-            this.cus4_1.Size = new System.Drawing.Size(73, 65);
+            this.cus4_1.Size = new System.Drawing.Size(55, 53);
             this.cus4_1.TabIndex = 0;
             this.cus4_1.TabStop = false;
             // 
@@ -982,10 +925,9 @@
             this.pn_8.Controls.Add(this.cus8_3);
             this.pn_8.Controls.Add(this.cus8_2);
             this.pn_8.Controls.Add(this.cus8_1);
-            this.pn_8.Location = new System.Drawing.Point(937, 338);
-            this.pn_8.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_8.Location = new System.Drawing.Point(703, 275);
             this.pn_8.Name = "pn_8";
-            this.pn_8.Size = new System.Drawing.Size(265, 221);
+            this.pn_8.Size = new System.Drawing.Size(200, 180);
             this.pn_8.TabIndex = 11;
             this.pn_8.Click += new System.EventHandler(this.pn_Click);
             this.pn_8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
@@ -995,10 +937,9 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("UTM Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(103, 87);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(77, 71);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 48);
+            this.label8.Size = new System.Drawing.Size(38, 39);
             this.label8.TabIndex = 4;
             this.label8.Text = " 8";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1007,10 +948,9 @@
             // 
             this.cus8_4.BackColor = System.Drawing.Color.Transparent;
             this.cus8_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus8_4.Location = new System.Drawing.Point(148, 146);
-            this.cus8_4.Margin = new System.Windows.Forms.Padding(4);
+            this.cus8_4.Location = new System.Drawing.Point(111, 119);
             this.cus8_4.Name = "cus8_4";
-            this.cus8_4.Size = new System.Drawing.Size(73, 65);
+            this.cus8_4.Size = new System.Drawing.Size(55, 53);
             this.cus8_4.TabIndex = 3;
             this.cus8_4.TabStop = false;
             // 
@@ -1018,10 +958,9 @@
             // 
             this.cus8_3.BackColor = System.Drawing.Color.Transparent;
             this.cus8_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus8_3.Location = new System.Drawing.Point(44, 148);
-            this.cus8_3.Margin = new System.Windows.Forms.Padding(4);
+            this.cus8_3.Location = new System.Drawing.Point(33, 120);
             this.cus8_3.Name = "cus8_3";
-            this.cus8_3.Size = new System.Drawing.Size(73, 65);
+            this.cus8_3.Size = new System.Drawing.Size(55, 53);
             this.cus8_3.TabIndex = 2;
             this.cus8_3.TabStop = false;
             // 
@@ -1029,10 +968,9 @@
             // 
             this.cus8_2.BackColor = System.Drawing.Color.Transparent;
             this.cus8_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus8_2.Location = new System.Drawing.Point(149, 15);
-            this.cus8_2.Margin = new System.Windows.Forms.Padding(4);
+            this.cus8_2.Location = new System.Drawing.Point(112, 12);
             this.cus8_2.Name = "cus8_2";
-            this.cus8_2.Size = new System.Drawing.Size(73, 65);
+            this.cus8_2.Size = new System.Drawing.Size(55, 53);
             this.cus8_2.TabIndex = 1;
             this.cus8_2.TabStop = false;
             // 
@@ -1040,10 +978,9 @@
             // 
             this.cus8_1.BackColor = System.Drawing.Color.Transparent;
             this.cus8_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus8_1.Location = new System.Drawing.Point(48, 15);
-            this.cus8_1.Margin = new System.Windows.Forms.Padding(4);
+            this.cus8_1.Location = new System.Drawing.Point(36, 12);
             this.cus8_1.Name = "cus8_1";
-            this.cus8_1.Size = new System.Drawing.Size(73, 65);
+            this.cus8_1.Size = new System.Drawing.Size(55, 53);
             this.cus8_1.TabIndex = 0;
             this.cus8_1.TabStop = false;
             // 
@@ -1058,10 +995,9 @@
             this.pn_3.Controls.Add(this.cus3_3);
             this.pn_3.Controls.Add(this.cus3_2);
             this.pn_3.Controls.Add(this.cus3_1);
-            this.pn_3.Location = new System.Drawing.Point(939, 94);
-            this.pn_3.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_3.Location = new System.Drawing.Point(704, 76);
             this.pn_3.Name = "pn_3";
-            this.pn_3.Size = new System.Drawing.Size(265, 221);
+            this.pn_3.Size = new System.Drawing.Size(200, 180);
             this.pn_3.TabIndex = 6;
             this.pn_3.Click += new System.EventHandler(this.pn_Click);
             this.pn_3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
@@ -1071,10 +1007,9 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("UTM Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(111, 87);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(83, 71);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 48);
+            this.label4.Size = new System.Drawing.Size(31, 39);
             this.label4.TabIndex = 4;
             this.label4.Text = "3";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1083,10 +1018,9 @@
             // 
             this.cus3_4.BackColor = System.Drawing.Color.Transparent;
             this.cus3_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus3_4.Location = new System.Drawing.Point(148, 146);
-            this.cus3_4.Margin = new System.Windows.Forms.Padding(4);
+            this.cus3_4.Location = new System.Drawing.Point(111, 119);
             this.cus3_4.Name = "cus3_4";
-            this.cus3_4.Size = new System.Drawing.Size(73, 65);
+            this.cus3_4.Size = new System.Drawing.Size(55, 53);
             this.cus3_4.TabIndex = 3;
             this.cus3_4.TabStop = false;
             // 
@@ -1094,10 +1028,9 @@
             // 
             this.cus3_3.BackColor = System.Drawing.Color.Transparent;
             this.cus3_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus3_3.Location = new System.Drawing.Point(44, 148);
-            this.cus3_3.Margin = new System.Windows.Forms.Padding(4);
+            this.cus3_3.Location = new System.Drawing.Point(33, 120);
             this.cus3_3.Name = "cus3_3";
-            this.cus3_3.Size = new System.Drawing.Size(73, 65);
+            this.cus3_3.Size = new System.Drawing.Size(55, 53);
             this.cus3_3.TabIndex = 2;
             this.cus3_3.TabStop = false;
             // 
@@ -1105,10 +1038,9 @@
             // 
             this.cus3_2.BackColor = System.Drawing.Color.Transparent;
             this.cus3_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus3_2.Location = new System.Drawing.Point(149, 15);
-            this.cus3_2.Margin = new System.Windows.Forms.Padding(4);
+            this.cus3_2.Location = new System.Drawing.Point(112, 12);
             this.cus3_2.Name = "cus3_2";
-            this.cus3_2.Size = new System.Drawing.Size(73, 65);
+            this.cus3_2.Size = new System.Drawing.Size(55, 53);
             this.cus3_2.TabIndex = 1;
             this.cus3_2.TabStop = false;
             // 
@@ -1116,10 +1048,9 @@
             // 
             this.cus3_1.BackColor = System.Drawing.Color.Transparent;
             this.cus3_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus3_1.Location = new System.Drawing.Point(48, 14);
-            this.cus3_1.Margin = new System.Windows.Forms.Padding(4);
+            this.cus3_1.Location = new System.Drawing.Point(36, 11);
             this.cus3_1.Name = "cus3_1";
-            this.cus3_1.Size = new System.Drawing.Size(73, 65);
+            this.cus3_1.Size = new System.Drawing.Size(55, 53);
             this.cus3_1.TabIndex = 0;
             this.cus3_1.TabStop = false;
             // 
@@ -1134,10 +1065,9 @@
             this.pn_7.Controls.Add(this.cus7_3);
             this.pn_7.Controls.Add(this.cus7_2);
             this.pn_7.Controls.Add(this.cus7_1);
-            this.pn_7.Location = new System.Drawing.Point(652, 338);
-            this.pn_7.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_7.Location = new System.Drawing.Point(489, 275);
             this.pn_7.Name = "pn_7";
-            this.pn_7.Size = new System.Drawing.Size(265, 221);
+            this.pn_7.Size = new System.Drawing.Size(200, 180);
             this.pn_7.TabIndex = 10;
             this.pn_7.Click += new System.EventHandler(this.pn_Click);
             this.pn_7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
@@ -1147,10 +1077,9 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("UTM Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(104, 87);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(78, 71);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 48);
+            this.label9.Size = new System.Drawing.Size(35, 39);
             this.label9.TabIndex = 4;
             this.label9.Text = " 7";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1159,10 +1088,9 @@
             // 
             this.cus7_4.BackColor = System.Drawing.Color.Transparent;
             this.cus7_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus7_4.Location = new System.Drawing.Point(148, 146);
-            this.cus7_4.Margin = new System.Windows.Forms.Padding(4);
+            this.cus7_4.Location = new System.Drawing.Point(111, 119);
             this.cus7_4.Name = "cus7_4";
-            this.cus7_4.Size = new System.Drawing.Size(73, 65);
+            this.cus7_4.Size = new System.Drawing.Size(55, 53);
             this.cus7_4.TabIndex = 3;
             this.cus7_4.TabStop = false;
             // 
@@ -1170,10 +1098,9 @@
             // 
             this.cus7_3.BackColor = System.Drawing.Color.Transparent;
             this.cus7_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus7_3.Location = new System.Drawing.Point(44, 148);
-            this.cus7_3.Margin = new System.Windows.Forms.Padding(4);
+            this.cus7_3.Location = new System.Drawing.Point(33, 120);
             this.cus7_3.Name = "cus7_3";
-            this.cus7_3.Size = new System.Drawing.Size(73, 65);
+            this.cus7_3.Size = new System.Drawing.Size(55, 53);
             this.cus7_3.TabIndex = 2;
             this.cus7_3.TabStop = false;
             // 
@@ -1181,10 +1108,9 @@
             // 
             this.cus7_2.BackColor = System.Drawing.Color.Transparent;
             this.cus7_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus7_2.Location = new System.Drawing.Point(149, 15);
-            this.cus7_2.Margin = new System.Windows.Forms.Padding(4);
+            this.cus7_2.Location = new System.Drawing.Point(112, 12);
             this.cus7_2.Name = "cus7_2";
-            this.cus7_2.Size = new System.Drawing.Size(73, 65);
+            this.cus7_2.Size = new System.Drawing.Size(55, 53);
             this.cus7_2.TabIndex = 1;
             this.cus7_2.TabStop = false;
             // 
@@ -1192,10 +1118,9 @@
             // 
             this.cus7_1.BackColor = System.Drawing.Color.Transparent;
             this.cus7_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus7_1.Location = new System.Drawing.Point(48, 15);
-            this.cus7_1.Margin = new System.Windows.Forms.Padding(4);
+            this.cus7_1.Location = new System.Drawing.Point(36, 12);
             this.cus7_1.Name = "cus7_1";
-            this.cus7_1.Size = new System.Drawing.Size(73, 65);
+            this.cus7_1.Size = new System.Drawing.Size(55, 53);
             this.cus7_1.TabIndex = 0;
             this.cus7_1.TabStop = false;
             // 
@@ -1210,10 +1135,9 @@
             this.pn_2.Controls.Add(this.cus2_3);
             this.pn_2.Controls.Add(this.cus2_2);
             this.pn_2.Controls.Add(this.cus2_1);
-            this.pn_2.Location = new System.Drawing.Point(652, 94);
-            this.pn_2.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_2.Location = new System.Drawing.Point(489, 76);
             this.pn_2.Name = "pn_2";
-            this.pn_2.Size = new System.Drawing.Size(265, 221);
+            this.pn_2.Size = new System.Drawing.Size(200, 180);
             this.pn_2.TabIndex = 5;
             this.pn_2.Click += new System.EventHandler(this.pn_Click);
             this.pn_2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
@@ -1223,10 +1147,9 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("UTM Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(112, 87);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(84, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 48);
+            this.label2.Size = new System.Drawing.Size(31, 39);
             this.label2.TabIndex = 4;
             this.label2.Text = "2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1235,10 +1158,9 @@
             // 
             this.cus2_4.BackColor = System.Drawing.Color.Transparent;
             this.cus2_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus2_4.Location = new System.Drawing.Point(148, 146);
-            this.cus2_4.Margin = new System.Windows.Forms.Padding(4);
+            this.cus2_4.Location = new System.Drawing.Point(111, 119);
             this.cus2_4.Name = "cus2_4";
-            this.cus2_4.Size = new System.Drawing.Size(73, 65);
+            this.cus2_4.Size = new System.Drawing.Size(55, 53);
             this.cus2_4.TabIndex = 3;
             this.cus2_4.TabStop = false;
             // 
@@ -1246,10 +1168,9 @@
             // 
             this.cus2_3.BackColor = System.Drawing.Color.Transparent;
             this.cus2_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus2_3.Location = new System.Drawing.Point(44, 148);
-            this.cus2_3.Margin = new System.Windows.Forms.Padding(4);
+            this.cus2_3.Location = new System.Drawing.Point(33, 120);
             this.cus2_3.Name = "cus2_3";
-            this.cus2_3.Size = new System.Drawing.Size(73, 65);
+            this.cus2_3.Size = new System.Drawing.Size(55, 53);
             this.cus2_3.TabIndex = 2;
             this.cus2_3.TabStop = false;
             // 
@@ -1257,10 +1178,9 @@
             // 
             this.cus2_2.BackColor = System.Drawing.Color.Transparent;
             this.cus2_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus2_2.Location = new System.Drawing.Point(149, 12);
-            this.cus2_2.Margin = new System.Windows.Forms.Padding(4);
+            this.cus2_2.Location = new System.Drawing.Point(112, 10);
             this.cus2_2.Name = "cus2_2";
-            this.cus2_2.Size = new System.Drawing.Size(73, 65);
+            this.cus2_2.Size = new System.Drawing.Size(55, 53);
             this.cus2_2.TabIndex = 1;
             this.cus2_2.TabStop = false;
             // 
@@ -1268,10 +1188,9 @@
             // 
             this.cus2_1.BackColor = System.Drawing.Color.Transparent;
             this.cus2_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus2_1.Location = new System.Drawing.Point(48, 14);
-            this.cus2_1.Margin = new System.Windows.Forms.Padding(4);
+            this.cus2_1.Location = new System.Drawing.Point(36, 11);
             this.cus2_1.Name = "cus2_1";
-            this.cus2_1.Size = new System.Drawing.Size(73, 65);
+            this.cus2_1.Size = new System.Drawing.Size(55, 53);
             this.cus2_1.TabIndex = 0;
             this.cus2_1.TabStop = false;
             // 
@@ -1286,10 +1205,9 @@
             this.pn_6.Controls.Add(this.cus6_3);
             this.pn_6.Controls.Add(this.cus6_2);
             this.pn_6.Controls.Add(this.cus6_1);
-            this.pn_6.Location = new System.Drawing.Point(365, 338);
-            this.pn_6.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_6.Location = new System.Drawing.Point(274, 275);
             this.pn_6.Name = "pn_6";
-            this.pn_6.Size = new System.Drawing.Size(265, 221);
+            this.pn_6.Size = new System.Drawing.Size(200, 180);
             this.pn_6.TabIndex = 9;
             this.pn_6.Click += new System.EventHandler(this.pn_Click);
             this.pn_6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
@@ -1299,10 +1217,9 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("UTM Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(111, 87);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(83, 71);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 48);
+            this.label10.Size = new System.Drawing.Size(32, 39);
             this.label10.TabIndex = 4;
             this.label10.Text = "6";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1311,10 +1228,9 @@
             // 
             this.cus6_4.BackColor = System.Drawing.Color.Transparent;
             this.cus6_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus6_4.Location = new System.Drawing.Point(148, 146);
-            this.cus6_4.Margin = new System.Windows.Forms.Padding(4);
+            this.cus6_4.Location = new System.Drawing.Point(111, 119);
             this.cus6_4.Name = "cus6_4";
-            this.cus6_4.Size = new System.Drawing.Size(73, 65);
+            this.cus6_4.Size = new System.Drawing.Size(55, 53);
             this.cus6_4.TabIndex = 3;
             this.cus6_4.TabStop = false;
             // 
@@ -1322,10 +1238,9 @@
             // 
             this.cus6_3.BackColor = System.Drawing.Color.Transparent;
             this.cus6_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus6_3.Location = new System.Drawing.Point(44, 148);
-            this.cus6_3.Margin = new System.Windows.Forms.Padding(4);
+            this.cus6_3.Location = new System.Drawing.Point(33, 120);
             this.cus6_3.Name = "cus6_3";
-            this.cus6_3.Size = new System.Drawing.Size(73, 65);
+            this.cus6_3.Size = new System.Drawing.Size(55, 53);
             this.cus6_3.TabIndex = 2;
             this.cus6_3.TabStop = false;
             // 
@@ -1333,10 +1248,9 @@
             // 
             this.cus6_2.BackColor = System.Drawing.Color.Transparent;
             this.cus6_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus6_2.Location = new System.Drawing.Point(149, 15);
-            this.cus6_2.Margin = new System.Windows.Forms.Padding(4);
+            this.cus6_2.Location = new System.Drawing.Point(112, 12);
             this.cus6_2.Name = "cus6_2";
-            this.cus6_2.Size = new System.Drawing.Size(73, 65);
+            this.cus6_2.Size = new System.Drawing.Size(55, 53);
             this.cus6_2.TabIndex = 1;
             this.cus6_2.TabStop = false;
             // 
@@ -1344,10 +1258,9 @@
             // 
             this.cus6_1.BackColor = System.Drawing.Color.Transparent;
             this.cus6_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus6_1.Location = new System.Drawing.Point(48, 15);
-            this.cus6_1.Margin = new System.Windows.Forms.Padding(4);
+            this.cus6_1.Location = new System.Drawing.Point(36, 12);
             this.cus6_1.Name = "cus6_1";
-            this.cus6_1.Size = new System.Drawing.Size(73, 65);
+            this.cus6_1.Size = new System.Drawing.Size(55, 53);
             this.cus6_1.TabIndex = 0;
             this.cus6_1.TabStop = false;
             // 
@@ -1362,10 +1275,9 @@
             this.pn_1.Controls.Add(this.cus1_3);
             this.pn_1.Controls.Add(this.cus1_2);
             this.pn_1.Controls.Add(this.cus1_1);
-            this.pn_1.Location = new System.Drawing.Point(365, 94);
-            this.pn_1.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_1.Location = new System.Drawing.Point(274, 76);
             this.pn_1.Name = "pn_1";
-            this.pn_1.Size = new System.Drawing.Size(265, 221);
+            this.pn_1.Size = new System.Drawing.Size(200, 180);
             this.pn_1.TabIndex = 0;
             this.pn_1.Click += new System.EventHandler(this.pn_Click);
             this.pn_1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pn_MouseDown);
@@ -1375,10 +1287,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("UTM Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(112, 87);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(84, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 48);
+            this.label1.Size = new System.Drawing.Size(27, 39);
             this.label1.TabIndex = 4;
             this.label1.Text = "1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1387,10 +1298,9 @@
             // 
             this.cus1_4.BackColor = System.Drawing.Color.Transparent;
             this.cus1_4.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus1_4.Location = new System.Drawing.Point(148, 146);
-            this.cus1_4.Margin = new System.Windows.Forms.Padding(4);
+            this.cus1_4.Location = new System.Drawing.Point(111, 119);
             this.cus1_4.Name = "cus1_4";
-            this.cus1_4.Size = new System.Drawing.Size(73, 65);
+            this.cus1_4.Size = new System.Drawing.Size(55, 53);
             this.cus1_4.TabIndex = 3;
             this.cus1_4.TabStop = false;
             // 
@@ -1398,10 +1308,9 @@
             // 
             this.cus1_3.BackColor = System.Drawing.Color.Transparent;
             this.cus1_3.Image = global::WinFormsRestaurant.Properties.Resources.occupied_reverse;
-            this.cus1_3.Location = new System.Drawing.Point(45, 148);
-            this.cus1_3.Margin = new System.Windows.Forms.Padding(4);
+            this.cus1_3.Location = new System.Drawing.Point(34, 120);
             this.cus1_3.Name = "cus1_3";
-            this.cus1_3.Size = new System.Drawing.Size(73, 65);
+            this.cus1_3.Size = new System.Drawing.Size(55, 53);
             this.cus1_3.TabIndex = 2;
             this.cus1_3.TabStop = false;
             // 
@@ -1409,10 +1318,9 @@
             // 
             this.cus1_2.BackColor = System.Drawing.Color.Transparent;
             this.cus1_2.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus1_2.Location = new System.Drawing.Point(149, 12);
-            this.cus1_2.Margin = new System.Windows.Forms.Padding(4);
+            this.cus1_2.Location = new System.Drawing.Point(112, 10);
             this.cus1_2.Name = "cus1_2";
-            this.cus1_2.Size = new System.Drawing.Size(73, 65);
+            this.cus1_2.Size = new System.Drawing.Size(55, 53);
             this.cus1_2.TabIndex = 1;
             this.cus1_2.TabStop = false;
             // 
@@ -1420,30 +1328,30 @@
             // 
             this.cus1_1.BackColor = System.Drawing.Color.Transparent;
             this.cus1_1.Image = global::WinFormsRestaurant.Properties.Resources.occupied;
-            this.cus1_1.Location = new System.Drawing.Point(48, 12);
-            this.cus1_1.Margin = new System.Windows.Forms.Padding(4);
+            this.cus1_1.Location = new System.Drawing.Point(36, 10);
             this.cus1_1.Name = "cus1_1";
-            this.cus1_1.Size = new System.Drawing.Size(73, 65);
+            this.cus1_1.Size = new System.Drawing.Size(55, 53);
             this.cus1_1.TabIndex = 0;
             this.cus1_1.TabStop = false;
             // 
             // list_log
             // 
             this.list_log.HideSelection = false;
-            this.list_log.Location = new System.Drawing.Point(21, 76);
+            this.list_log.Location = new System.Drawing.Point(16, 62);
+            this.list_log.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.list_log.Name = "list_log";
-            this.list_log.Size = new System.Drawing.Size(232, 379);
+            this.list_log.Size = new System.Drawing.Size(175, 309);
             this.list_log.TabIndex = 24;
             this.list_log.UseCompatibleStateImageBehavior = false;
             this.list_log.View = System.Windows.Forms.View.List;
             // 
             // WorkStation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1893, 858);
+            this.ClientSize = new System.Drawing.Size(1040, 640);
             this.Controls.Add(this.list_log);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -1465,7 +1373,6 @@
             this.Controls.Add(this.pn_6);
             this.Controls.Add(this.pn_1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "WorkStation";
             this.Text = "WorkStation";
             this.Load += new System.EventHandler(this.WorkStation_Load);

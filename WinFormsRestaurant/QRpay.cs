@@ -50,8 +50,6 @@ namespace WinFormsRestaurant
 
                 byte[] imgBytes = new byte[client.ReceiveBufferSize];
                 int bytesRead = client.GetStream().Read(imgBytes, 0, client.ReceiveBufferSize);
-
-                // Convert the bytes back into an image and display it in the picture box
                 using (MemoryStream ms = new MemoryStream(imgBytes, 0, bytesRead))
                 {
                     ms.Write(imgBytes, 0, bytesRead);

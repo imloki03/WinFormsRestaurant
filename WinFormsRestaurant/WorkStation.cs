@@ -229,5 +229,10 @@ namespace WinFormsRestaurant
             Salary salary = new Salary();
             salary.Show();
         }
+
+        private void option_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }
